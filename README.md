@@ -1,5 +1,5 @@
 Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something
-The configs are just barebones to get a functioning bspwm desktop (will add more as I progress). [Still todos](#Todos)
+The configs are just barebones to get a functioning i3 desktop (will add more as I progress). [Still todos](#todos)
 
 ## Base Installation
 1. [Setting up gpt table and partitioning disk](https://wiki.archlinux.org/index.php/GPT_fdisk#Create_a_partition_table_and_partitions) with [this layout](#Layout)
@@ -25,6 +25,10 @@ The configs are just barebones to get a functioning bspwm desktop (will add more
 
 9. ```# passwd``` and ```# passwd koala```
 
+<!---## Other System Related--->
+[//]: # (NetworkManager)
+[//]: # (Password Manager)
+
 ## Zsh
 1. [Autologin](https://wiki.archlinux.org/index.php/getty#Automatic_login_to_virtual_console) and use ```Type=simple``` in drop-in snippet
 
@@ -40,18 +44,6 @@ The configs are just barebones to get a functioning bspwm desktop (will add more
 3. [Set wallpaper](https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper) using ```feh``` and append ```~/.fehbg &``` to ```.xinitrc```
 
 4. Copy ```/etc/xdg/picom.conf.example``` to ```~/.config/picom/picom.conf``` and [configure](https://wiki.archlinux.org/index.php/Picom#Configuration). Append ```picom &``` to ```~/.xinitrc```
-
-5. BSPWM (Will add later)
-
-6. SXHKD (Will add later)
-
-7. Rofi (Will add later)
-
-8. Polybar (Will add later)
-
-9. Dunst/Other notification daemon (Will add later)
-
-<!---## Other System Related--->
 
 <!---## USB Flash Specific--->
 
@@ -119,9 +111,9 @@ The configs are just barebones to get a functioning bspwm desktop (will add more
 ##### Drivers
     xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau xf86-input-synaptics xf86-input-libinput
 ##### WM
-    xorg-server xorg-init picom bspwm sxhkd polybar(aur) feh
+    xorg-server xorg-init feh picom i3-gaps i3lock-color dunst polybar(aur)
 ##### Additional Apps
-    firefox kitty/alacritty vlc cmus ranger
+    firefox kitty/alacritty/rxvt-unicode vlc cmus ranger
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-emoji ttf-roboto ttf-anonymous-pro ttf-cascadia-code ttf-inconsolata ttf-fira-code ttf-hack
 
@@ -133,7 +125,8 @@ The configs are just barebones to get a functioning bspwm desktop (will add more
 - [x] Check if mlocate is reuqired in the first place (Answer: not required)
 - [x] Make LUKS Header backup
 - [ ] Filesyetem and journal modifications and optimizations for flash drives
-- [ ] Set up NetworkManager and NM-applet
+- [ ] Set up NetworkManager and nm-applet
+- [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
 
@@ -142,4 +135,3 @@ The configs are just barebones to get a functioning bspwm desktop (will add more
 * Enable journaling (use defaults) for ext4 partitions
 * Install GRUB for either just BIOS or UEFI, (or just use systemd-boot in case it's UEFI)
 * Use [default](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_2) encrypt mkinitcpio hooks (Don't move ```blocks``` hook)
-* lti monitor support? Last I checked that's still on the to-do list and it treats all displays as a single scs
