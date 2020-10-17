@@ -237,4 +237,4 @@ mode "$mode_system" {
 bindsym $mod+x mode "$mode_system"
 
 # screenshot
-bindsym --release Print exec --no-startup-id scrot ~/Pictures/%Y-%m-%d-%H-%M-%S.pn
+bindsym --release Print exec --no-startup-id scrot ~/Pictures/%Y-%m-%d-%H-%M-%S.png
