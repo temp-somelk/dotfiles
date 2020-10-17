@@ -1,5 +1,4 @@
-Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something <br />
-The configs are just barebones to get a functioning i3 desktop (will add more as I progress). [Still todos](#todos)
+Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something. The configs are just barebones to get a functioning i3 desktop (will add more as I progress). [Still todos](#todos)
 
 ## Base Installation
 1. [Setting up gpt table and partitioning disk](https://wiki.archlinux.org/index.php/GPT_fdisk#Create_a_partition_table_and_partitions) with [this layout](#Layout)
@@ -126,7 +125,6 @@ The configs are just barebones to get a functioning i3 desktop (will add more as
 - [x] Make LUKS Header backup
 - [ ] Filesyetem and journal modifications and optimizations for flash drives
 - [ ] Set up NetworkManager and nm-applet
-- [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
 
