@@ -1,4 +1,4 @@
-Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something
+Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something <br />
 The configs are just barebones to get a functioning i3 desktop (will add more as I progress). [Still todos](#todos)
 
 ## Base Installation
