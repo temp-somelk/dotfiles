@@ -125,6 +125,7 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 - [x] Make LUKS Header backup
 - [ ] Filesyetem and journal modifications and optimizations for flash drives
 - [ ] Set up NetworkManager and nm-applet
+- [ ] Check how to source substring-search without oh-my-zsh bloat
 - [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
