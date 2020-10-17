@@ -41,6 +41,10 @@ bindsym Shift+XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @D
 bindsym Shift+XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -2% && $refresh_i3status
 
 # increase/decrease brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 10
+bindsym Shift+XF86MonBrightnessUp exec --no-startup-id xbacklight -inc 2
+bindsym Shift+XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
