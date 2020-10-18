@@ -135,6 +135,7 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 - [ ] i3 setup
 	- [ ] borders
 	- [ ] firefox and vlc specific worskspace config
+	- [ ] i3lock-color
 - [ ] choose a status bar and set it up
 - [ ] dunst config
 - [ ] rofi config
