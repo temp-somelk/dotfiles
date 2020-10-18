@@ -33,7 +33,7 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 
 2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and remove all plugins
 
-3. In ```~/.zshrc``` source files for ```zsh-syntax-highlighting``` ```zsh-autosuggestions``` ```zsh-history-substring-search``` ```zsh-theme-powerlevel10k``` in the exact order
+3. In ```~/.zshrc``` source files for ```zsh-syntax-highlighting``` ```zsh-autosuggestions``` ```zsh-history-substring-search``` ```zsh-theme-powerlevel10k``` in this exact order
 
 4. Make ```~/.zprofile``` and add [this](https://wiki.archlinux.org/index.php/Xinit#Autostart_X_at_login) to autostart xorg
 
