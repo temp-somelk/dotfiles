@@ -129,6 +129,14 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 - [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
+* WM related
+- [ ] i3 setup
+	- [ ] borders
+	- [ ] firefox and vlc specific worskspace config
+- [ ] choose a status bar and set it up
+- [ ] dunst config
+- [ ] rofi config
+- [ ] urxvt config
 
 ### For Permanent Install (on PC)
 * Windows readable partition/Windows partition need not be the first partition
