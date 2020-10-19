@@ -31,7 +31,7 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 ## Zsh
 1. [Autologin](https://wiki.archlinux.org/index.php/getty#Automatic_login_to_virtual_console) and use ```Type=simple``` in drop-in snippet
 
-2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and remove all plugins
+2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and remove all plugins, themes and comment everything except ```export $HOME/.oh-my-zsh```  ```source $ZSH/oh-my-zsh.sh``` ```plugins=()```
 
 3. In ```~/.zshrc``` source files for ```zsh-syntax-highlighting``` ```zsh-autosuggestions``` ```zsh-history-substring-search``` ```zsh-theme-powerlevel10k``` in this exact order
 
