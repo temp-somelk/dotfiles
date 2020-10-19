@@ -50,7 +50,7 @@ bindsym Shift+XF86MonBrightnessDown exec --no-startup-id xbacklight -dec 2
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+q kill
