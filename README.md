@@ -1,4 +1,4 @@
-Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/index.php/Install_Arch_Linux_on_a_removable_medium#Tips) (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something. The configs are just barebones to get a functioning i3 desktop (will add more as I progress). Still [to-dos](#todos)
+Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/index.php/Install_Arch_Linux_on_a_removable_medium#Tips) (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something. The configs are just barebones to get a functioning i3 desktop (will add more as I progress). Still [to-do](#todos)
 
 ## Base Installation
 1. [Setting up gpt table and partitioning disk](https://wiki.archlinux.org/index.php/GPT_fdisk#Create_a_partition_table_and_partitions) with [this layout](#Layout)
