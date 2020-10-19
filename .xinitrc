@@ -49,5 +49,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
 fi
 
 ~/.fehbg &
+# dunst autostarts and using xinit to start it causes xorg to crash, so commenting it
+# dunst
 picom --experimental-backends &
 exec i3
