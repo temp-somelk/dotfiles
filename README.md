@@ -110,7 +110,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 ##### Drivers
     xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau xf86-input-synaptics xf86-input-libinput
 ##### WM
-    xorg-server xorg-init feh picom i3-gaps i3lock-color dunst polybar(aur)
+    xorg-server xorg-init feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
 ##### Additional Apps
     firefox kitty/alacritty/rxvt-unicode vlc cmus ranger
 ##### Fonts
