@@ -1,4 +1,4 @@
-Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something. The configs are just barebones to get a functioning i3 desktop (will add more as I progress). [Still todos](#todos)
+Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/index.php/Install_Arch_Linux_on_a_removable_medium#Tips) (bootable on both BIOS and UEFI preferably). Checklist to see if I forgot something. The configs are just barebones to get a functioning i3 desktop (will add more as I progress). Still [to-dos](#todos)
 
 ## Base Installation
 1. [Setting up gpt table and partitioning disk](https://wiki.archlinux.org/index.php/GPT_fdisk#Create_a_partition_table_and_partitions) with [this layout](#Layout)
@@ -45,8 +45,6 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 3. [Set wallpaper](https://wiki.archlinux.org/index.php/Feh#Set_the_wallpaper) using ```feh``` and append ```~/.fehbg &``` to ```.xinitrc```
 
 4. Copy ```/etc/xdg/picom.conf.example``` to ```~/.config/picom/picom.conf``` and [configure](https://wiki.archlinux.org/index.php/Picom#Configuration). Append ```picom &``` to ```~/.xinitrc```
-
-<!---## USB Flash Specific--->
 
 ### Layout
 <table>
@@ -127,7 +125,6 @@ Backup to set up an encrypted Arch on a USB drive (bootable on both BIOS and UEF
 - [x] Make LUKS Header backup
 - [ ] Filesyetem and journal modifications and optimizations for flash drives
 - [ ] Set up NetworkManager and nm-applet
-- [ ] Check how to source substring-search without oh-my-zsh bloat
 - [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
