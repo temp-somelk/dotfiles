@@ -24,8 +24,11 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 9. ```# passwd``` and ```# passwd koala```
 
-<!---## Other System Related--->
-[//]: # (NetworkManager)
+## System
+1. For, networking, use [NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager), by enabling NetworkManager.service and [disabling dhcpcd/netctl/other services](https://wiki.archlinux.org/index.php/NetworkManager#Additional_interfaces)
+
+2. 
+
 [//]: # (Password Manager)
 
 ## Zsh
@@ -106,13 +109,17 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 ### Packages
 ##### Base
-    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr nano grub
-#### Zsh
-    zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10
+    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub nano
+#### Shell
+    zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
+#### Networking
+    networkmanager network-manager-applet nm-connection-editor modemmanager mobile-broadband-provider-info usb_modeswitch networkmanager-openconnect networkmanager-openvpn dnsmasq
 ##### Drivers
     xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau xf86-input-synaptics xf86-input-libinput
-##### WM
-    xorg-server xorg-init xorg-xbacklight feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
+##### Xorg
+    xorg-server xorg-init xorg-xbacklight
+#### Window Manager
+    feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
 ##### Additional Apps
     firefox kitty/alacritty/rxvt-unicode vlc cmus ranger
 ##### Fonts
@@ -125,8 +132,8 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 - [x] Configure [mlocate](https://wiki.archlinux.org/index.php/mlocate) to change frequency of updatedb in systemd timer unit
 - [x] Check if mlocate is reuqired in the first place (Answer: not required)
 - [x] Make LUKS Header backup
-- [ ] Filesyetem and journal modifications and optimizations for flash drives
-- [ ] Set up NetworkManager and nm-applet
+- [x] Filesyetem and journal modifications and optimizations for flash drives
+- [x] Set up NetworkManager and nm-applet
 - [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
