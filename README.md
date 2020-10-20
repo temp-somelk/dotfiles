@@ -119,7 +119,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 ##### Xorg
     xorg-server xorg-init xorg-xbacklight
 #### Window Manager
-    feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
+    feh picom scrot i3-gaps i3lock-color dunst libnotify polybar(aur)
 ##### Additional Apps
     firefox kitty/alacritty/rxvt-unicode vlc cmus ranger
 ##### Fonts
@@ -134,7 +134,8 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 - [x] Make LUKS Header backup
 - [x] Filesyetem and journal modifications and optimizations for flash drives
 - [x] Set up NetworkManager and nm-applet
-- [ ] Set up a password manager, preferably [pass](https://wiki.archlinux.org/index.php/Pass)
+- [ ] Set up session lock (both X and tty)
+- [ ] Set up a password manager, preferably [KeePassXC](https://wiki.archlinux.org/index.php/KeePass)
 - [ ] Transition to complete CLI apps if possible
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
 * WM related
