@@ -106,11 +106,13 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 ### Packages
 ##### Base
-    base base-devel arch-install-scripts zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k intel-ucode amd-ucode linux linux-lts linux-firmware dosfstools ntfs-3g lvm2 efibootmgr grub nano
+    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr nano grub
+#### Zsh
+    zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10
 ##### Drivers
     xf86-video-vesa xf86-video-ati xf86-video-intel xf86-video-amdgpu xf86-video-nouveau xf86-input-synaptics xf86-input-libinput
 ##### WM
-    xorg-server xorg-init feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
+    xorg-server xorg-init xorg-xbacklight feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
 ##### Additional Apps
     firefox kitty/alacritty/rxvt-unicode vlc cmus ranger
 ##### Fonts
