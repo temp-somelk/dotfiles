@@ -119,7 +119,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 ##### Xorg
     xorg-server xorg-init xorg-xbacklight
 #### Window Manager
-    feh picom i3-gaps i3lock-color dunst libnotify polybar(aur)
+    feh picom i3-gaps i3lock-color dunst libnotify polybar(aur) scrot
 ##### Additional Apps
     firefox kitty/alacritty/rxvt-unicode vlc cmus ranger
 ##### Fonts
