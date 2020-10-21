@@ -50,6 +50,6 @@ fi
 
 ~/.fehbg &
 # dunst autostarts and using xinit to start it causes xorg to crash, so commenting it
-dunst
+# dunst
 picom --experimental-backends &
 exec i3
