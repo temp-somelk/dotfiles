@@ -4,7 +4,7 @@
     "height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces"],
+    "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["sway/window"],
     "modules-right": ["mpd", "pulseaudio", "backlight", "network", "idle_inhibitor", "cpu", "memory", "temperature", "battery", "battery#bat2", "clock", "tray"],
     // Modules configuration
@@ -25,7 +25,7 @@
              "9": [],
              "10": [],
          },
-         // "format": "{index:•} {icon}",
+         // {index}: "•",
          "format": "{index} {icon}",
          "format-icons": {
              "1": "",
@@ -130,8 +130,7 @@
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-	"format-good": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+	"format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
@@ -147,7 +146,7 @@
         "format-wifi": "{essid} ({signalStrength}%) ",
         "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
         "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "Disconnected ",
+        "format-disconnected": "No Networks ",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
 	// "format-alt": "{bandwidthDownBits} {bandwidthUpBits}",
 	// "max-length": 50,

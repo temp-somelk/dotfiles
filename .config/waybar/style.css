@@ -44,7 +44,6 @@ window#waybar.solo {background-color: #FFFFFF;}
         color: #000000;
     }
 }
-
 #battery.critical:not(.charging) {
     background-color: #ee3a3a;
     color: #ffffff;
@@ -56,11 +55,10 @@ window#waybar.solo {background-color: #FFFFFF;}
 }
 
 label:focus {background-color: #000000;}
-
 #idle_inhibitor.activated {background-color: #22ef6f; color: #000000;}
-#network.disconnected {background-color: #ee3a3a;}
 #temperature.critical {background-color: #ee3a3a;}
 
+#network.disconnected {color: #5f5f5f;}
 #pulseaudio.muted {color: #5f5f5f;}
 #mpd.disconnected {color: #5f5f5f;}
 #mpd.stopped {color: #5f5f5f;}

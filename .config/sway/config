@@ -239,7 +239,7 @@ bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s.png')
 # bindsym Ctrl+Print exec grim - | wl-copy
 
 # Power Options
-set $mode_system System (l) Lock, (e) Logout, (s) Suspend, (Shift+r) Reboot, (Shift+s) Shutdown
+set $mode_system (l)ock (e)Logout (s)uspend (R)eboot, (S)hutdown
 mode "$mode_system" {
     bindsym l exec swaylock -f -c 000000, mode "default"
     bindsym e exec swaymsg exit, mode "default"
@@ -253,9 +253,7 @@ mode "$mode_system" {
 }
 bindsym $mod+x mode "$mode_system"
 
-# Status Bar:
-#
-# Read `man 5 sway-bar` for more information about this section.
+# Status Bar
 bar {
       swaybar_command waybar
 }
