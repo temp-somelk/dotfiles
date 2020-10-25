@@ -45,7 +45,7 @@ exec swayidle -w \
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-input type:touchpad {
+input "type:touchpad" {
       dwt enabled
       tap enabled
       natural_scroll disabled
@@ -55,7 +55,7 @@ input type:touchpad {
 }
 
 # Typematic delay and rate
-input type:keyboard {
+input "type:keyboard" {
       xkb_layout us
       repeat_delay 500
       repeat_rate 30
@@ -266,10 +266,21 @@ font pango:FiraCode 9
 exec swaymsg border normal 3
 gaps inner 15
 gaps outer 15
+# workspace 3,5,6 gaps outer,inner 0
+workspace 3 gaps outer -10
+workspace 3 gaps inner 10
+workspace 5 gaps outer -10
+workspace 5 gaps inner 10
+workspace 6 gaps outer -10
+workspace 6 gaps inner 10
 # class                 border  backgr. text    indicator child_border
 client.focused          #22ef6f #22ef6f #000000 #ffffff   #22ef6f
 client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
 client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
 client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
+
+# Open specific apps on specific workspaces
+assign [class="firefox"] workspace 3
+assign [class="vlc"] workspace 6
 
 include /etc/sway/config.d/*
