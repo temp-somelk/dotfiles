@@ -26,7 +26,7 @@
              "10": [],
          },
          // {index}: "•",
-         "format": "{index} {icon}",
+         "format": "{icon}",
          "format-icons": {
              "1": "",
              "2": "",
@@ -50,7 +50,7 @@
         // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {title} ⸨{songPosition}|{queueLength}⸩",
         "format-disconnected": " MPD Disconnected",
-        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  Stopped",
         "unknown-tag": "N/A",
         "interval": 5,
         "consume-icons": {
@@ -124,15 +124,16 @@
     "battery": {
 	"interval": 60,
         "states": {
-            "good": 65,
+            // "good": 65,
             "warning": 30,
-            "caution": 25,
+            // "caution": 25,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
-	"format-charging": "{capacity}% ",
+        "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
+	// "format-caution": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
         "format-icons": ["", "", "", "", ""],

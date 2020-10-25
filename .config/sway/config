@@ -18,12 +18,13 @@ set $term termite
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
-set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+set $menu wofi --show run
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/extra/Pictures/Purple.jpg fill
+output * bg /home/extra/Pictures/Mountains.jpg fill
 #
 # Example configuration:
 #
@@ -258,7 +259,7 @@ bar {
       swaybar_command waybar
 }
 
-font pango:FiraCode 9
+font pango:Roboto Regular 9
 
 # Borders and Gaps
 exec swaymsg border normal 3

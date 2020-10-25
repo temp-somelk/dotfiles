@@ -32,7 +32,7 @@ cursor_shape = block
 filter_unmatched_urls = true
 
 # Emit escape sequences for extra modified keys
-#modify_other_keys = false
+modify_other_keys = true
 
 # set size hints for the window
 #size_hints = false
@@ -48,18 +48,18 @@ cursor_foreground = #000000
 
 foreground = #dcdccc
 foreground_bold = #ffffff
-background = #101010
+background = #111111
 
 # 20% background transparency (requires a compositor)
 #background = rgba(63, 63, 63, 0.8)
 
 # If unset, will reverse foreground and background
-highlight = #2f2f2f
+#highlight = #555555
 
 # Colors from color0 to color254 can be set
 color0 = #3f3f3f
-color1 = #705050
-color2 = #60b48a
+color1 = #ee3a3a
+color2 = #22ef6f
 color3 = #dfaf8f
 color4 = #506070
 color5 = #dc8cc3

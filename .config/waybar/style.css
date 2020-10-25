@@ -16,9 +16,10 @@ window#waybar.solo {background-color: #FFFFFF;}
 */
 
 #workspaces button {padding: 0 8px; color: #ffffff;}
-#workspaces button:hover {color: #22ef6f;}
+#workspaces button:hover {background: #222222; color: #22ef6f; box-shadow: inherit; text-shadow: inherit;}
 #workspaces button.focused {background-color: #22ef6f; color: #000000;}
 #workspaces button.urgent {background-color: #ee3a3a;}
+/* #workspaces button:hover {color: #000000;} */
 
 #clock,
 #battery,
@@ -35,7 +36,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #mpd {padding: 0 8px}
 
 #battery.charging {color: #22ef6f;}
-#battery.warning {color: #ef6f22;}
+#battery.warning:not(.charging) {background-color: #f5a555; color: #000000;}
+/* #battery.warning {color: #ef6f22;} */
 /* #battery.caution {bacground-color: #efef00;} */
 
 @keyframes blink {
