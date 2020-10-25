@@ -12,6 +12,8 @@
 .config/*
 !.config/bspwm
 !.config/sxhkd
+!.config/sway
+!.config/waybar
 !.config/picom
 !.config/i3
 !.config/polybar
