@@ -30,7 +30,7 @@
              "1": "",
              "2": "",
              "3": "",
-             "4": "",
+             "4": "",
              "5": "",
              "urgent": "",
              "focused": "",
@@ -78,7 +78,7 @@
         "spacing": 0
     },
     "clock": {
-        "timezone": "default",
+        // "timezone": "default",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
     },
