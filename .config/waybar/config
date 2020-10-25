@@ -126,7 +126,7 @@
         "states": {
             "good": 65,
             "warning": 30,
-            "caution": 20,
+            "caution": 25,
             "critical": 15
         },
         "format": "{capacity}% {icon}",
