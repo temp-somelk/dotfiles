@@ -266,7 +266,7 @@ bar {
 font pango:Roboto Regular 10
 
 # Borders and Gaps
-exec swaymsg border normal 3
+exec swaymsg border normal
 gaps inner 15
 gaps outer 15
 # workspace 3,5,6 gaps outer,inner 0
