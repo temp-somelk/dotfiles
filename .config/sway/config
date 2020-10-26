@@ -37,10 +37,10 @@ output * bg /home/extra/Pictures/Mountains.jpg fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 240 'swaylock -f -c 000000' \
+         timeout 240 'swaylock \
          timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          timeout 360 'systemctl suspend' \
-         before-sleep 'swaylock -f -c 000000'
+         before-sleep 'swaylock'
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
 # resumed. It will also lock your screen before your computer goes to sleep.
@@ -242,7 +242,7 @@ bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s.png')
 # Power Options
 set $mode_system (l)ock (e)Logout (s)uspend (R)eboot, (S)hutdown
 mode "$mode_system" {
-    bindsym l exec swaylock -f -c 000000, mode "default"
+    bindsym l exec swaylock, mode "default"
     bindsym e exec swaymsg exit, mode "default"
     bindsym s exec systemctl suspend, mode "default"
     bindsym Shift+r exec systemctl reboot, mode "default"
