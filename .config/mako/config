@@ -27,9 +27,9 @@ format=<span color="#999999">(%g) <small>%a</small></span>\n<b>%s</b>\n\n%b
 [hidden]
 format=%h more notifications. %t total.
 
-[urgency="high" hidden]
-background-color=#ee3a3a
-format=%h more notifications. %t total.
+# [hidden urgency="high"]
+# background-color=#ee3a3a
+# format=%h more notifications. %t total.
 
 [urgency="high"]
 background-color=#ee3a3a
