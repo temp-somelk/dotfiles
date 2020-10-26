@@ -196,7 +196,7 @@ input "type:keyboard" {
     bindsym $mod+minus scratchpad show
 
 # Resizing containers:
-mode "resize" {
+mode "Resize" {
     # left will shrink the containers width
     # right will grow the containers width
     # up will shrink the containers height
@@ -216,7 +216,7 @@ mode "resize" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
+bindsym $mod+r mode "Resize"
 
 # Volume and Brightness
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
@@ -263,7 +263,7 @@ bar {
 }
 
 
-font pango:Roboto Regular 9
+font pango:Roboto Regular 10
 
 # Borders and Gaps
 exec swaymsg border normal 3
