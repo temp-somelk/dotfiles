@@ -257,6 +257,9 @@ bindsym $mod+x mode "$mode_system"
 # Notifications
 exec mako
 
+# Redshit
+exec gammastep
+
 # Status Bar
 bar {
       swaybar_command waybar
