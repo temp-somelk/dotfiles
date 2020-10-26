@@ -37,7 +37,7 @@ output * bg /home/extra/Pictures/Mountains.jpg fill
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 240 'swaylock \
+         timeout 240 'swaylock' \
          timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          timeout 360 'systemctl suspend' \
          before-sleep 'swaylock'
@@ -254,10 +254,14 @@ mode "$mode_system" {
 }
 bindsym $mod+x mode "$mode_system"
 
+# Notifications
+exec mako
+
 # Status Bar
 bar {
       swaybar_command waybar
 }
+
 
 font pango:Roboto Regular 9
 
