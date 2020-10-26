@@ -12,12 +12,14 @@
 .config/*
 !.config/bspwm
 !.config/sxhkd
-!.config/sway
-!.config/waybar
 !.config/picom
 !.config/i3
 !.config/polybar
 !.config/rofi
 !.config/dunst
 !.config/kitty
+!.config/sway
+!.config/swaylock
+!.config/waybar
+!.config/wofi
 !.config/termite
