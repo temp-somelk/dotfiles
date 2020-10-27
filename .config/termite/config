@@ -45,13 +45,13 @@ scrollbar = off
 # special
 foreground      = #eeeeee
 foreground_bold = #ffffff
-cursor          = #22ef6f
+cursor          = #ffffff
 cursor_foreground = #282a36
 background      = #282a36
 
 # black
 color0  = #000000
-color8  = #555555
+color8  = #666666
 
 # red
 color1  = #ee3a3a
@@ -78,7 +78,7 @@ color6  = #8be9fd
 color14 = #8be9fd
 
 # white
-color7  = #cccccc
+color7  = #ffffff
 color15 = #ffffff
 
 [hints]

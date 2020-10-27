@@ -16,8 +16,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 */
 
 #workspaces button {padding: 0 8px; color: #ffffff;}
-#workspaces button:hover {background: #222222; color: #22ef6f; box-shadow: inherit; text-shadow: inherit;}
-#workspaces button.focused {background-color: #22ef6f; color: #000000;}
+#workspaces button:hover {background: #222222; color: #8be9fd; box-shadow: inherit; text-shadow: inherit;}
+#workspaces button.focused {background-color: #8be9fd; color: #000000;}
 #workspaces button.urgent {background-color: #ee3a3a;}
 /* #workspaces button:hover {color: #000000;} */
 
@@ -57,13 +57,13 @@ window#waybar.solo {background-color: #FFFFFF;}
 }
 
 label:focus {background-color: #000000;}
-#idle_inhibitor.activated {background-color: #22ef6f; color: #000000;}
+#idle_inhibitor.activated {background-color: #8be9fd; color: #000000;}
 #temperature.critical {background-color: #ee3a3a;}
 
-#network.disconnected {color: #5f5f5f;}
-#pulseaudio.muted {color: #5f5f5f;}
-#mpd.disconnected {color: #5f5f5f;}
-#mpd.stopped {color: #5f5f5f;}
+#network.disconnected {color: #666666;}
+#pulseaudio.muted {color: #666666;}
+#mpd.disconnected {color: #666666;}
+#mpd.stopped {color: #666666;}
 
 #tray {background-color: #ffffff; color: #000000;}
 

@@ -17,7 +17,7 @@ inside-caps-lock-color=00000000
 inside-ver-color=00000000
 inside-wrong-color=00000000
 
-key-hl-color=22ef6f
+key-hl-color=8be9fd
 bs-hl-color=ffffff
 caps-lock-bs-hl-color=ffffff
 caps-lock-key-hl-color=f1fa8c
@@ -29,18 +29,18 @@ line-ver-color=00000000
 line-wrong-color=00000000
 
 ring-color=222222
-ring-clear-color=222222
+ring-clear-color=ffffff
 ring-caps-lock-color=222222
-ring-ver-color=82abed
+ring-ver-color=22ef6f
 ring-wrong-color=ee3a3a
 
 separator-color=00000000
 
 text-color=222222
-text-clear-color=222222
+text-clear-color=00000000
 text-caps-lock-color=222222
 text-ver-color=222222
-text-wrong-color=222222
+text-wrong-color=00000000
 
 layout-bg-color=00000000
 layout-border-color=00000000
