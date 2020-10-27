@@ -50,7 +50,7 @@ cursor_foreground = #282a36
 background      = #282a36
 
 # black
-color0  = #000000
+color0  = #222222
 color8  = #666666
 
 # red
