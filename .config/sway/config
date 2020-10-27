@@ -266,7 +266,7 @@ bar {
 }
 
 
-font pango:Roboto Regular 10
+font pango:SourceSansPro 10
 
 # Borders and Gaps
 exec swaymsg border normal
@@ -280,7 +280,7 @@ workspace 5 gaps inner 10
 workspace 6 gaps outer -10
 workspace 6 gaps inner 10
 # class                 border  backgr. text    indicator child_border
-client.focused          #8be9fd #8be9fd #000000 #ffffff   #222222
+client.focused          #8be9fd #8be9fd #000000 #ffffff   #8be9fd
 client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
 client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
 client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
