@@ -49,10 +49,13 @@ exec swayidle -w \
 input "type:touchpad" {
       dwt enabled
       tap enabled
-      natural_scroll disabled
-      middle_emulation enabled
-      scroll_method two_finger
       tap_button_map lrm
+      middle_emulation enabled
+      natural_scroll disabled
+      scroll_method two_finger
+      scroll_factor 0.5
+      accel_profile adaptive
+      pointer_accel 0.2
 }
 
 # Typematic delay and rate
@@ -269,7 +272,7 @@ bar {
 font pango:SourceSansPro 10
 
 # Borders and Gaps
-exec swaymsg border normal
+# exec swaymsg border normal
 gaps inner 15
 gaps outer 15
 # workspace 3,5,6 gaps outer,inner 0
@@ -286,7 +289,7 @@ client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
 client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
 
 # Open specific apps on specific workspaces
-assign [class="firefox"] workspace 3
+assign [app_id="firefox"] workspace 3
 assign [class="vlc"] workspace 6
 
 include /etc/sway/config.d/*
