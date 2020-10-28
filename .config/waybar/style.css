@@ -35,7 +35,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 #idle_inhibitor,
 #mpd {padding: 0 8px}
 
-#battery.charging {color: #22ef6f;}
+#battery.charging {color: #8be9fd;}
 #battery.warning:not(.charging) {background-color: #f1fa8c; color: #000000;}
 /* #battery.warning {color: #ef6f22;} */
 /* #battery.caution {bacground-color: #efef00;} */
