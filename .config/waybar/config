@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["sway/window"],
-    "modules-right": ["mpd", "pulseaudio", "backlight", "idle_inhibitor", "temperature", "cpu", "memory", "network", "battery", "clock", "tray"],
+    "modules-right": ["custom/cmus", "network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "clock", "tray"],
     // Modules configuration
     "sway/workspaces": {
          "disable-scroll": false,
@@ -47,7 +47,7 @@
         "format": "{}"
     },
     "mpd": {
-        // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ ",
+        // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
         "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {title} ⸨{songPosition}|{queueLength}⸩",
         "format-disconnected": " MPD Disconnected",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  Stopped",
@@ -66,8 +66,8 @@
             "on": " 1 "
         },
         "state-icons": {
-            "paused": "",
-            "playing": ""
+            "paused": "",
+            "playing": ""
         },
         "tooltip": false
     },
@@ -91,34 +91,34 @@
         "format-alt": "{:%d %b %Y}"
     },
     "cpu": {
-        "format": "{usage}% ",
-	"format-alt": "{load} ",
+        "format": " {usage}%",
+	"format-alt": " {load}",
         "tooltip": false
     },
     "memory": {
 	// "interval": 20,
-        "format": "{percentage}% ",
-	"format-alt": "{used:0.1f}G/{total:0.1f}G ",
+        "format": " {percentage}%",
+	"format-alt": " {used:0.1f}G/{total:0.1f}G",
         "tooltip": false
     },
     "disk": {
 	"interval": 300,
-	"format": "{free} ",
-	"format-alt": "{used}/{total} ",
+	"format": " {free}",
+	"format-alt": " {used}/{total}",
 	"tooltip": false
     },
     "temperature": {
         // "thermal-zone": 2,
         // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
         "critical-threshold": 55,
-        "format-critical": "{temperatureC}°C {icon}",
-        "format": "{temperatureC}°C {icon}",
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
         "format-icons": ["", "", "", "", "", ""],
 	"tooltip": false
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent}% {icon}",
+        "format": "{icon} {percent}%",
         "format-icons": ["", ""]
     },
     "battery": {
@@ -129,10 +129,10 @@
             // "caution": 25,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
-        "format-plugged": "{capacity}% ",
-        "format-alt": "{time} {icon}",
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-alt": "{icon} {time}",
 	// "format-caution": "{capacity}% {icon}",
         // "format-good": "", // An empty format will hide the module
         // "format-full": "",
@@ -144,22 +144,23 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "{essid} ({signalStrength}%) ",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
-        "format-linked": "{ifname} (No IP) ",
-        "format-disconnected": "No Networks ",
-        "format-alt": "{ifname}: {ipaddr}/{cidr}",
-	// "format-alt": "{bandwidthDownBits} {bandwidthUpBits}",
+        // "format-wifi": "{essid} ",
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
+        "format-linked": " {ifname} (No IP)",
+        "format-disconnected": " No Networks",
+	"format-alt": " {bandwidthDownBits} {bandwidthUpBits}",
+        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
 	// "max-length": 50,
 	"tooltip": false
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
-        "format": "{volume}% {icon} {format_source}",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
-        "format-bluetooth-muted": " {icon} {format_source}",
-        "format-muted": " {format_source}",
-        "format-source": "{volume}% ",
+        "format": "{icon} {volume}%   {format_source}",
+        "format-bluetooth": "{icon} {volume}%   {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": " {volume}%",
         "format-source-muted": "",
         "format-icons": {
             "headphone": "",
@@ -170,7 +171,19 @@
             "car": "",
             "default": ["", ""]
         },
+        "tooltip": false,
         "on-click": "pavucontrol"
+    },
+    "custom/cmus": {
+            "format": "♬ {}",
+            // "format": "🎜 {}",
+            "interval": 10,
+            "exec": "cmus-remote -C 'format_print %t'",
+            "exec-if": "pgrep cmus",
+            "on-click": "cmus-remote -u",
+            "tooltip": false,
+            "escape": true
+            // "max-length": 100,
     },
     "custom/media": {
         "format": "{icon} {}",

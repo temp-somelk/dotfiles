@@ -29,7 +29,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 #backlight,
 #network,
 #pulseaudio,
-#custom-media,
+#custom-cmus,
 #tray,
 #mode,
 #idle_inhibitor,
@@ -62,24 +62,16 @@ label:focus {background-color: #000000;}
 
 #network.disconnected {color: #666666;}
 #pulseaudio.muted {color: #666666;}
-#mpd.disconnected {color: #666666;}
-#mpd.stopped {color: #666666;}
 
 #tray {background-color: #ffffff; color: #000000;}
 
-
 /*
-#custom-media {
-    background-color: #66cc99;
-    color: #2a5c45;
-    min-width: 100px;
-}
+#custom-media {background-color: #66cc99; color: #2a5c45; min-width: 100px;}
+#custom-media.custom-spotify {background-color: #66cc99;}
+#custom-media.custom-vlc {background-color: #ffa000;}
 
-#custom-media.custom-spotify {
-    background-color: #66cc99;
-}
+#custom-cmus {color: #fffffff;}
 
-#custom-media.custom-vlc {
-    background-color: #ffa000;
-}
+#mpd.disconnected {color: #666666;}
+#mpd.stopped {color: #666666;}
 */
