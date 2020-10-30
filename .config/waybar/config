@@ -175,7 +175,8 @@
         "on-click": "pavucontrol"
     },
     "custom/cmus": {
-        "format": "{title}",
+        // "format": "{text}",
+        // "exec": "$HOME/.config/waybar/cmus2.sh",
         // "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
         // "shuffle": {
         //     "true": ""
@@ -190,10 +191,11 @@
         //     "paused": "",
         //     "playing": ""
         // },
+        // "return-type": "json",
+        "format": "♬ {}",
         "interval": 10,
-        "exec": "$HOME/.config/waybar/cmus.sh",
+        "exec": "cmus-remote -C 'format_print %t'",
         "exec-if": "pgrep cmus",
-        "return-type": "json",
         "on-click": "cmus-remote -u",
         "tooltip": false,
         "escape": true
