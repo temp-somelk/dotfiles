@@ -4,8 +4,8 @@ daemonize
 indicator-idle-visible
 indicator-caps-lock
 
-font=Roboto
-font-size=15
+font=SourceSansPro
+font-size=18
 image=/home/extra/Pictures/Mountains.jpg
 scaling=fill
 indicator-radius=80

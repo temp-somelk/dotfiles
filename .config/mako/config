@@ -3,7 +3,7 @@ sort=-priority
 layer=overlay
 anchor=top-right
 
-font=Roboto Regular 10
+font=SourceSansPro 10
 background-color=#222222
 text-color=#ffffff
 width=350
