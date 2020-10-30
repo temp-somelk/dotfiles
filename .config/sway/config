@@ -288,8 +288,10 @@ client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
 client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
 client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
 
-# Open specific apps on specific workspaces
+# App specific commands
 assign [app_id="firefox"] workspace 3
 assign [class="vlc"] workspace 6
+for_window [class="zoom"] inhibit_idle visible
+for_window [class="vlc"] inhibit_idle visible
 
 include /etc/sway/config.d/*
