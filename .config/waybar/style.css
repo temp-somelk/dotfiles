@@ -15,7 +15,7 @@ window#waybar.empty {background-color: transparent;}
 window#waybar.solo {background-color: #FFFFFF;}
 */
 
-#workspaces button {padding: 0 8px; color: #ffffff;}
+#workspaces button {padding: 0 8px; color: #ffffff; font-size: 16px;}
 #workspaces button:hover {background: #222222; color: #8be9fd; box-shadow: inherit; text-shadow: inherit;}
 #workspaces button.focused {background-color: #8be9fd; color: #000000;}
 #workspaces button.urgent {background-color: #ee3a3a;}
