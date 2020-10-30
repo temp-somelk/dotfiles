@@ -47,8 +47,8 @@
         "format": "{}"
     },
     "mpd": {
-        // "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
-        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {artist} - {title} ⸨{songPosition}|{queueLength}⸩",
+        // "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
+        "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {title}",
         "format-disconnected": " MPD Disconnected",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  Stopped",
         "unknown-tag": "N/A",
@@ -146,11 +146,11 @@
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": "{essid} ",
         "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": " {ifname}: {ipaddr}/{cidr}",
-        "format-linked": " {ifname} (No IP)",
+        "format-ethernet": " Wired Connection",
+        "format-linked": " Linked",
         "format-disconnected": " No Networks",
 	"format-alt": " {bandwidthDownBits} {bandwidthUpBits}",
-        // "format-alt": "{ifname}: {ipaddr}/{cidr}",
+        // "format-alt": " {ifname}: {ipaddr}/{cidr}",
 	// "max-length": 50,
 	"tooltip": false
     },
@@ -175,26 +175,40 @@
         "on-click": "pavucontrol"
     },
     "custom/cmus": {
-            "format": "♬ {}",
-            // "format": "🎜 {}",
-            "interval": 10,
-            "exec": "cmus-remote -C 'format_print %t'",
-            "exec-if": "pgrep cmus",
-            "on-click": "cmus-remote -u",
-            "tooltip": false,
-            "escape": true
-            // "max-length": 100,
-    },
-    "custom/media": {
-        "format": "{icon} {}",
+        "format": "{title}",
+        // "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
+        // "shuffle": {
+        //     "true": ""
+        // },
+        // "repeat": {
+        //     "true": ""
+        // },
+        // "repeat_current": {
+        //     "true": " 1"
+        // },
+        // "state-icons": {
+        //     "paused": "",
+        //     "playing": ""
+        // },
+        "interval": 10,
+        "exec": "$HOME/.config/waybar/cmus.sh",
+        "exec-if": "pgrep cmus",
         "return-type": "json",
-        "max-length": 40,
-        "format-icons": {
-            "spotify": "",
-            "default": "🎜"
-        },
-        "escape": true,
-        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
-        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+        "on-click": "cmus-remote -u",
+        "tooltip": false,
+        "escape": true
+        // "max-length": 100,
     }
+//    "custom/media": {
+//          "format": "{icon} {}",
+//          "return-type": "json",
+//          "max-length": 40,
+//          "format-icons": {
+//              "spotify": "",
+//              "default": "🎜"
+//          },
+//         "escape": true,
+//        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+//        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+//    }
 }
