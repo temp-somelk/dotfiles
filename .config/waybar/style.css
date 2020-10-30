@@ -62,8 +62,7 @@ label:focus {background-color: #000000;}
 #idle_inhibitor.activated {background-color: #8be9fd; color: #000000;}
 #temperature.critical {background-color: #ee3a3a;}
 
-#network.disconnected {color: #666666;}
-#pulseaudio.muted {color: #666666;}
+#network.disconnected, #pulseaudio.muted {color: #666666;}
 
 #tray {background-color: #ffffff; color: #000000;}
 
@@ -71,9 +70,7 @@ label:focus {background-color: #000000;}
 #custom-media {background-color: #66cc99; color: #2a5c45; min-width: 100px;}
 #custom-media.custom-spotify {background-color: #66cc99;}
 #custom-media.custom-vlc {background-color: #ffa000;}
-
 #custom-cmus {color: #fffffff;}
-
 #mpd.disconnected {color: #666666;}
 #mpd.stopped {color: #666666;}
 */
