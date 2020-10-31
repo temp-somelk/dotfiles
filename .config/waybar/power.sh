@@ -1,1 +1,1 @@
-swaynag -t warning -m 'Power Menu Options' -b "Lock" "swaylock" -b "Logout" "swaymsg exit" -b "Suspend" "systemctl suspend" -b "Reboot" "systemctl reboot" -b "Shutdown" "systemctl shutdown -i"
+swaynag -t warning -m 'Power Menu Options' -Z "Lock" "swaylock" -Z "Logout" "swaymsg exit" -Z "Suspend" "systemctl suspend" -Z "Reboot" "systemctl reboot" -Z "Shutdown" "systemctl shutdown -i"
