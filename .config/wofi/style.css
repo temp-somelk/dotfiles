@@ -2,6 +2,6 @@
 #outer-box {background-color: #222222; color: #ffffff;}
 
 /* unable to disable borders for searchbox, so adding boder settings */
-#input {background-color: #222222; color: #ffffff; border-radius: 0px; border-width: 0px}
+#input {background-color: #222222; color: #ffffff; border-radius: 0px; border-width: 2px; border-color: #222222;}
 #entry:selected {background-color: #8be9fd;}
 #text:selected {color: #000000;}
