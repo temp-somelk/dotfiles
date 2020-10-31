@@ -10,6 +10,7 @@
 .config/*
 !.config/sway
 !.config/swaylock
+!.config/swaynag
 !.config/waybar
 !.config/mako
 !.config/wofi
