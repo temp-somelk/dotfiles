@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["sway/window"],
-    "modules-right": ["custom/cmus", "network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "clock", "tray"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "clock", "tray", "custom/power"],
     // Modules configuration
     "sway/workspaces": {
          "disable-scroll": false,
@@ -174,33 +174,36 @@
         "tooltip": false,
         "on-click": "pavucontrol"
     },
-    "custom/cmus": {
-        // "format": "{text}",
-        // "exec": "$HOME/.config/waybar/cmus2.sh",
-        // "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
-        // "shuffle": {
-        //     "true": ""
-        // },
-        // "repeat": {
-        //     "true": ""
-        // },
-        // "repeat_current": {
-        //     "true": " 1"
-        // },
-        // "state-icons": {
-        //     "paused": "",
-        //     "playing": ""
-        // },
-        // "return-type": "json",
-        "format": "♬ {}",
-        "interval": 10,
-        "exec": "cmus-remote -C 'format_print %t'",
-        "exec-if": "pgrep cmus",
-        "on-click": "cmus-remote -u",
-        "tooltip": false,
-        "escape": true
-        // "max-length": 100,
+    "custom/power": {
+        "format":"",
+        "on-click": "$HOME/.config/waybar/power.sh",
+        "tooltip": false
     }
+
+//      "custom/cmus": {
+//         "exec": "$HOME/.config/waybar/cmus.sh",
+//         "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
+//         "shuffle": {
+//             "true": ""
+//         },
+//         "repeat": {
+//             "true": ""
+//         },
+//         "repeat_current": {
+//             "true": " 1"
+//         },
+//         "state-icons": {
+//             "paused": "",
+//             "playing": ""
+//         },
+//         "return-type": "json",
+//         "interval": 10,
+//         "exec-if": "pgrep cmus",
+//         "on-click": "cmus-remote -u",
+//         "tooltip": false,
+//         "escape": true
+//         "max-length": 100,
+//     }
 //    "custom/media": {
 //          "format": "{icon} {}",
 //          "return-type": "json",
@@ -213,4 +216,5 @@
 //        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
 //        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
 //    }
+
 }
