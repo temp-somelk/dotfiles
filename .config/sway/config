@@ -75,6 +75,7 @@ input "type:keyboard" {
 
     # Kill focused window
     bindsym $mod+Shift+q kill
+    bindsym button2 kill
 
     # Start your launcher
     bindsym $mod+d exec $menu
@@ -116,6 +117,9 @@ input "type:keyboard" {
     bindsym $mod+Shift+Right move right
 
 # Workspaces:
+    # Next and Previous workspace
+    bindsym $mod+Tab workspace next
+    bindsym $mod+Shift+Tab workspace prev
     # Switch to workspace
     bindsym $mod+1 workspace number 1
     bindsym $mod+2 workspace number 2
@@ -180,6 +184,7 @@ input "type:keyboard" {
 
     # Toggle the current focus between tiling and floating mode
     bindsym $mod+Shift+space floating toggle
+    bindsym button3 floating toggle
 
     # Swap focus between the tiling area and the floating area
     bindsym $mod+space focus mode_toggle
@@ -221,7 +226,7 @@ mode "Resize" {
 }
 bindsym $mod+r mode "Resize"
 
-# Volume and Brightness
+# Volume, Media and Brightness
 bindsym --locked XF86AudioRaiseVolume exec amixer sset Master 5%+
 bindsym --locked XF86AudioLowerVolume exec amixer sset Master 5%-
 bindsym --locked Shift+XF86AudioRaiseVolume exec amixer sset Master 2%+
@@ -237,7 +242,7 @@ bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Screenshots
-bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s.png')
+bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshots/
 # bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
 # bindsym Shift+Print exec grim -g "$(slurp)" grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
 # bindsym Ctrl+Print exec grim - | wl-copy
