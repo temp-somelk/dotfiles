@@ -297,6 +297,7 @@ client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
 assign [app_id="firefox"] workspace 3
 assign [class="vlc"] workspace 6
 for_window [class="zoom"] inhibit_idle visible
+for_window [workspace=3] layout stacking
 # for_window [class="vlc"] inhibit_idle visible
 
 include /etc/sway/config.d/*
