@@ -173,19 +173,19 @@
         "on-click": "pavucontrol"
     },
 
-    "custom/weather": {
-        "format": {},
-        "exec": "curl 'https://wttr.in/?format=1'",
-        "interval": 3600,
-        "tooltip": false
-    },
-
     "custom/power": {
         "format":"",
         "on-click": "$HOME/.config/waybar/power.sh",
         "tooltip": false
     }
 
+//     "custom/weather": {
+//         "format": {},
+//         "exec": "$HOME/.config/waybar/weather.sh",
+//         "interval": 3600,
+//         "tooltip": false
+//     },
+//
 //      "custom/cmus": {
 //         "exec": "$HOME/.config/waybar/cmus.sh",
 //         "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
