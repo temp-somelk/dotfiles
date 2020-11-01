@@ -67,7 +67,6 @@ label:focus {background-color: #000000;}
 #network.disconnected, #pulseaudio.muted {color: #666666;}
 #tray {background-color: #ffffff; color: #000000;}
 
-#custom-screencast {color: #ee3a3a;}
 
 /*
 #custom-media {background-color: #66cc99; color: #2a5c45; min-width: 100px;}
@@ -76,4 +75,5 @@ label:focus {background-color: #000000;}
 #custom-cmus {color: #fffffff;}
 #mpd.disconnected {color: #666666;}
 #mpd.stopped {color: #666666;}
+#custom-screencast {color: #ee3a3a;}
 */
