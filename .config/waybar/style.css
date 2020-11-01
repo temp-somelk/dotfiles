@@ -16,10 +16,10 @@ window#waybar.empty {background-color: transparent;}
 window#waybar.solo {background-color: #FFFFFF;}
 */
 
-#workspaces button {color: #8be9fd; font-size: 20px; padding: 0 8px;}
+#workspaces button {color: #9cffa2; font-size: 20px; padding: 0 8px;}
 #workspaces button.persistent {color: #ffffff}
 #workspaces button:hover {background: #ffffff; color: #000000; box-shadow: inherit; text-shadow: inherit;}
-#workspaces button.focused {background-color: #8be9fd; color: #000000;}
+#workspaces button.focused {background-color: #9cffa2; color: #000000;}
 #workspaces button.urgent {background-color: #ee3a3a; color: #ffffff;}
 /* for  #workspaces button:hover use background not background-color */
 
@@ -40,7 +40,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 #idle_inhibitor,
 #mpd {padding: 0 8px}
 
-#battery.charging {color: #8be9fd;}
+#battery.charging {color: #9cffa2;}
 #battery.warning:not(.charging) {background-color: #f1fa8c; color: #000000;}
 /* #battery.warning {color: #ef6f22;} */
 /* #battery.caution {bacground-color: #efef00;} */
@@ -62,7 +62,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 }
 
 label:focus {background-color: #000000;}
-#idle_inhibitor.activated {background-color: #8be9fd; color: #000000;}
+#idle_inhibitor.activated {background-color: #9cffa2; color: #000000;}
 #temperature.critical {background-color: #ee3a3a;}
 #network.disconnected, #pulseaudio.muted {color: #666666;}
 #tray {background-color: #ffffff; color: #000000;}
