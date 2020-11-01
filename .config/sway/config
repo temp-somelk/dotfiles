@@ -24,7 +24,7 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /home/extra/Pictures/Mountains.jpg fill
+output * bg $HOME/Pictures/Wallpapers/feather.png fill
 #
 # Example configuration:
 #
@@ -242,10 +242,16 @@ bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Screenshots
-bindsym Print exec grim $(xdg-user-dir PICTURES)/Screenshots/
-# bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
-# bindsym Shift+Print exec grim -g "$(slurp)" grim $(xdg-user-dir PICTURES)/Screenshots/$(date +'%s_grim.png')
-# bindsym Ctrl+Print exec grim - | wl-copy
+bindsym Print exec grim $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
+bindsym $mod+Print exec grim -g "$(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"')" $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
+bindsym $mod+Shift+Print exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
+bindsym $mod+Ctrl+Print exec grim - | wl-copy
+bindsym $mod+Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
+
+# Screencasts
+bindsym $mod+F10 exec wf-recorder -a -f $HOME/Videos/Screencasts/$(date +'%F_%T.mp4')
+bindsym $mod+Shift+F10 exec wf-recorder -g "$(slurp)" -a -f $HOME/Videos/Screencasts/$(date +'%F_%T.mp4')
+bindsym $mod+Escape exec killall -s SIGINT wf-recorder
 
 # Power Options
 set $mode_system (l)ock (e)Logout (s)uspend (R)eboot, (S)hutdown
@@ -288,7 +294,7 @@ workspace 5 gaps inner 10
 workspace 6 gaps outer -10
 workspace 6 gaps inner 10
 # class                 border  backgr. text    indicator child_border
-client.focused          #8be9fd #8be9fd #000000 #ffffff   #8be9fd
+client.focused          #9cffa2 #9cffa2 #000000 #ffffff   #9cffa2
 client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
 client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
 client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
@@ -297,7 +303,7 @@ client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
 assign [app_id="firefox"] workspace 3
 assign [class="vlc"] workspace 6
 for_window [class="zoom"] inhibit_idle visible
+for_window [class="vlc"] inhibit_idle visible
 for_window [workspace=3] layout stacking
-# for_window [class="vlc"] inhibit_idle visible
 
 include /etc/sway/config.d/*
