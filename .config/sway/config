@@ -24,7 +24,7 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/Pictures/Wallpapers/feather.png fill
+output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
 #
 # Example configuration:
 #
@@ -294,7 +294,7 @@ workspace 5 gaps inner 10
 workspace 6 gaps outer -10
 workspace 6 gaps inner 10
 # class                 border  backgr. text    indicator child_border
-client.focused          #9cffa2 #9cffa2 #000000 #ffffff   #9cffa2
+client.focused          #9cffa2 #9cffa2 #000000 #ffffff   #222222
 client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
 client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
 client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
