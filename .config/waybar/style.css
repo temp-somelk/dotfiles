@@ -33,6 +33,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #pulseaudio,
 #custom-cmus,
 #custom-power,
+#custom-weather
+#custom-screencast
 #tray,
 #mode,
 #idle_inhibitor,
@@ -62,10 +64,10 @@ window#waybar.solo {background-color: #FFFFFF;}
 label:focus {background-color: #000000;}
 #idle_inhibitor.activated {background-color: #8be9fd; color: #000000;}
 #temperature.critical {background-color: #ee3a3a;}
-
 #network.disconnected, #pulseaudio.muted {color: #666666;}
-
 #tray {background-color: #ffffff; color: #000000;}
+
+#custom-screencast {color: #ee3a3a;}
 
 /*
 #custom-media {background-color: #66cc99; color: #2a5c45; min-width: 100px;}

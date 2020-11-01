@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["custom/weather"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "clock", "tray", "custom/power"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/power"],
 
     "sway/workspaces": {
          "disable-scroll": false,
@@ -179,6 +179,15 @@
         "tooltip": false
     }
 
+//     "custom/screencast": {
+//         "format": "{}",
+//         "exec": "echo  Recording",
+//         "exec-if": "pgrep wf-recorder",
+//         "interval": 10,
+//         "on-click": "killall -s SIGINT wf-recorder",
+//         "tooltip": false
+//     }
+//
 //     "custom/weather": {
 //         "format": {},
 //         "exec": "$HOME/.config/waybar/weather.sh",
@@ -186,6 +195,7 @@
 //         "tooltip": false
 //     },
 //
+// This cmus module does't work for now, since waybar doesn't accept custom json formatting
 //      "custom/cmus": {
 //         "exec": "$HOME/.config/waybar/cmus.sh",
 //         "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
