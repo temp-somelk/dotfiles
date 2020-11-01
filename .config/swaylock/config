@@ -31,7 +31,7 @@ line-wrong-color=00000000
 ring-color=222222
 ring-clear-color=ffffff
 ring-caps-lock-color=222222
-ring-ver-color=9cffa2
+ring-ver-color=8be9fd
 ring-wrong-color=ee3a3a
 
 separator-color=00000000
@@ -39,7 +39,7 @@ separator-color=00000000
 text-color=222222
 text-clear-color=00000000
 text-caps-lock-color=222222
-text-ver-color=222222
+text-ver-color=00000000
 text-wrong-color=00000000
 
 layout-bg-color=00000000
