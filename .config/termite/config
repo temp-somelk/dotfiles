@@ -43,10 +43,10 @@ scrollbar = off
 [colors]
 
 # special
-foreground      = #eeeeee
+foreground      = #dddddd
 foreground_bold = #ffffff
 cursor          = #ffffff
-cursor_foreground = #282a36
+cursor_foreground = #000000
 background      = #000000
 
 # black
