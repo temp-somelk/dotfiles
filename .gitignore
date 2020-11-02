@@ -18,4 +18,5 @@
 !.config/gammastep
 !.config/cmus
 .config/cmus/*
-!.config/cmus/lime.theme
+!.config/cmus/green.theme
+!.config/cmus/green-minimal.theme
