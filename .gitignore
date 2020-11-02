@@ -18,5 +18,4 @@
 !.config/gammastep
 !.config/cmus
 .config/cmus/*
-!.config/cmus/rc
 !.config/cmus/lime.theme
