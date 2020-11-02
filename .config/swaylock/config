@@ -6,8 +6,7 @@ indicator-caps-lock
 
 font=SourceSansPro
 font-size=18
-image=/home/extra/Pictures/Mountains.jpg
-scaling=fill
+color=666666
 indicator-radius=80
 indicator-thickness=20
 
