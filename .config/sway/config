@@ -246,7 +246,7 @@ bindsym Print exec grim $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
 bindsym $mod+Shift+Print exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
 bindsym $mod+Ctrl+Print exec grim - | wl-copy
 bindsym $mod+Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
-bindsym $mod+Print exec grim -g $(swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"') $HOME/Pictures/Screenshots/$(date +'%F_%T.png')"
+bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
 
 # Screencasts
 bindsym $mod+F10 exec wf-recorder --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F_%T.mp4')
