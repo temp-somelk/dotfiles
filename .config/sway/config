@@ -297,7 +297,7 @@ workspace 6 gaps inner 10
 client.focused          #9cffa2 #9cffa2 #000000 #ffffff   #222222
 client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
 client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
-client.urgent           #ee3a3a #ee3a3a #000000 #ffffff   #ee3a3a
+client.urgent           #ee3a3a #ee3a3a #ffffff #ffffff   #ee3a3a
 
 # App specific commands
 assign [app_id="firefox"] workspace 3
