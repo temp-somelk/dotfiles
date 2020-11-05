@@ -24,8 +24,7 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-# output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
-exec $HOME/.config/custom_scripts/wallpaper.sh
+output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
 #
 # Example configuration:
 #
