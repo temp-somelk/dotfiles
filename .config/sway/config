@@ -24,7 +24,7 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
+output * bg /usr/share/backgrounds/archlinux/wirefeather.png fill
 #
 # Example configuration:
 #
@@ -254,7 +254,7 @@ bindsym $mod+Shift+F10 exec wf-recorder -g "$(slurp)" --audio="$(pactl list sour
 bindsym $mod+Escape exec killall -s SIGINT wf-recorder
 
 # Power Options
-set $mode_system (l)ock (e)Logout (s)uspend (R)eboot, (S)hutdown
+set $mode_system (l)ock (s)uspend (e)Logout (R)eboot, (S)hutdown
 mode "$mode_system" {
     bindsym l exec swaylock, mode "default"
     bindsym e exec swaymsg exit, mode "default"
