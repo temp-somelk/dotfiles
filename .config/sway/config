@@ -258,8 +258,8 @@ set $mode_system (l)ock (s)uspend (e)Logout (R)eboot, (S)hutdown
 mode "$mode_system" {
     bindsym l exec swaylock, mode "default"
     bindsym e exec swaymsg exit, mode "default"
-    bindsym s exec systemctl suspend, mode "default"
-    bindsym Shift+r exec systemctl reboot, mode "default"
+    bindsym s exec systemctl suspend -i, mode "default"
+    bindsym Shift+r exec systemctl reboot -i, mode "default"
     bindsym Shift+s exec systemctl poweroff -i, mode "default"  
 
     # back to normal: Enter or Escape
