@@ -24,7 +24,8 @@ set $menu wofi
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg /usr/share/backgrounds/archlinux/"$(shuf -n1 -e 'geowaves.png' 'geolanes.png' 'wirefeather.png' 'wireparts.png' 'wild.png')" fill
+# output * bg /usr/share/backgrounds/archlinux/"$(shuf -n1 -e 'geowaves.png' 'geolanes.png' 'wirefeather.png' 'wireparts.png' 'wild.png')" fill
+output * bg /usr/share/backgrounds/archlinux/wireparts.png fill
 #
 # Example configuration:
 #
