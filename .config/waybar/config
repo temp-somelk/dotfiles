@@ -10,6 +10,7 @@
          "disable-scroll": false,
          "disable-scroll-wraparound": true,
          "enable-bar-scroll": false,
+         "smooth-scrolling-threshold": 1,
          "all-outputs": true,
          "persistent_workspaces": {
              "1": [],
