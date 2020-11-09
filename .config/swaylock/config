@@ -6,7 +6,7 @@ indicator-caps-lock
 
 font=SourceSansPro
 font-size=18
-color=666666
+color=000000
 indicator-radius=80
 indicator-thickness=20
 
@@ -35,12 +35,12 @@ ring-wrong-color=ee3a3a
 
 separator-color=00000000
 
-text-color=222222
+text-color=ffffff
 text-clear-color=00000000
-text-caps-lock-color=222222
+text-caps-lock-color=ffffff
 text-ver-color=00000000
 text-wrong-color=00000000
 
 layout-bg-color=00000000
 layout-border-color=00000000
-layout-text-color=222222
+layout-text-color=ffffff
