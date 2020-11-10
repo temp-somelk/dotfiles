@@ -277,9 +277,7 @@ exec mako
 exec gammastep
 
 # Status Bar
-bar {
-      swaybar_command waybar
-}
+exec waybar
 
 font pango:SourceSansPro 10
 
