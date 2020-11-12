@@ -25,7 +25,8 @@ set $menu wofi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/archlinux/"$(shuf -n1 -e 'geowaves.png' 'geolanes.png' 'wirefeather.png' 'wireparts.png' 'wild.png')" fill
-output * bg $HOME/Pictures/Wallpapers2/Forest7.JPG fill
+# output * bg $HOME/Pictures/Wallpapers2/Forest7.JPG fill
+output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
 #
 # Example configuration:
 #
@@ -277,7 +278,10 @@ exec mako
 exec gammastep
 
 # Status Bar
-exec waybar
+# exec waybar
+bar {
+    status_command waybar
+}
 
 font pango:SourceSansPro 10
 
@@ -293,7 +297,7 @@ workspace 5 gaps inner 10
 workspace 6 gaps outer -10
 workspace 6 gaps inner 10
 # class                 border  backgr. text    indicator child_border
-client.focused          #eecc6c #eecc6c #000000 #c1c1c1   #333333
+client.focused          #c1c1c1 #c1c1c1 #000000 #c1c1c1   #333333
 client.focused_inactive #333333 #333333 #c1c1c1 #c1c1c1   #333333
 client.unfocused        #333333 #333333 #c1c1c1 #c1c1c1   #333333
 client.urgent           #a06666 #a06666 #ffffff #c1c1c1   #a06666
