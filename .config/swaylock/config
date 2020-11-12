@@ -16,10 +16,10 @@ inside-caps-lock-color=00000000
 inside-ver-color=00000000
 inside-wrong-color=00000000
 
-key-hl-color=ffffff
-bs-hl-color=5f8787
-caps-lock-bs-hl-color=5f8787
-caps-lock-key-hl-color=eecc6c
+key-hl-color=9cffa2
+bs-hl-color=ffffff
+caps-lock-bs-hl-color=ffffff
+caps-lock-key-hl-color=f1fa8c
 
 line-color=00000000
 line-clear-color=00000000
@@ -27,20 +27,20 @@ line-caps-lock-color=00000000
 line-ver-color=00000000
 line-wrong-color=00000000
 
-ring-color=333333
-ring-clear-color=5f8787
-ring-caps-lock-color=333333
-ring-ver-color=ffffff
-ring-wrong-color=a06666
+ring-color=222222
+ring-clear-color=ffffff
+ring-caps-lock-color=222222
+ring-ver-color=8fa5ff
+ring-wrong-color=ee3a3a
 
 separator-color=00000000
 
-text-color=c1c1c1
+text-color=ffffff
 text-clear-color=00000000
-text-caps-lock-color=c1c1c1
+text-caps-lock-color=ffffff
 text-ver-color=00000000
 text-wrong-color=00000000
 
 layout-bg-color=00000000
 layout-border-color=00000000
-layout-text-color=c1c1c1
+layout-text-color=ffffff

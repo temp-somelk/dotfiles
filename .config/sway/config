@@ -25,8 +25,7 @@ set $menu wofi
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/archlinux/"$(shuf -n1 -e 'geowaves.png' 'geolanes.png' 'wirefeather.png' 'wireparts.png' 'wild.png')" fill
-# output * bg $HOME/Pictures/Wallpapers2/Forest7.JPG fill
-output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
+output * bg $HOME/Pictures/Wallpapers2/Forest7.JPG fill
 #
 # Example configuration:
 #
@@ -294,10 +293,10 @@ workspace 5 gaps inner 10
 workspace 6 gaps outer -10
 workspace 6 gaps inner 10
 # class                 border  backgr. text    indicator child_border
-client.focused          #c1c1c1 #c1c1c1 #000000 #c1c1c1   #333333
-client.focused_inactive #333333 #333333 #c1c1c1 #c1c1c1   #333333
-client.unfocused        #333333 #333333 #c1c1c1 #c1c1c1   #333333
-client.urgent           #a06666 #a06666 #ffffff #c1c1c1   #a06666
+client.focused          #9cffa2 #9cffa2 #000000 #ffffff   #222222
+client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
+client.unfocused        #222222 #222222 #ffffff #aaaaaa   #222222
+client.urgent           #ee3a3a #ee3a3a #ffffff #ffffff   #ee3a3a
 
 # App specific commands
 assign [app_id="firefox"] workspace 3

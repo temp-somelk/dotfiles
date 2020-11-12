@@ -11,16 +11,16 @@ button-dismiss-gap=0
 button-margin-right=7
 
 [message]
-text=c1c1c1
-background=333333
-button-background=333333
+text=ffffff
+background=666666
+button-background=666666
 
 [warning]
 text=000000
-background=eecc6c
-button-background=eecc6c
+background=f1fa8c
+button-background=f1fa8c
 
 [error]
 text=ffffff
-background=a06666
-button-background=a06666
+background=ee3a3a
+button-background=ee3a3a

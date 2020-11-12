@@ -8,7 +8,7 @@
     min-height: 0;
 }
 
-window#waybar {background-color: #000000; color: #c1c1c1;}
+window#waybar {background-color: #000000; color: #ffffff;}
 
 /*
 window#waybar.hidden {opacity: 0.2;}
@@ -16,11 +16,11 @@ window#waybar.empty {background-color: transparent;}
 window#waybar.solo {background-color: #FFFFFF;}
 */
 
-#workspaces button {color: #c1c1c1; font-size: 20px; padding: 0 8px;}
-#workspaces button.persistent {color: #333333;}
-#workspaces button:hover {background: #000000; color: #c1c1c1; box-shadow: inherit; text-shadow: inherit;}
-#workspaces button.focused {background-color: #c1c1c1; color: #000000;}
-#workspaces button.urgent {background-color: #a06666; color: #ffffff;}
+#workspaces button {color: #9cffa2; font-size: 20px; padding: 0 8px;}
+#workspaces button.persistent {color: #ffffff}
+#workspaces button:hover {background: #ffffff; color: #000000; box-shadow: inherit; text-shadow: inherit;}
+#workspaces button.focused {background-color: #9cffa2; color: #000000;}
+#workspaces button.urgent {background-color: #ee3a3a; color: #ffffff;}
 /* for  #workspaces button:hover use background not background-color */
 
 #clock,
@@ -40,8 +40,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #idle_inhibitor,
 #mpd {padding: 0 8px}
 
-#battery.charging {color: #5f8787;}
-#battery.warning:not(.charging) {background-color: #eecc6c; color: #000000;}
+#battery.charging {color: #9cffa2;}
+#battery.warning:not(.charging) {background-color: #f1fa8c; color: #000000;}
 /* #battery.warning {color: #ef6f22;} */
 /* #battery.caution {bacground-color: #efef00;} */
 
@@ -52,7 +52,7 @@ window#waybar.solo {background-color: #FFFFFF;}
     }
 }
 #battery.critical:not(.charging) {
-    background-color: #a06666;
+    background-color: #ee3a3a;
     color: #ffffff;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -62,9 +62,9 @@ window#waybar.solo {background-color: #FFFFFF;}
 }
 
 label:focus {background-color: #000000;}
-#idle_inhibitor.activated {background-color: #ffffff; color: #000000;}
-#temperature.critical {background-color: #a06666;}
-#network.disconnected, #pulseaudio.muted {color: #333333;}
+#idle_inhibitor.activated {background-color: #9cffa2; color: #000000;}
+#temperature.critical {background-color: #ee3a3a;}
+#network.disconnected, #pulseaudio.muted {color: #666666;}
 #tray {background-color: #ffffff; color: #000000;}
 
 

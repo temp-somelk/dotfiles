@@ -4,7 +4,7 @@ layer=overlay
 anchor=top-right
 
 font=SourceSansPro 10
-background-color=#c1c1c1
+background-color=#9cffa2
 text-color=#000000
 width=350
 height=150
@@ -28,15 +28,15 @@ format=(%g) <small>%a</small>\n<b>%s</b>\n\n%b
 format=%h more notifications. %t total.
 
 # [hidden urgency="high"]
-# background-color=#a06666
+# background-color=#ee3a3a
 # format=%h more notifications. %t total.
 
 [urgency="high"]
-background-color=#a06666
+background-color=#ee3a3a
 text-color=#ffffff
 format=<small>%a</small>\n<b>%s</b>\n\n%b
 
 [urgency="high" grouped]
-background-color=#a06666
+background-color=#ee3a3a
 text-color=#ffffff
 format=(%g) <small>%a</small>\n<b>%s</b>\n\n%b
