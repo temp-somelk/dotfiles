@@ -1,7 +1,7 @@
-#window {background-color: #222222; color: #ffffff; border-style: none; font-family: SourceSansPro; font-size: 14px;}
-#outer-box {background-color: #222222; color: #ffffff;}
+#window {background-color: #3b4252; color: #d8dee9; border-style: none; font-family: SourceSansPro; font-size: 14px;}
+#outer-box {background-color: #3b4252; color: #d8dee9;}
 
 /* unable to disable borders for searchbox and entry, so adding boder settings */
-#input {background-color: #222222; color: #ffffff; border-radius: 0px; border-width: 2px; border-color: #222222;}
-#entry:selected {background-color: #9cffa2; border-radius: 0px;}
-#text:selected {color: #000000;}
+#input {background-color: #3b4252; color: #d8dee9; border-radius: 0px; border-width: 2px; border-color: #3b4252;}
+#entry:selected {background-color: #8fbcbb; border-radius: 0px;}
+#text:selected {color: #2e3440;}

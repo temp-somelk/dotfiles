@@ -41,45 +41,31 @@ modify_other_keys = true
 scrollbar = off
 
 [colors]
+cursor = #d8dee9
+cursor_foreground = #2e3440
 
-# special
-foreground      = #dddddd
-foreground_bold = #ffffff
-cursor          = #ffffff
-cursor_foreground = #000000
-background      = #000000
+foreground = #d8dee9
+foreground_bold = #d8dee9
+background = #2e3440
 
-# black
-color0  = #222222
-color8  = #666666
+highlight = #4c566a
 
-# red
-color1  = #ee3a3a
-color9  = #ee3a3a
-
-# green
-color2  = #9cffa2
-color10 = #9cffa2
-
-# yellow
-color3  = #f1fa8c
-color11 = #f1fa8c
-
-# blue
-color4  = #8fa5ff
-color12 = #8fa5ff
-
-# magenta
-color5  = #deb3ff
-color13 = #deb3ff
-
-# cyan
-color6  = #8be9fd
-color14 = #8be9fd
-
-# white
-color7  = #dddddd
-color15 = #ffffff
+color0  = #3b4252
+color1  = #bf616a
+color2  = #a3be8c
+color3  = #ebcb8b
+color4  = #81a1c1
+color5  = #b48ead
+color6  = #88c0d0
+color7  = #e5e9f0
+color8  = #4c566a
+color9  = #bf616a
+color10 = #a3be8c
+color11 = #ebcb8b
+color12 = #81a1c1
+color13 = #b48ead
+color14 = #8fbcbb
+color15 = #eceff4
 
 [hints]
 #font = Monospace 12
