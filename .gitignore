@@ -6,6 +6,7 @@
 !.zprofile
 !.zcompdump
 !.p10k.zsh
+!.themes/
 !.config/
 .config/*
 !.config/sway
