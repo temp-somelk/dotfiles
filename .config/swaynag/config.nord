@@ -1,0 +1,26 @@
+edge=top
+font=SourceSansPro 10
+dismiss-button=
+border-bottom-size=0
+details-border-size=0
+button-border-size=0
+message-padding=4
+button-padding=4
+button-gap=20
+button-dismiss-gap=0
+button-margin-right=7
+
+[message]
+text=3b4252
+background=eceff4
+button-background=eceff4
+
+[warning]
+text=3b4252
+background=ebcb8b
+button-background=ebcb8b
+
+[error]
+text=3b4252
+background=bf616a
+button-background=bf616a
