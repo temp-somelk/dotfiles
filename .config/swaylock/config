@@ -6,9 +6,9 @@ indicator-caps-lock
 
 font=SourceSansPro
 font-size=18
-color=2e3440
 indicator-radius=80
 indicator-thickness=20
+color=000000
 
 inside-color=00000000
 inside-clear-color=00000000
@@ -16,10 +16,10 @@ inside-caps-lock-color=00000000
 inside-ver-color=00000000
 inside-wrong-color=00000000
 
-key-hl-color=8fbcbb
-bs-hl-color=eceff4
-caps-lock-bs-hl-color=eceff4
-caps-lock-key-hl-color=f1fa8c
+key-hl-color=d0ff36
+caps-lock-key-hl-color=ffa51f
+bs-hl-color=ffffff
+caps-lock-bs-hl-color=ffffff
 
 line-color=00000000
 line-clear-color=00000000
@@ -27,20 +27,20 @@ line-caps-lock-color=00000000
 line-ver-color=00000000
 line-wrong-color=00000000
 
-ring-color=3b4252
-ring-clear-color=eceff4
-ring-caps-lock-color=3b4252
-ring-ver-color=8fbcbb
-ring-wrong-color=bf616a
+ring-color=222222
+ring-caps-lock-color=222222
+ring-clear-color=ffffff
+ring-ver-color=d0ff36
+ring-wrong-color=ff173e
 
 separator-color=00000000
 
-text-color=3b4252
+text-color=ffffff
+text-caps-lock-color=ffffff
 text-clear-color=00000000
-text-caps-lock-color=3b4252
 text-ver-color=00000000
 text-wrong-color=00000000
 
 layout-bg-color=00000000
 layout-border-color=00000000
-layout-text-color=3b4252
+layout-text-color=ffffff
