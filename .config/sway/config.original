@@ -199,11 +199,11 @@ input "type:keyboard" {
     # You can send windows there and get them back later.
 
     # Move the currently focused window to the scratchpad
-    bindsym $mod+Shift+minus move scratchpad
+    bindsym $mod+Shift+grave move scratchpad
 
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
-    bindsym $mod+minus scratchpad show
+    bindsym $mod+grave scratchpad show
 
 # Resizing containers:
 mode "Resize" {
@@ -281,17 +281,23 @@ exec waybar
 
 font pango:SourceSansPro 10
 
-# Borders and Gaps
+# Gaps
 # exec swaymsg border normal
+bindsym $mod+equal gaps outer current plus 15
+bindsym $mod+minus gaps outer current minus 15
+bindsym $mod+Shift+equal gaps inner current plus 15
+bindsym $mod+Shift+minus gaps inner current minus 15
 gaps inner 15
 gaps outer 15
 # workspace 3,5,6 gaps outer,inner 0
-workspace 3 gaps outer -10
-workspace 3 gaps inner 10
-workspace 5 gaps outer -10
-workspace 5 gaps inner 10
-workspace 6 gaps outer -10
-workspace 6 gaps inner 10
+workspace 3 gaps outer 0
+workspace 3 gaps inner 0
+workspace 5 gaps outer 0
+workspace 5 gaps inner 0
+workspace 6 gaps outer 0
+workspace 6 gaps inner 0
+
+# Window Colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #9cffa2 #9cffa2 #000000 #ffffff   #222222
 client.focused_inactive #222222 #222222 #ffffff #aaaaaa   #222222
@@ -304,6 +310,8 @@ assign [class="vlc"] workspace 6
 for_window [class="zoom"] inhibit_idle visible
 for_window [class="vlc"] inhibit_idle visible
 for_window [workspace=3] layout tabbed
+for_window [workspace=5] layout tabbed
 for_window [workspace=6] layout tabbed
+for_window [workspace=10] floating enabled
 
 include /etc/sway/config.d/*
