@@ -306,5 +306,5 @@ for_window [workspace=5] layout tabbed
 for_window [workspace=6] layout tabbed
 for_window [workspace=10] floating enabled
 
-include config.nord
+include config.lime
 include /etc/sway/config.d/*
