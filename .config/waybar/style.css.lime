@@ -33,8 +33,10 @@ window#waybar.solo {background-color: #FFFFFF;}
 #pulseaudio,
 #custom-cmus,
 #custom-power,
-#custom-weather
-#custom-screencast
+#custom-applauncher,
+#custom-clipman,
+#custom-weather,
+#custom-screencast,
 #tray,
 #mode,
 #idle_inhibitor,
