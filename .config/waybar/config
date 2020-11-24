@@ -34,7 +34,7 @@
              "6": "",
              "7": "",
              "8": "",
-             // "9": "",
+             "9": "",
              "10": "", // "",
              "urgent": "",
              "default": "",
@@ -178,8 +178,20 @@
         "format":"",
         "on-click": "$HOME/.config/waybar/power.sh",
         "tooltip": false
-    }
+    },
 
+    "custom/clipman": {
+        "format": "",
+        "on-click": "clipman",
+        "tooltip": false
+    },
+
+    "custom/applauncher": {
+        "format": "",
+        "on-clcik": "wofi",
+        "tooltip": false
+    }
+//
 //     "custom/screencast": {
 //         "format": "{}",
 //         "exec": "echo  Recording",
@@ -187,7 +199,7 @@
 //         "interval": 10,
 //         "on-click": "killall -s SIGINT wf-recorder",
 //         "tooltip": false
-//     }
+//     },
 //
 //     "custom/weather": {
 //         "format": {},
