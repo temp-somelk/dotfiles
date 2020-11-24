@@ -182,13 +182,13 @@
 
     "custom/clipman": {
         "format": "",
-        "on-click": "clipman",
+        "on-click": "clipman pick -t wofi",
         "tooltip": false
     },
 
     "custom/applauncher": {
         "format": "",
-        "on-clcik": "wofi --show run",
+        "on-click": "wofi",
         "tooltip": false
     }
 //

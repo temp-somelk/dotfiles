@@ -278,6 +278,11 @@ exec gammastep
 # Status Bar
 exec waybar
 
+# Clipboard Manager
+exec wl-paste -t text --watch clipman store
+exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
+bindsym $mod+z exec clipman pick -t wofi
+
 font pango:SourceSansPro 10
 
 # Gaps
