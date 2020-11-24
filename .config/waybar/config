@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["custom/weather"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/power"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/clipman", "custom/applauncher", "custom/power"],
 
     "sway/workspaces": {
          "disable-scroll": false,
@@ -188,7 +188,7 @@
 
     "custom/applauncher": {
         "format": "",
-        "on-clcik": "wofi",
+        "on-clcik": "wofi --show run",
         "tooltip": false
     }
 //
