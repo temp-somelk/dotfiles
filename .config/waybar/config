@@ -4,7 +4,7 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["custom/weather"],
-    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/clipman", "custom/applauncher", "custom/power"],
+    "modules-right": ["network", "cpu", "memory", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/applauncher", "custom/power"],
 
     "sway/workspaces": {
          "disable-scroll": false,
@@ -180,17 +180,17 @@
         "tooltip": false
     },
 
-    "custom/clipman": {
-        "format": "",
-        "on-click": "clipman pick -t wofi",
-        "tooltip": false
-    },
-
     "custom/applauncher": {
         "format": "",
         "on-click": "wofi",
         "tooltip": false
     }
+
+//     "custom/clipman": {
+//         "format": "",
+//         "on-click": "clipman pick -t wofi",
+//         "tooltip": false
+//     },
 //
 //     "custom/screencast": {
 //         "format": "{}",
