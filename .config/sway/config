@@ -279,9 +279,11 @@ exec gammastep
 exec waybar
 
 # Clipboard Manager
-exec wl-paste -t text --watch clipman store
+exec clipman clear -a
+exec wl-paste -t text --watch clipman store --max-items=20
 exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/clipman-primary.json"
 bindsym $mod+z exec clipman pick -t wofi
+bindsym $mod+Shift+z exec clipman clear -a
 
 font pango:SourceSansPro 10
 
