@@ -27,6 +27,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 #battery,
 #cpu,
 #memory,
+#disk,
 #temperature,
 #backlight,
 #network,
