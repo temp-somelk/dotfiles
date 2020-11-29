@@ -1,0 +1,6 @@
+# Window Colors
+# class                 border		backgr. 	text		indicator	child_border
+client.focused          #$accent	#$accent	#$text		#$white		#$gray
+client.focused_inactive #$gray		#$gray		#$text_light	#$grey		#$gray
+client.unfocused        #$gray		#$gray		#$text_light	#$grey		#$gray
+client.urgent           #$red		#$red		#$text_light	#$white		#$gray
