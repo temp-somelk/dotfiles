@@ -8,7 +8,7 @@ font=SourceSansPro
 font-size=18
 indicator-radius=80
 indicator-thickness=20
-color=$black
+color=$background
 
 inside-color=00000000
 inside-clear-color=00000000
