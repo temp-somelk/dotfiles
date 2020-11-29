@@ -41,14 +41,14 @@ modify_other_keys = true
 scrollbar = off
 
 [colors]
-cursor = $white
-cursor_foreground = $text
+cursor = #$white
+cursor_foreground = #$text
 
-foreground = $text_light
-foreground_bold = $white
-background = $background
+foreground = #$text_light
+foreground_bold = #$white
+background = #$background
 
-# highlight = $grey
+# highlight = #$grey
 
 color0  = #$black0
 color1  = #$red
