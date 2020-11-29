@@ -1,13 +1,11 @@
 {
-    "name": "", // theme name
-    // colors
+    "name": "",
     "accent": "",
     "text": "",
     "text_light": "",
     "background": "",
-    "black0": "",
 
-    // base16 colors
+    "black0": "",
     "black8": "",
     "red": "",
     "green": "",
@@ -17,7 +15,6 @@
     "cyan": "",
     "white": "",
 
-    // additional for sway borders, etc
     "gray": "",
-    "grey": "",
+    "grey": ""
 }
