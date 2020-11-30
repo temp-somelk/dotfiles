@@ -1,0 +1,8 @@
+output * bg $HOME/Pictures/Wallpapers2/Eagle.jpg fill
+
+# Window Colors
+# class                 border		backgr. 	text		indicator	child_border
+client.focused		#748F9E	#748F9E	#0f1213		#d8e5ef		#212429
+client.focused_inactive	#212429		#212429		#d8e5ef	#494f59		#212429
+client.unfocused	#212429		#212429		#d8e5ef	#494f59		#212429
+client.urgent		#c44f45		#c44f45		#d8e5ef	#d8e5ef		#212429
