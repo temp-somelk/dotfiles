@@ -1,20 +1,20 @@
 {
-    "name": "",
-    "accent": "",
-    "text": "",
-    "text_light": "",
-    "background": "",
+    "name": "misty",
+    "accent": "748F9E",
+    "text": "0f1213",
+    "text_light": "d8e5ef",
+    "background": "0f1213",
 
-    "black0": "",
-    "black8": "",
-    "red": "",
-    "green": "",
-    "yellow": "",
-    "blue": "",
-    "magenta": "",
-    "cyan": "",
-    "white": "",
+    "black0": "0f1213",
+    "black8": "97a0a",
+    "red": "7799ff",
+    "green": "748F9E",
+    "yellow": "88A4B5",
+    "blue": "97B4C6",
+    "magenta": "ABC9DA",
+    "cyan": "BAD6EA",
+    "white": "d8e5ef",
 
-    "gray": "",
-    "grey": ""
+    "gray": "9918C1",
+    "grey": "4C82DD"
 }
