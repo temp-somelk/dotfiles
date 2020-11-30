@@ -21,6 +21,6 @@ background=$yellow
 button-background=$yellow
 
 [error]
-text=$text_light
+text=$texlight
 background=$red
 button-background=$red

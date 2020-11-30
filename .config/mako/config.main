@@ -33,10 +33,10 @@ format=%h more notifications. %t total.
 
 [urgency="high"]
 background-color=#$red
-text-color=#$text_light
+text-color=#$texlight
 format=<small>%a</small>\n<b>%s</b>\n\n%b
 
 [urgency="high" grouped]
 background-color=#$red
-text-color=#$text_light
+text-color=#$texlight
 format=(%g) <small>%a</small>\n<b>%s</b>\n\n%b

@@ -44,7 +44,7 @@ scrollbar = off
 cursor = #$white
 cursor_foreground = #$text
 
-foreground = #$text_light
+foreground = #$texlight
 foreground_bold = #$white
 background = #$background
 
