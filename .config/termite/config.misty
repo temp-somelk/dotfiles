@@ -50,7 +50,7 @@ background = #0f1213
 
 # highlight = #494f59
 
-color0  = #97a0a7
+color0  = #0f1213
 color1  = #c44f45
 color2  = #748F9E
 color3  = #88A4B5
@@ -58,7 +58,7 @@ color4  = #97B4C6
 color5  = #ABC9DA
 color6  = #BAD6EA
 color7  = #d8e5ef
-color8  = #$black8
+color8  = #97a0a7
 color9  = #c44f45
 color10 = #748F9E
 color11 = #88A4B5
