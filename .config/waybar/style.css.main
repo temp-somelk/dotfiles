@@ -64,7 +64,7 @@ window#waybar.solo {background-color: #FFFFFF;}
     animation-direction: alternate;
 }
 
-label:focus {background-color: #$black0;}
+label:focus {background-color: #$black;}
 #idle_inhibitor.activated {background-color: #$accent; color: #$background;}
 #temperature.critical {background-color: #$red; color: #$texlight;}
 #network.disconnected, #pulseaudio.muted {color: #$grey;}

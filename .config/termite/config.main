@@ -50,7 +50,7 @@ background = #$background
 
 # highlight = #$grey
 
-color0  = #$black0
+color0  = #$black
 color1  = #$red
 color2  = #$green
 color3  = #$yellow
@@ -58,7 +58,7 @@ color4  = #$blue
 color5  = #$magenta
 color6  = #$cyan
 color7  = #$white
-color8  = #$black8
+color8  = #$grey
 color9  = #$red
 color10 = #$green
 color11 = #$yellow

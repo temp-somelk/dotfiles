@@ -27,8 +27,8 @@ line-caps-lock-color=00000000
 line-ver-color=00000000
 line-wrong-color=00000000
 
-ring-color=$gray
-ring-caps-lock-color=$gray
+ring-color=$grey
+ring-caps-lock-color=$grey
 ring-clear-color=$white
 ring-ver-color=$accent
 ring-wrong-color=$red
