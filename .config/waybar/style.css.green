@@ -45,8 +45,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 
 #battery.charging {color: #80c990;}
 #battery.warning:not(.charging) {background-color: #a69460; color: #101010;}
-/* #battery.warning {color: #ef6f22;} */
-/* #battery.caution {bacground-color: #efef00;} */
+#battery.caution:not(.charging) {color: #a69460;}
+#battery.good.charging {background-color: #80c990; color: #101010;}
 
 @keyframes blink {
     to {
@@ -68,7 +68,6 @@ label:focus {background-color: #031310;}
 #idle_inhibitor.activated {background-color: #80c990; color: #101010;}
 #temperature.critical {background-color: #efa6a2; color: #c0c0c0;}
 #network.disconnected, #pulseaudio.muted {color: #808080;}
-#tray {background-color: #c0c0c0; color: #101010;}
 
 
 /*
@@ -79,4 +78,5 @@ label:focus {background-color: #031310;}
 #mpd.disconnected {color: #666666;}
 #mpd.stopped {color: #666666;}
 #custom-screencast {color: #ee3a3a;}
+#tray {background-color: #c0c0c0; color: #101010;}
 */
