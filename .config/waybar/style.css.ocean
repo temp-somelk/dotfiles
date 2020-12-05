@@ -68,7 +68,6 @@ label:focus {background-color: #000000;}
 #idle_inhibitor.activated {background-color: #EBCB8B; color: #00010a;}
 #temperature.critical {background-color: #BF616A; color: #e5e9f0;}
 #network.disconnected, #pulseaudio.muted {color: #3b4252;}
-#tray {background-color: #e5e9f0; color: #00010a;}
 
 
 /*
@@ -79,4 +78,5 @@ label:focus {background-color: #000000;}
 #mpd.disconnected {color: #666666;}
 #mpd.stopped {color: #666666;}
 #custom-screencast {color: #ee3a3a;}
+#tray {background-color: #e5e9f0; color: #00010a;}
 */
