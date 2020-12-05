@@ -123,18 +123,17 @@
     "battery": {
 	"interval": 60,
         "states": {
-            // "good": 65,
-            "warning": 30,
-            // "caution": 25,
+            "good": 100,
+            "normal": 80,
+            "caution": 30,
+            "warning": 25,
             "critical": 15
         },
         "format": "{icon} {capacity}%",
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
+        // "format-charged-or-full": "",
         "format-alt": "{icon} {time}",
-	// "format-caution": "{capacity}% {icon}",
-        // "format-good": "", // An empty format will hide the module
-        // "format-full": "",
         "format-icons": ["", "", "", "", ""],
 	"tooltip": false
     },
