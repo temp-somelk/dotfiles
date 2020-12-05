@@ -23,6 +23,7 @@
 .config/cmus/*
 !.config/cmus/green.theme
 !.config/cmus/green-minimal.theme
+!.config/cmus/ocean.theme
 !.config/spotify-tui
 .config/spotify-tui/*
 !.config/spotify-tui/config.yml
