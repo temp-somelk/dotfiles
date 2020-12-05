@@ -44,8 +44,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #mpd {padding: 0 8px}
 
 #battery.charging {color: #748F9E;}
-#battery.warning:not(.charging) {background-color: #88A4B5; color: #0f1213;}
-#battery.caution:not(.charging) {color: #88A4B5;}
+#battery.warning:not(.charging) {background-color: #ebcb8c; color: #0f1213;}
+#battery.caution:not(.charging) {color: #ebcb8c;}
 #battery.good.charging {background-color: #748F9E; color: #0f1213;}
 
 @keyframes blink {
