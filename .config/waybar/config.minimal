@@ -3,8 +3,8 @@
     "position": "top",
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["tray", "memory", "disk", "cpu", "temperature", "idle_inhibitor", "backlight", "network", "battery", "pulseaudio", "clock", "custom/applauncher", "custom/power"],
+    // "modules-center": ["sway/window", "wlr/taskbar"],
+    "modules-right": ["custom/playerctl", "tray", "memory", "disk", "cpu", "temperature", "idle_inhibitor", "backlight", "network", "battery", "pulseaudio", "clock", "custom/applauncher", "custom/power"],
 
     "sway/workspaces": {
          "disable-scroll": false,
@@ -66,7 +66,7 @@
     },
 
     "mpd": {
-        // "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
+        // "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
         "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {title}",
         "format-disconnected": " MPD Disconnected",
         "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  Stopped",
@@ -182,20 +182,22 @@
 
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{format_source}     {volume}%  {icon}",
-        "format-bluetooth": "{format_source}     {volume}%  {icon}",
-        "format-bluetooth-muted": "{format_source}       {icon}",
-        "format-muted": "{format_source}     ",
+        "format": "{format_source}     {icon}",
+        "format-bluetooth": "{format_source}     {icon}",
+        "format-bluetooth-muted": "{format_source}     {icon}",
+        "format-muted": "{format_source}     {icon}",
+        // "format-source": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
         "format-source": "{volume}%  ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": "",
-            "hands-free": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", ""]
+            "headphone": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
+            "hands-free": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
+            "headset": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
+            "phone": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
+            "portable": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
+            "car": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
+            "default": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"]
+            // "default": ["", ""]
         },
         "tooltip": false,
         "on-click": "pavucontrol"
@@ -210,6 +212,27 @@
     "custom/applauncher": {
         "format": "",
         "on-click": "wofi",
+        "tooltip": false
+    },
+
+    "custom/playerctl": {
+        "format": "{icon}  {}",
+        "format-icons": {
+            "Playing": "",
+            "Paused": "",
+            "Stopped": ""
+        },
+        "exec": "$HOME/.config/waybar/playerctl.sh",
+        "return-type": "json",
+        "exec-if": "playerctl status",
+        "on-click": "playerctl play-pause",
+        "on-click-right": "playerctl next",
+        "on-click-middle": "playerctl previous",
+        "interval": 5,
+        // "signal": 12,
+        "max-length": 60,
+        "exec-on-event": true,
+        "escape": true,
         "tooltip": false
     }
 
