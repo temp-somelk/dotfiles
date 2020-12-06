@@ -70,7 +70,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 label:focus {background-color: #$black;}
 #idle_inhibitor.activated {background-color: #$accent; color: #$background;}
 #temperature.critical {background-color: #$red; color: #$texlight;}
-#network.disconnected, #pulseaudio.muted {color: #$grey;}
+#network.disconnected, #pulseaudio.muted, #custom-playerctl.Stopped, #custom-playerctl.Paused {color: #$grey;}
 
 
 /*
