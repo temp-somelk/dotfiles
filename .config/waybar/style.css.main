@@ -1,4 +1,3 @@
-
 * {
     border: none;
     border-radius: 0;
@@ -15,6 +14,10 @@ window#waybar.hidden {opacity: 0.2;}
 window#waybar.empty {background-color: transparent;}
 window#waybar.solo {background-color: #FFFFFF;}
 */
+
+#taskbar button {color: #$grey;}
+#taskbar button.active {color: #$textlight;}
+#taskbar button:hover {background-color: #$white; color: #$background;}
 
 #workspaces button {color: #$accent; font-size: 20px; padding: 0 8px;}
 #workspaces button.persistent {color: #$white;}

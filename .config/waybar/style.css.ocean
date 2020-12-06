@@ -1,8 +1,6 @@
-
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: SourceSansPro, FiraSans, Roboto, sans-serif;
     font-size: 14px;
     min-height: 0;
@@ -15,6 +13,10 @@ window#waybar.hidden {opacity: 0.2;}
 window#waybar.empty {background-color: transparent;}
 window#waybar.solo {background-color: #FFFFFF;}
 */
+
+#taskbar button {color: #3b4252;}
+#taskbar button.active {color: #e5e9f0;}
+#taskbar button:hover {background-color: #e5e9f0; color: #00010a}
 
 #workspaces button {color: #3a575c; font-size: 20px; padding: 0 8px;}
 #workspaces button.persistent {color: #e5e9f0;}
