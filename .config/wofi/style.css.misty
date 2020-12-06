@@ -1,7 +1,0 @@
-#window {background-color: #0f1213; color: #d8e5ef; border-style: none; font-family: SourceSansPro; font-size: 14px;}
-#outer-box {background-color: #0f1213; color: #d8e5ef;}
-
-/* unable to disable borders for searchbox and entry, so adding boder settings */
-#input {background-color: #0f1213; color: #d8e5ef; border-radius: 0px; border-width: 2px; border-color: #0f1213;}
-#entry:selected {background-color: #748F9E; border-radius: 0px;}
-#text:selected {color: #0f1213;}

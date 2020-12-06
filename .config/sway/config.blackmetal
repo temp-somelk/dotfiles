@@ -1,8 +1,0 @@
-output * bg /usr/share/backgrounds/archlinux/geowaves.png fill
-
-# Window Colors
-# class                 border  backgr. text    indicator child_border
-client.focused          #c1c1c1 #c1c1c1 #000000 #c1c1c1   #333333
-client.focused_inactive #333333 #333333 #c1c1c1 #c1c1c1   #333333
-client.unfocused        #333333 #333333 #c1c1c1 #c1c1c1   #333333
-client.urgent           #a06666 #a06666 #ffffff #c1c1c1   #a06666
