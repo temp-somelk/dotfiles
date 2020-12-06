@@ -11,9 +11,9 @@ button-dismiss-gap=0
 button-margin-right=7
 
 [message]
-text=e5e9f0
-background=3a575c
-button-background=3a575c
+text=00010A
+background=e5e9f0
+button-background=e5e9f0
 
 [warning]
 text=0f111a
