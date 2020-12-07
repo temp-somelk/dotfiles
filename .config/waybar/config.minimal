@@ -224,17 +224,16 @@
         },
         "exec": "$HOME/.config/waybar/playerctl.sh",
         "return-type": "json",
-        "exec-if": "playerctl status",
         "on-click": "playerctl play-pause",
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl previous",
         "on-scroll-up": "playerctl position 3+",
         "on-scroll-down": "playerctl position 3-",
-        "interval": 5,
-        // "signal": 12,
+        "interval": "once",
+        "signal": 4,
         "max-length": 60,
         "exec-on-event": false,
-        "escape": true,
+        "escape": false,
         "tooltip": false
     }
 
