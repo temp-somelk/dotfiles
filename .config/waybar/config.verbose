@@ -73,7 +73,7 @@
 	"tooltip": false
     },
 
-    "tray": {"spacing": 0},
+    "tray": {"spacing": 8},
 
     "clock": {
         // "timezone": "",
