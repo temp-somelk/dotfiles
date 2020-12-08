@@ -200,7 +200,7 @@
             // "default": ["", ""]
         },
         "tooltip": false,
-        "on-click": "pavucontrol"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
     },
 
     "custom/power": {
