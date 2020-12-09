@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-kill -s 38 "$(pgrep waybar)"
+playerctl metadata --format '{{ title }}{{ status }}' --follow | ad | kill -s 38 "$(pgrep waybar)"
