@@ -105,14 +105,14 @@
 
     "cpu": {
         "format": "", // 
-        "format-alt": "{usage}%  ",
+        "format-alt": "{usage}% ",
         "interval": 30,
         "tooltip": false
     },
 
     "memory": {
         "format": "", // 
-        "format-alt": "{percentage}%  ", // "{used:0.1f}G/{total:0.1f}G"
+        "format-alt": "{percentage}% ", // "{used:0.1f}G/{total:0.1f}G"
         "interval": 30,
         "tooltip": false
     },
@@ -120,7 +120,7 @@
     "disk": {
         "interval": 600,
         "format": "", //  
-        "format-alt": "{free}  ", // "{used}/{total}"
+        "format-alt": "{free} ", // "{used}/{total}"
         "tooltip": false
     },
 
@@ -131,14 +131,14 @@
         "format-critical": "{temperatureC}°C {icon}",
         "format": "{icon}",
         "format-icons": ["", "", "", "", "", ""],
-        "format-alt": "{temperatureC}°C  {icon}",
+        "format-alt": "{temperatureC}°C {icon}",
         "tooltip": false
     },
 
     "backlight": {
         // "device": "acpi_video1",
         "format": "",
-        "format-alt": "{percent}%  ",
+        "format-alt": "{percent}% ",
         "tooltip": false
         // "format-icons": ["", ""]
     },
@@ -153,10 +153,10 @@
             "critical": 15
         },
         "format": "{icon}",
-        "format-charging": "{capacity}%  ",
-        "format-plugged": "{capacity}%  ",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
         "format-full": "",
-        "format-alt": "{capacity}%  {icon}",
+        "format-alt": "{capacity}% {icon}",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
@@ -169,7 +169,7 @@
         "format-ethernet": "",
         "format-linked": "",
         "format-disconnected": "",
-        "format-alt": "{bandwidthDownBits} {bandwidthUpBits}  ",
+        "format-alt": "{bandwidthDownBits} {bandwidthUpBits} ",
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": " {essid} ({signalStrength}%)",
         // "format-ethernet": " Wired Connection",
@@ -183,21 +183,21 @@
 
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{format_source}     {icon}",
-        "format-bluetooth": "{format_source}     {icon}",
-        "format-bluetooth-muted": "{format_source}     {icon}",
-        "format-muted": "{format_source}     {icon}",
+        "format": "{format_source}    {icon}",
+        "format-bluetooth": "{format_source}    {icon}",
+        "format-bluetooth-muted": "{format_source}    {icon}",
+        "format-muted": "{format_source}    {icon}",
         // "format-source": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
-        "format-source": "{volume}%  ",
+        "format-source": "{volume}% ",
         "format-source-muted": "",
         "format-icons": {
-            "headphone": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
-            "hands-free": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
-            "headset": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
-            "phone": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
-            "portable": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
-            "car": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"],
-            "default": ["  ○○○○○", "  ●○○○○", "  ●●○○○", "  ●●●○○", "  ●●●●○", "  ●●●●●"]
+            "headphone": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
+            "hands-free": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
+            "headset": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
+            "phone": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
+            "portable": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
+            "car": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
+            "default": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"]
             // "default": ["", ""]
         },
         "tooltip": false,
