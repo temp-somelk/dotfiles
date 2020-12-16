@@ -4,7 +4,8 @@
     "height": 30,
     "modules-left": ["sway/workspaces", "sway/mode"],
     // "modules-center": ["sway/window", "wlr/taskbar"],
-    "modules-right": ["custom/playerctl", "tray", "memory", "disk", "cpu", "temperature", "idle_inhibitor", "backlight", "network", "battery", "pulseaudio", "clock", "custom/applauncher", "custom/power"],
+    "modules-center": ["custom/playerctl"],
+    "modules-right": ["tray", "memory", "cpu", "disk", "temperature", "idle_inhibitor", "backlight", "network", "battery", "pulseaudio", "clock", "custom/applauncher", "custom/power"],
 
     "sway/workspaces": {
          "disable-scroll": false,
@@ -45,7 +46,7 @@
     "wlr/taskbar": {
         "format": "{app_id}",
         // "icon-size": 16,
-        // "icon-theme": "",
+        // "icon-theme": "Numix-Circle",
         "on-click": "activate",
         "on-click-middle": "close",
         "max-length": 50,
@@ -89,7 +90,7 @@
             "activated": "",
             "deactivated": ""
         },
-	"tooltip": false
+        "tooltip": false
     },
 
     "tray": {"spacing": 8},
@@ -97,30 +98,30 @@
     "clock": {
         // "timezone": "",
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-	"tooltip": false,
+        "tooltip": false,
         "format": "{:%H:%M %a}",
         "format-alt": "{:%d %b %Y}"
     },
 
     "cpu": {
-        "format": "",
-	"format-alt": "{usage}%  ",
+        "format": "", // 
+        "format-alt": "{usage}%  ",
         "interval": 30,
         "tooltip": false
     },
 
     "memory": {
-        "format": "", // 
-	"format-alt": "{percentage}%  ", // "{used:0.1f}G/{total:0.1f}G"
-	"interval": 30,
+        "format": "", // 
+        "format-alt": "{percentage}%  ", // "{used:0.1f}G/{total:0.1f}G"
+        "interval": 30,
         "tooltip": false
     },
 
     "disk": {
-	"interval": 600,
-	"format": "", // 
-	"format-alt": "{free}  ", // "{used}/{total}"
-	"tooltip": false
+        "interval": 600,
+        "format": "", //  
+        "format-alt": "{free}  ", // "{used}/{total}"
+        "tooltip": false
     },
 
     "temperature": {
@@ -131,7 +132,7 @@
         "format": "{icon}",
         "format-icons": ["", "", "", "", "", ""],
         "format-alt": "{temperatureC}°C  {icon}",
-	"tooltip": false
+        "tooltip": false
     },
 
     "backlight": {
@@ -158,26 +159,26 @@
         "format-alt": "{capacity}%  {icon}",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""],
-	"tooltip": false
+        "tooltip": false
     },
 
     "battery#bat2": {"bat": "BAT2"},
 
     "network": {
-        "format-wifi": "",
+        "format-wifi": "", // 
         "format-ethernet": "",
-        "format-linked": "",
+        "format-linked": "",
         "format-disconnected": "",
-	"format-alt": "{bandwidthDownBits} {bandwidthUpBits}  ",
+        "format-alt": "{bandwidthDownBits} {bandwidthUpBits}  ",
         // "interface": "wlp2*", // (Optional) To force the use of this interface
         // "format-wifi": " {essid} ({signalStrength}%)",
         // "format-ethernet": " Wired Connection",
         // "format-linked": " Linked",
         // "format-disconnected": " No Networks",
-	// "format-alt": " {bandwidthDownBits} {bandwidthUpBits}",
+        // "format-alt": " {bandwidthDownBits} {bandwidthUpBits}",
         // "format-alt": " {ifname}: {ipaddr}/{cidr}",
-	// "max-length": 50,
-	"tooltip": false
+        // "max-length": 50,
+        "tooltip": false
     },
 
     "pulseaudio": {
@@ -223,20 +224,31 @@
             "Stopped": ""
         },
         "exec": "$HOME/.config/waybar/playerctl.sh",
+        "exec-if": "playerctl status",
         "return-type": "json",
         "on-click": "playerctl play-pause",
         "on-click-right": "playerctl next",
         "on-click-middle": "playerctl previous",
         "on-scroll-up": "playerctl position 3+",
         "on-scroll-down": "playerctl position 3-",
-        "interval": "once",
-        "signal": 4,
-        "max-length": 60,
+        // "interval": "once",
+        // "signal": 4,
+        "interval": 5,
+        "max-length": 70,
         "exec-on-event": false,
         "escape": false,
         "tooltip": false
     }
 
+//    "custom/packages": {
+//         "format": "",
+//         "format-alt": "{} ",
+//         "exec": "checkupdates | wc -l",
+//         "interval": 3600,
+//         "exec-on-event": false,
+//         "tooltip": false
+//     },
+//
 //     "custom/clipman": {
 //         "format": "",
 //         "on-click": "clipman pick -t wofi",
