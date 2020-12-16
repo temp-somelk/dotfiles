@@ -50,7 +50,7 @@ set color_win_cur_sel_fg=016
 
 # Color of the selected row which is also the currently playing track in inactive window.
 set color_win_inactive_cur_sel_bg=default
-set color_win_inactive_cur_sel_fg=default
+set color_win_inactive_cur_sel_fg=yellow
 
 # Color of selected row in inactive window.
 set color_win_inactive_sel_bg=default
