@@ -44,7 +44,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 #tray,
 #mode,
 #idle_inhibitor,
-#mpd {padding: 0 8px}
+#mpd {padding: 0 6px}
 
 #battery.charging {color: #d0ff36;}
 #battery.warning:not(.charging) {background-color: #ffa51f; color: #000000;}
