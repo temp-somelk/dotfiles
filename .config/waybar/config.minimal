@@ -137,8 +137,8 @@
 
     "backlight": {
         // "device": "acpi_video1",
-        "format": "",
-        "format-alt": "{percent}% ",
+        "format": "", // 
+        "format-alt": "{percent}% ",
         "tooltip": false
         // "format-icons": ["", ""]
     },
