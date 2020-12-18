@@ -175,7 +175,7 @@
 
     "custom/power": {
         "format":"",
-        "on-click": "$HOME/.config/waybar/power.sh",
+        "on-click": "$HOME/.config/scripts/power.sh",
         "tooltip": false
     },
 
@@ -202,14 +202,14 @@
 //
 //     "custom/weather": {
 //         "format": {},
-//         "exec": "$HOME/.config/waybar/weather.sh",
+//         "exec": "$HOME/.config/scripts/weather.sh",
 //         "interval": 3600,
 //         "tooltip": false
 //     },
 //
 // This cmus module does't work for now, since waybar doesn't accept custom json formatting
 //      "custom/cmus": {
-//         "exec": "$HOME/.config/waybar/cmus.sh",
+//         "exec": "$HOME/.config/scripts/cmus.sh",
 //         "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
 //         "shuffle": {
 //             "true": ""
