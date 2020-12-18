@@ -18,7 +18,7 @@
 !.config/termite
 !.config/gammastep
 !.config/nvim
-!.config/colorschemes
+!.config/scripts
 !.config/cmus
 .config/cmus/*
 !.config/cmus/green.theme
