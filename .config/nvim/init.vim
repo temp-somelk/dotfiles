@@ -1,3 +1,4 @@
 set number
 colorscheme pablo
-autocmd FileType python imap <buffer> <F9> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+let g:airline_theme='base16'
+nnoremap <F9> :!%:p<Enter>
