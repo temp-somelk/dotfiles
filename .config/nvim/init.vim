@@ -1,4 +1,4 @@
 set number
 colorscheme pablo
 let g:airline_theme='base16'
-nnoremap <F9> :!%:p<Enter>
+nnoremap <F9> :w<CR>:!%:p<CR>
