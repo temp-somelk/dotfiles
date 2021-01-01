@@ -1,0 +1,8 @@
+output * bg $HOME/Pictures/Wallpapers/Feathers.jpg fill
+
+# Window Colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #3a575ce5 #3a575ce5 #e5e9f0 #e5e9f0   #0f111a
+client.focused_inactive #00010ae5 #00010ae5 #e5e9f0 #3b4252   #0f111a
+client.unfocused        #00010ae5 #00010ae5 #e5e9f0 #3b4252   #0f111a
+client.urgent           #BF616Ae5 #BF616Ae5 #e5e9f0 #e5e9f0   #0f111a

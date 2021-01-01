@@ -1,0 +1,7 @@
+#window {background-color: rgba(0, 1, 10, 0.85); color: #e5e9f0; border-style: none; font-family: SourceSansPro; font-size: 14px;}
+#outer-box {background-color: rgba(0, 1, 10, 0); color: #e5e9f0;}
+
+/* unable to disable borders for searchbox and entry, so adding boder settings */
+#input {background-color: rgba(0, 1, 10, 0); color: #e5e9f0; border-radius: 0px; border-width: 2px; border-color: rgba(0, 1, 10, 0);}
+#entry:selected {background-color: #3a575c; border-radius: 0px;}
+#text:selected {color: #e5e9f0;}
