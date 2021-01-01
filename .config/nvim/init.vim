@@ -8,7 +8,7 @@ colorscheme ocean
 set number relativenumber
 set scrolloff=10
 set noshowmode
-"set cursorline
+set cursorline
 let g:currentmode={
 	\ 'n'      : 'N',
 	\ 'i'      : 'I',

@@ -18,6 +18,6 @@ highlight Directory  ctermfg=2                        guifg=#00c000
 highlight StatusLine ctermfg=15 ctermbg=0 cterm=none guifg=#ffff00 guibg=#0000ff gui=none
 highlight Normal                                      guifg=#ffffff guibg=#000000
 highlight Search     ctermbg=3                           guibg=#c0c000
-highlight LineNr     ctermfg=0
+highlight LineNr     ctermfg=8
 highlight CursorLineNr ctermfg=15          cterm=bold
 highlight CursorLine            ctermbg=0  cterm=none
