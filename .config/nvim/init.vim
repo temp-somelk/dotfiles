@@ -1,14 +1,11 @@
-augroup numbertoggle
-  autocmd!
-  autocmd BufEnter,InsertLeave * set relativenumber
-  autocmd BufLeave,InsertEnter * set norelativenumber
-augroup END
-augroup numbertoggle
-colorscheme ocean
-set number relativenumber
-set scrolloff=10
-set noshowmode
-set cursorline
+colo ocean
+set nu rnu
+set so=10
+set ch=5
+set nosmd
+set cul
+au BufEnter,InsertLeave * set rnu | hi StatuslineMode ctermfg=0 ctermbg=15
+au BufLeave,InsertEnter * set nornu | hi StatuslineMode ctermfg=0 ctermbg=1
 let g:currentmode={
 	\ 'n'      : 'N',
 	\ 'i'      : 'I',
@@ -31,13 +28,21 @@ let g:currentmode={
 	\ '!'      : 'Shell'
 	\}
 set statusline=
-set statusline+=\ %{toupper(g:currentmode[mode()])}
-set statusline+=\ %f
+set statusline+=%#StatuslineMode#
+set statusline+=\ %{toupper(g:currentmode[mode()])}\ 
+set statusline+=%#StatuslineColor#
+set statusline+=\ %.20f
 set statusline+=\ %m
 set statusline+=%=
 set statusline+=\ %y
 set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
 set statusline+=\[%{&fileformat}\]
-set statusline+=\ %p%%
-set statusline+=\ %l:%c
-nnoremap <F9> :w<CR>:!%:p<CR>
+set statusline+=\ %3p%%\ 
+set statusline+=%#StatuslineMode#
+set statusline+=\ %3l:%-3c
+ino " ""<left>
+ino ' ''<left>
+ino ( ()<left>
+ino [ []<left>
+ino { {}<left>
+nn <F9> :w<CR>:!%:p<CR>

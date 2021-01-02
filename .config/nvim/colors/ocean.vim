@@ -15,9 +15,11 @@ highlight Special    ctermfg=12                       guifg=#0000ff
 highlight Error                 ctermbg=9                           guibg=#ff0000
 highlight Todo       ctermfg=4  ctermbg=3             guifg=#000080 guibg=#c0c000
 highlight Directory  ctermfg=2                        guifg=#00c000
-highlight StatusLine ctermfg=15 ctermbg=0 cterm=none guifg=#ffff00 guibg=#0000ff gui=none
 highlight Normal                                      guifg=#ffffff guibg=#000000
 highlight Search     ctermbg=3                           guibg=#c0c000
-highlight LineNr     ctermfg=8
-highlight CursorLineNr          ctermfg=15 ctermbg=0  cterm=bold
-highlight CursorLine            ctermbg=0  cterm=none
+hi LineNr     ctermfg=8
+hi CursorLineNr          ctermfg=15 ctermbg=0  cterm=bold
+hi CursorLine            ctermbg=0  cterm=none
+hi StatuslineColor   ctermfg=15 ctermbg=0
+hi StatuslineMode    ctermfg=0  ctermbg=15
+hi MatchParen        ctermfg=0  ctermbg=3  cterm=none
