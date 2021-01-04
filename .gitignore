@@ -18,6 +18,7 @@
 !.config/termite
 !.config/gammastep
 !.config/nvim
+.config/nvim/plugged
 !.config/scripts
 !.config/cmus
 .config/cmus/*
