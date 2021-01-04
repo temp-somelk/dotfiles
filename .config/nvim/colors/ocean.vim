@@ -23,3 +23,8 @@ hi CursorLine            ctermbg=0  cterm=none
 hi StatuslineColor   ctermfg=15 ctermbg=0
 hi StatuslineMode    ctermfg=0  ctermbg=15
 hi MatchParen        ctermfg=0  ctermbg=3  cterm=none
+hi SignColumn        ctermfg=0 ctermbg=none  cterm=bold
+hi DiffAdd           ctermfg=0  ctermbg=none  cterm=bold
+hi DiffChange        ctermfg=0  ctermbg=none  cterm=bold
+hi DiffDelete        ctermfg=0  ctermbg=none  cterm=bold
+hi DiffText          ctermfg=0  ctermbg=3     cterm=none
