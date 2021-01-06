@@ -47,11 +47,11 @@ set statusline+=%#StatuslineMode#
 set statusline+=\ %3l:%-3c
 
 " mappings
-ino " ""<left>
-ino ' ''<left>
-ino ( ()<left>
-ino [ []<left>
-ino { {}<left>
+"ino " ""<left>
+"ino ' ''<left>
+"ino ( ()<left>
+"ino [ []<left>
+"ino { {}<left>
 nn <F9> :w<CR>:!%:p<CR>
 
 " plugins
@@ -61,4 +61,4 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
 let g:indentLine_char = '┊'
-let g:indentLine_color_term = 0
+let g:indentLine_setColors = 0
