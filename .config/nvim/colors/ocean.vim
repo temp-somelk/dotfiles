@@ -28,3 +28,11 @@ hi DiffAdd           ctermfg=0  ctermbg=none  cterm=bold
 hi DiffChange        ctermfg=0  ctermbg=none  cterm=bold
 hi DiffDelete        ctermfg=0  ctermbg=none  cterm=bold
 hi DiffText          ctermfg=0  ctermbg=3     cterm=none
+hi Pmenu             ctermfg=15 ctermbg=0     cterm=none
+hi PmenuSel          ctermfg=0  ctermbg=15    cterm=none
+hi PmenuSbar                    ctermbg=8
+hi Conceal           ctermfg=0  ctermbg=none
+hi CocErrorSign      ctermfg=1                cterm=bold
+hi CocWarningSign    ctermfg=3                cterm=bold
+hi CocInfoSign       ctermfg=4                cterm=bold
+hi CocHintSign       ctermfg=6                cterm=bold
