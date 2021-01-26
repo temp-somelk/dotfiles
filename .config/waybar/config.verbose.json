@@ -1,0 +1,249 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 30,
+    "modules-left": ["sway/workspaces", "sway/mode"],
+    // "modules-center": ["custom/weather"],
+    "modules-right": ["network", "cpu", "memory", "disk", "temperature", "idle_inhibitor", "backlight", "pulseaudio", "battery", "tray", "clock", "custom/applauncher", "custom/power"],
+
+    "sway/workspaces": {
+         "disable-scroll": false,
+         "disable-scroll-wraparound": true,
+         "enable-bar-scroll": false,
+         "smooth-scrolling-threshold": 1,
+         "all-outputs": true,
+         "persistent_workspaces": {
+             "1": [],
+             "2": [],
+             "3": [],
+             "4": [],
+             "5": [],
+             "6": [],
+             "7": [],
+             "8": [],
+             "9": [],
+             "10": []
+         },
+         "format": "{icon}",
+         "format-icons": {
+             "1": "",
+             "2": "", //   
+             "3": "", //   
+             "4": "", // 
+             "5": "", // 
+             "6": "",
+             "7": "",
+             "8": "",
+             "9": "",
+             "10": "",
+             "urgent": "",
+             "default": "",
+             // "focused": ""
+         }
+    },
+
+    "sway/mode": {
+        "format": "{}"
+    },
+
+    "mpd": {
+        // "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title}",
+        "format": "🎜 {stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon} {title}",
+        "format-disconnected": " MPD Disconnected",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}  Stopped",
+        "unknown-tag": "N/A",
+        "interval": 5,
+        "consume-icons": {"on": " "},
+        "random-icons": {"on": " "},
+        "repeat-icons": {"on": " "},
+        "single-icons": {"on": " 1 "},
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip": false
+    },
+
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        },
+	"tooltip": false
+    },
+
+    "tray": {"spacing": 8},
+
+    "clock": {
+        // "timezone": "",
+        // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+	"tooltip": false,
+        "format": "{:%H:%M %a}",
+        "format-alt": "{:%d %b %Y}"
+    },
+
+    "cpu": {
+        "format": " {usage}%",
+	"format-alt": " {load}",
+        "interval": 30,
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": " {percentage}%", // 
+	"format-alt": " {used:0.1f}G/{total:0.1f}G",
+	"interval": 30,
+        "tooltip": false
+    },
+
+    "disk": {
+	"interval": 600,
+	"format": " {free}", // 
+	"format-alt": " {used}/{total}",
+	"tooltip": false
+    },
+
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 55,
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": ["", "", "", "", "", ""],
+	"tooltip": false
+    },
+
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": " {percent}%",
+        // "format-icons": ["", ""]
+    },
+
+    "battery": {
+	"interval": 60,
+        "states": {
+            "good": 100,
+            "normal": 80,
+            "caution": 30,
+            "warning": 25,
+            "critical": 15
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": " {capacity}%",
+        "format-full": "",
+        "format-alt": "{icon} {time}",
+        "format-icons": ["", "", "", "", ""],
+	"tooltip": false
+    },
+
+    "battery#bat2": {"bat": "BAT2"},
+
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": " {essid} ({signalStrength}%)",
+        "format-ethernet": " Wired Connection",
+        "format-linked": " Linked",
+        "format-disconnected": " No Networks",
+	"format-alt": " {bandwidthDownBits} {bandwidthUpBits}",
+        // "format-alt": " {ifname}: {ipaddr}/{cidr}",
+	// "max-length": 50,
+	"tooltip": false
+    },
+
+    "pulseaudio": {
+        "scroll-step": 1,
+        "format": "{icon} {volume}%   {format_source}",
+        "format-bluetooth": "{icon} {volume}%   {format_source}",
+        "format-bluetooth-muted": " {icon}   {format_source}",
+        "format-muted": "   {format_source}",
+        "format-source": " {volume}%",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", ""]
+        },
+        "tooltip": false,
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+    },
+
+    "custom/power": {
+        "format":"",
+        "on-click": "$HOME/.config/scripts/power.sh",
+        "tooltip": false
+    },
+
+    "custom/applauncher": {
+        "format": "",
+        "on-click": "wofi",
+        "tooltip": false
+    }
+
+//     "custom/clipman": {
+//         "format": "",
+//         "on-click": "clipman pick -t wofi",
+//         "tooltip": false
+//     },
+//
+//     "custom/screencast": {
+//         "format": "{}",
+//         "exec": "echo  Recording",
+//         "exec-if": "pgrep wf-recorder",
+//         "interval": 10,
+//         "on-click": "killall -s SIGINT wf-recorder",
+//         "tooltip": false
+//     },
+//
+//     "custom/weather": {
+//         "format": {},
+//         "exec": "$HOME/.config/scripts/weather.sh",
+//         "interval": 3600,
+//         "tooltip": false
+//     },
+//
+// This cmus module does't work for now, since waybar doesn't accept custom json formatting
+//      "custom/cmus": {
+//         "exec": "$HOME/.config/scripts/cmus.sh",
+//         "format": "🎜 {shuffle} {repeat}{repeat_current} {status} {title}",
+//         "shuffle": {
+//             "true": ""
+//         },
+//         "repeat": {
+//             "true": ""
+//         },
+//         "repeat_current": {
+//             "true": " 1"
+//         },
+//         "state-icons": {
+//             "paused": "",
+//             "playing": ""
+//         },
+//         "return-type": "json",
+//         "interval": 10,
+//         "exec-if": "pgrep cmus",
+//         "on-click": "cmus-remote -u",
+//         "tooltip": false,
+//         "escape": true
+//         "max-length": 100,
+//     }
+//
+//    "custom/media": {
+//          "format": "{icon} {}",
+//          "return-type": "json",
+//          "max-length": 40,
+//          "format-icons": {
+//              "spotify": "",
+//              "default": "🎜"
+//          },
+//         "escape": true,
+//        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+//        "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+//    }
+
+}
