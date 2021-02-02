@@ -19,6 +19,7 @@ highlight Directory  ctermfg=2                           guifg=#00c000
 highlight Normal                                         guifg=#ffffff guibg=#000000
 highlight Search     ctermbg=3                           guibg=#c0c000
 
+hi EndOfBuffer       ctermfg=0
 hi LineNr            ctermfg=8
 hi CursorLineNr      ctermfg=15 ctermbg=none  cterm=bold
 hi CursorLine                   ctermbg=0     cterm=none
