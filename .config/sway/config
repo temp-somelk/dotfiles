@@ -93,6 +93,7 @@ input "type:keyboard" {
     bindsym $mod+Shift+c reload
 
     # Exit sway (logs you out of your Wayland session)
+    bindsym Ctrl+Mod1+Delete exit
     # bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 
 # Moving around:
@@ -249,6 +250,7 @@ bindsym Shift+Print exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'
 bindsym Ctrl+Print exec grim - | wl-copy
 bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
 bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
+bindsym $mod+Ctrl+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy
 
 # Screencasts
 bindsym $mod+F10 exec wf-recorder --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F_%T.mp4')
