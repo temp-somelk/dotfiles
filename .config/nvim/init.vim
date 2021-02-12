@@ -9,6 +9,10 @@ set nosmd
 set cul
 set et
 set nofixeol
+" set sts=0
+" set noet
+" set lcs=tab:\┊\ 
+" set list
 
 au BufEnter,InsertLeave * set rnu | hi StatuslineMode ctermfg=0 ctermbg=15
 au BufLeave,InsertEnter * set nornu | hi StatuslineMode ctermfg=0 ctermbg=1
