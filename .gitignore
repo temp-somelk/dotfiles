@@ -28,3 +28,6 @@
 !.config/spotify-tui
 .config/spotify-tui/*
 !.config/spotify-tui/config.yml
+!Pictures
+Pictures/*
+!Pictures/Wallpapers
