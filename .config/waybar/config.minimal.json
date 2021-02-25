@@ -139,6 +139,8 @@
         // "device": "acpi_video1",
         "format": "", // 
         "format-alt": "{percent}% ",
+        "on-scroll-up": "brightnessctl set +1%",
+        "on-scroll-down": "brightnessctl set 1%-",
         "tooltip": false
         // "format-icons": ["", ""]
     },
