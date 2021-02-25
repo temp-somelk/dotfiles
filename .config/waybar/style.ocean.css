@@ -68,7 +68,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 }
 
 label:focus {background-color: #000000;}
-#idle_inhibitor.activated {background-color: #e5e9f0; color: #00010a;}
+#idle_inhibitor.activated {background-color: #e5e9f0; color: #00010a; padding: 0 7px;}
 #temperature.critical {background-color: #BF616A; color: #e5e9f0;}
 #network.disconnected, #pulseaudio.muted, #custom-playerctl.Stopped, #custom-playerctl.Paused {color: #3b4252;}
 
