@@ -242,6 +242,30 @@
         "tooltip": false
     }
 
+// todo stopwatch notifications pomodoro health backup&sync newmail
+//    "custom/pomodoro": {
+//        "format": "",
+//        "format-alt": "{}  ",
+//        "exec": "echo $((500 - $SECONDS))",
+//        "exec-on-event": true,
+//        "tooltip": false
+//    }
+//
+//    "custom/stopwatch": {
+//        "format": "",
+//        "format-alt": "{} ",
+//        "exec": "$HOME/.config/scripts/stopwatch.sh",
+//        "on-click": "~/.config/waybar/stopwatch.sh",
+//        "on-click-right": "~/.config/waybar/stopwatch.sh --stop",
+//        "return-type": "json"
+//    }
+//
+//    "custom/notifications": {
+//        "format": " {}",
+//        "format-alt": "                                            ",
+//        "tooltip": false
+//    }
+//
 //     "custom/wallpaper": {
 //         "format": "",
 //         "on-click": "swaymsg output '*' bg `find $HOME/Pictures/Wallpapers/New -type f | shuf -n 1` fill",
