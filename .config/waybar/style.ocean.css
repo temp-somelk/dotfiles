@@ -20,7 +20,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 
 #workspaces button {color: #3a575c; font-size: 20px; padding: 0 8px;}
 #workspaces button.persistent {color: #e5e9f0;}
-#workspaces button:hover {background: #e5e9f0; color: #00010a; box-shadow: inherit; text-shadow: inherit;}
+#workspaces button:hover {background: #00010a; box-shadow: inherit; text-shadow: inherit;}
 #workspaces button.focused {background-color: #3a575c; color: #e5e9f0;}
 #workspaces button.urgent {background-color: #BF616A; color: #e5e9f0;}
 /* for  #workspaces button:hover use background not background-color */
