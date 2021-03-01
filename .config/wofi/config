@@ -1,6 +1,7 @@
 show=run
 width=500
 height=200
+layer=overlay
 term=termite
 hide_scroll=true
 sort_order=default
