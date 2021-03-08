@@ -277,7 +277,9 @@
 //         "format-alt": "{} ",
 //         "exec": "checkupdates | wc -l",
 //         "interval": 3600,
+//         "on-click-middle": "termite -e 'sudo pacman -Syu'; pkill -SIGRTMIN+8 waybar",
 //         "exec-on-event": false,
+//         "signal": 8,
 //         "tooltip": false
 //     },
 //
