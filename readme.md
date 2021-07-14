@@ -68,7 +68,9 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 2. To open firefox [in wayland mode](https://wiki.archlinux.org/index.php/firefox#Wayland), set environment variable ```MOZ_ENABLE_WAYLAND=1``` in ```/etc/environment```. The wiki [says](https://wiki.archlinux.org/index.php/Environment_variables#Graphical_environment) to set the variable in ```~/.config/environment.d/envvars.conf```, but it doesn't work for some reason (have to figure out why), so setting it [globally](https://wiki.archlinux.org/index.php/Environment_variables#Globally)
 
-3. [systemd-sway integration](https://github.com/swaywm/sway/wiki/Systemd-integration)
+3. ```LIBSEAT_BACKEND=logind``` in ```/etc/environment``` in case libseat fails to connect to socket
+
+4. [systemd-sway integration](https://github.com/swaywm/sway/wiki/Systemd-integration)
 
 ### Extras
 1. Add ```userChrome.css``` in ```~/.mozilla/firefox/(the_deafult_active_profile)/chrome/```
