@@ -50,7 +50,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
     --completion-percent 100.0
     --country de,fr,ch,nl,no,fi,be,at
     --age 2
-    --score 5
+    --score 10
     --sort rate
 ```
 
@@ -83,7 +83,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 4. Set ```cmus``` theme using ```:colorscheme```
 
-5. Uncomment ```VerbosePkgLists```, ```CheckSpace```, ```TotalDownload```, ```Color``` in ```/etc/pacman.conf```
+5. Uncomment ```VerbosePkgLists```, ```CheckSpace```, ```Color``` and ```ParallelDownloads = 6``` in ```/etc/pacman.conf```
 
 6. Set ```EDITOR=nvim```, ```TERMINAL=termite``` and ```BROWSER=firefox``` in ```/etc/environment```
 
