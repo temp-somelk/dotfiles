@@ -49,6 +49,7 @@ exec swayidle -w \
 ### Input configuration
 input "type:touchpad" {
       dwt enabled
+      drag enabled
       tap enabled
       tap_button_map lrm
       middle_emulation enabled
@@ -62,6 +63,9 @@ input "type:touchpad" {
 # Typematic delay and rate
 input "type:keyboard" {
       xkb_layout us
+      xkb_options compose:caps
+      xkb_capslock disabled
+      xkb_numlock disabled
       repeat_delay 500
       repeat_rate 30
 }
