@@ -70,9 +70,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 3. ```LIBSEAT_BACKEND=logind``` in ```/etc/environment``` in case libseat fails to connect to socket
 
-4. ```MOZ_WEBRENDER=1``` in case there are performance issues (and/or CPU is not properly utilized/optimized), and ```MOZ_ACCELERATED=1``` in order to force hardware acceleration for MOZ_WEBRENDER to work in case it is disabled by default 
-
-5. [systemd-sway integration](https://github.com/swaywm/sway/wiki/Systemd-integration)
+4. ```MOZ_WEBRENDER=1``` in case there are performance issues (and/or CPU is not properly utilized/optimized), and ```MOZ_ACCELERATED=1``` in order to force hardware acceleration for MOZ_WEBRENDER to work in case it is disabled by default
 
 ### Extras
 1. Add ```userChrome.css``` in ```~/.mozilla/firefox/(the_deafult_active_profile)/chrome/```
