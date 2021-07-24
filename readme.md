@@ -68,9 +68,11 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 2. To open firefox [in wayland mode](https://wiki.archlinux.org/index.php/firefox#Wayland), set environment variable ```MOZ_ENABLE_WAYLAND=1``` in ```/etc/environment```. The wiki [says](https://wiki.archlinux.org/index.php/Environment_variables#Graphical_environment) to set the variable in ```~/.config/environment.d/envvars.conf```, but it doesn't work for some reason (have to figure out why), so setting it [globally](https://wiki.archlinux.org/index.php/Environment_variables#Globally)
 
-3. ```LIBSEAT_BACKEND=logind``` in ```/etc/environment``` in case libseat fails to connect to socket
+3. Export ```XDG_SESSION_TYPE=wayland``` and ```XDG_CURRENT_DESKTOP=sway``` to ```/etc/environment```
 
-4. ```MOZ_WEBRENDER=1``` in case there are performance issues (and/or CPU is not properly utilized/optimized), and ```MOZ_ACCELERATED=1``` in order to force hardware acceleration for MOZ_WEBRENDER to work in case it is disabled by default
+4. ```LIBSEAT_BACKEND=logind``` in ```/etc/environment``` in case libseat fails to connect to socket
+
+5. ```MOZ_WEBRENDER=1``` in case there are performance issues (and/or CPU is not properly utilized/optimized), and ```MOZ_ACCELERATED=1``` in order to force hardware acceleration for MOZ_WEBRENDER to work in case it is disabled by default
 
 ### Extras
 1. Add ```userChrome.css``` in ```~/.mozilla/firefox/(the_deafult_active_profile)/chrome/```
@@ -84,6 +86,20 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 5. Uncomment ```VerbosePkgLists```, ```CheckSpace```, ```Color``` and ```ParallelDownloads = 6``` in ```/etc/pacman.conf```
 
 6. Set ```EDITOR=nvim```, ```TERMINAL=termite``` and ```BROWSER=firefox``` in ```/etc/environment```
+
+### Environment Varibale
+The ```/etc/environment``` file should end up looking like
+```
+EDITOR=nvim
+TERMINAL=termite
+XDG_SESSION_TYPE=wayland      
+XDG_CURRENT_DESKTOP=sway
+BROWSER=firefox
+MOZ_ENABLE_WAYLAND=1
+MOZ_WEBRENDER=1
+MOZ_ACCELERATED=1
+LIBSEAT_BACKEND=logind
+```
 
 ### Disk Layout
 <table>
