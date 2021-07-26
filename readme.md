@@ -173,7 +173,7 @@ LIBSEAT_BACKEND=logind
 ##### Sway & Wayland
     archlinux-wallpaper xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard gammastep kanshi clipman(aur)
 ##### Additional Apps
-    termite neovim vifm firefox cmus vlc/mpv/both mutt/neomutt/notmuch rtv youtube-dl spotify-tui(aur)
+    termite neovim vifm firefox cmus imv vlc/mpv/both mutt/neomutt/notmuch rtv youtube-dl spotify-tui(aur)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 
