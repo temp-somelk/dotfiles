@@ -175,7 +175,7 @@ LIBSEAT_BACKEND=logind
 ##### Additional Apps
     termite neovim vifm firefox cmus imv mpv youtube-dl vlc
 ##### Maybe
-    mutt/neomutt/notmuch spotify-tui rtv tickrs bat bottom
+    bat exa tldr fzf bottom spotify-tui rtv tickrs mutt/neomutt/notmuch httpie(maybe?)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 
