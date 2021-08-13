@@ -152,13 +152,14 @@
             "normal": 80,
             "caution": 30,
             "warning": 25,
-            "critical": 15
+            "critical": 20
         },
         "format": "{icon}",
         "format-charging": "{capacity}% ",
         "format-plugged": "{capacity}% ",
         "format-full": "",
         "format-alt": "{capacity}% {icon}",
+        "format-critical": "{capacity}% {icon}",
         "format-time": "{H}:{M}",
         "format-icons": ["", "", "", "", ""],
         "tooltip": false
@@ -203,7 +204,8 @@
             // "default": ["", ""]
         },
         "tooltip": false,
-        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle"
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
 
     "custom/power": {
