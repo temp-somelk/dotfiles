@@ -209,6 +209,7 @@ MOZ_ACCELERATED=1
 	- [ ] termite -> foot
 	- [ ] brightnessctl -> light
 	- [ ] gammastep -> wlsunset
+	- [ ] pulseaudio -> pipewire
 - [ ] Binary tree layout for tiled windows automation scipt
 - [ ] Window switching using wofi
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings
