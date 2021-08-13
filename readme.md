@@ -213,6 +213,8 @@ MOZ_ACCELERATED=1
 - [ ] Window switching using wofi
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings
 - [ ] Revise drivers and packages
+- [ ] Configure neovim
+- [ ] Configure rtorrent
 - [ ] Revise the entire repo and remove bloat from config files
 - [x] Timed wallpapers (changed to random, because userspace systemd timers are messy)
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
