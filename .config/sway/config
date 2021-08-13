@@ -37,7 +37,7 @@ set $menu wofi
 # Example configuration:
 #
 exec swayidle -w \
-         timeout 60 'brightnessctl -s && brightnessctl set 20' resume 'brightnessctl -r' \
+         timeout 60 'brightnessctl -s && brightnessctl set 0' resume 'brightnessctl -r' \
          timeout 240 'swaylock' \
          timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
          timeout 360 'systemctl suspend -i' \
@@ -247,6 +247,7 @@ bindsym --locked Shift+XF86MonBrightnessUp exec brightnessctl set +2%
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
+bindsym --locked $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Screenshots
 bindsym Print exec grim $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
@@ -276,6 +277,15 @@ mode "$mode_system" {
 }
 bindsym $mod+x mode "$mode_system"
 
+set $mode_tools (m)atrix (c)olor
+mode "$mode_tools" {
+    bindsym m exec grim -g "$(slurp)" - | zbarimg --quiet --raw - | wl-copy, mode "default"
+    bindsym c exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy, mode "default"
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+t mode "$mode_tools"
+
 # Notifications
 exec mako
 
@@ -292,6 +302,9 @@ exec wl-paste -p -t text --watch clipman store -P --histpath="~/.local/share/cli
 bindsym $mod+z exec clipman pick -t wofi
 bindsym $mod+Shift+z exec clipman clear -t wofi
 bindsym $mod+Shift+Ctrl+z exec clipman clear -a
+
+# Windows Switcher
+bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
 
 font pango:SourceSansPro 10
 
