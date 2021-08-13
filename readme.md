@@ -87,18 +87,18 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 6. Set ```EDITOR=nvim```, ```TERMINAL=termite``` and ```BROWSER=firefox``` in ```/etc/environment```
 
-### Environment Varibale
+### Environment Variable
 The ```/etc/environment``` file should end up looking like
 ```
 EDITOR=nvim
-TERMINAL=termite
 XDG_SESSION_TYPE=wayland      
 XDG_CURRENT_DESKTOP=sway
+LIBSEAT_BACKEND=logind
+TERMINAL=termite
 BROWSER=firefox
 MOZ_ENABLE_WAYLAND=1
 MOZ_WEBRENDER=1
 MOZ_ACCELERATED=1
-LIBSEAT_BACKEND=logind
 ```
 
 ### Disk Layout
@@ -163,7 +163,7 @@ LIBSEAT_BACKEND=logind
 ##### Base
     base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub nano
 ##### System
-    ntp reflector playerctl brightnessctl libnotify pulseaudio pavucontrol(maybe?)
+    ntp rsync reflector playerctl brightnessctl libnotify pulseaudio pavucontrol(maybe?)
 #### Shell
     zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 #### Networking
@@ -171,14 +171,15 @@ LIBSEAT_BACKEND=logind
 #### Drivers
     mesa mesa-vdpau libva-mesa-driver opencl-mesa vulkan-intel vulkan-mesa-layers vulkan-radeon libinput
 ##### Sway & Wayland
-    archlinux-wallpaper xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard gammastep kanshi clipman(aur)
+    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard gammastep xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
-    termite neovim vifm firefox cmus imv mpv youtube-dl vlc
+    termite neovim vifm firefox cmus imv mpv youtube-dl rtorrent vlc
 ##### Maybe
-    bat exa tldr fzf bottom spotify-tui rtv tickrs mutt/neomutt/notmuch httpie(maybe?) ncdu(maybe?)
+    bat exa tldr fzf bottom tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper
 ##### Fonts
-    adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
-
+    adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
+##### AUR
+    wlr-randr wlsunset clipman foot spotify-tui rtv
 
 ### Todos
 - [x] Transition from i3 to sway ~~(currently in progress)~~ Done
@@ -187,7 +188,6 @@ LIBSEAT_BACKEND=logind
 - [x] Check if mlocate is reuqired in the first place (yeah, not required)
 - [x] Make LUKS Header backup
 - [x] Filesyetem and journal modifications and optimizations for flash drives
-- [ ] Sway-systemd integration
 - [ ] Set up Network Manager
 - [ ] Set up a firewall
 - [ ] Set up a VPN
@@ -204,9 +204,15 @@ LIBSEAT_BACKEND=logind
 - [x] Make a good color scheme which can be used both at day/night (and stick to it dammit)
 - [x] Window screenshot binding on sway (grim)
 - [x] Use output audio (speakers) for wf-recorder screencasts
+- [ ] Fix screensharing audio (probably pipewire related)
+- [ ] Consider switching:
+	- [ ] termite -> foot
+	- [ ] brightnessctl -> light
+	- [ ] gammastep -> wlsunset
 - [ ] Binary tree layout for tiled windows automation scipt
+- [ ] Window switching using wofi
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings
-- [x] Revise Drivers, Xorg and Window Manager packages
+- [ ] Revise drivers and packages
 - [ ] Revise the entire repo and remove bloat from config files
 - [x] Timed wallpapers (changed to random, because userspace systemd timers are messy)
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
