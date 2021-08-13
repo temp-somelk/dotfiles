@@ -1,12 +1,3 @@
-# Another Green Theme for cmus
-#
-# Change this to a red or blue theme by doing the following in vim:
-#
-#  :%s/lightgreen/light<color>/g
-#  :%s/green/<color>/g
-#
-# - roobert@gmail.com
-
 # Directory colors
 set color_win_dir=-1
 
