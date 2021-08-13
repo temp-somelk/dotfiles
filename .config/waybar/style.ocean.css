@@ -22,7 +22,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 #workspaces button.persistent {color: #e5e9f0;}
 #workspaces button:hover {background: #00010a; box-shadow: inherit; text-shadow: inherit;}
 #workspaces button.focused {background-color: #3a575c; color: #e5e9f0;}
-#workspaces button.urgent {background-color: #BF616A; color: #e5e9f0;}
+#workspaces button.urgent {background-color: #bf616a; color: #e5e9f0;}
 /* for  #workspaces button:hover use background not background-color */
 
 #clock,
@@ -51,8 +51,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #idle_inhibitor,
 #mpd {padding: 0 6px}
 
-#battery.warning:not(.charging) {background-color: #EBCB8B; color: #00010a;}
-#battery.caution:not(.charging) {color: #EBCB8B;}
+#battery.warning:not(.charging) {background-color: #ebcb8b; color: #00010a;}
+#battery.caution:not(.charging) {color: #ebcb8b;}
 #battery.good.charging {background-color: #e5e9f0; color: #00010a;}
 
 @keyframes blink {
@@ -62,7 +62,7 @@ window#waybar.solo {background-color: #FFFFFF;}
     }
 }
 #battery.critical:not(.charging) {
-    background-color: #BF616A;
+    background-color: #bf616a;
     color: #e5e9f0;
     animation-name: blink;
     animation-duration: 0.5s;
@@ -73,7 +73,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 
 label:focus {background-color: #000000;}
 #idle_inhibitor.activated {background-color: #e5e9f0; color: #00010a; padding: 0 7px;}
-#temperature.critical {background-color: #BF616A; color: #e5e9f0;}
+#temperature.critical {background-color: #bf616a; color: #e5e9f0;}
 #network.disconnected, #pulseaudio.muted, #custom-playerctl.Stopped, #custom-playerctl.Paused {color: #3b4252;}
 
 

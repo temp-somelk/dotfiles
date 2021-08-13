@@ -1,7 +1,6 @@
 * {
     border: none;
     border-radius: 0;
-    /* `otf-font-awesome` is required to be installed for icons */
     font-family: SourceSansPro, FiraSans, Roboto, sans-serif;
     font-size: 14px;
     min-height: 0;
@@ -42,12 +41,16 @@ window#waybar.solo {background-color: #FFFFFF;}
 #custom-weather,
 #custom-wallpaper,
 #custom-screencast,
+#custom-playerctl,
+#custom-pomodoro,
+#custom-stopwatch,
+#custom-notifications,
+#custom-packages,
 #tray,
 #mode,
 #idle_inhibitor,
 #mpd {padding: 0 6px}
 
-#battery.charging {color: #d0ff36;}
 #battery.warning:not(.charging) {background-color: #ffa51f; color: #000000;}
 #battery.caution:not(.charging) {color: #ffa51f;}
 #battery.good.charging {background-color: #d0ff36; color: #000000;}
@@ -69,7 +72,7 @@ window#waybar.solo {background-color: #FFFFFF;}
 }
 
 label:focus {background-color: #000000;}
-#idle_inhibitor.activated {background-color: #d0ff36; color: #000000;}
+#idle_inhibitor.activated {background-color: #d0ff36; color: #000000; padding: 0 7 px}
 #temperature.critical {background-color: #ff173e; color: #ffffff;}
 #network.disconnected, #pulseaudio.muted, #custom-playerctl.Stopped, #custom-playerctl.Paused {color: #666666;}
 
