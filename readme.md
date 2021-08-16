@@ -72,7 +72,9 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 4. ```LIBSEAT_BACKEND=logind``` in ```/etc/environment``` in case libseat fails to connect to socket
 
-5. ```MOZ_WEBRENDER=1``` in case there are performance issues (and/or CPU is not properly utilized/optimized), and ```MOZ_ACCELERATED=1``` in order to force hardware acceleration for MOZ_WEBRENDER to work in case it is disabled by default
+5. In case hardware acceleration doesn't work out of the box, [set environment variables](https://wiki.archlinux.org/title/Hardware_video_acceleration#Configuration), ```LIBVA_DRIVER_NAME=i965/iHD/radeonsi/nouveau``` and ```VDPAU_DRIVER=va_gl/radeonsi/nouveau```.
+
+6. ```MOZ_WEBRENDER=1``` in case there are performance issues (and/or CPU is not properly utilized/optimized), and ```MOZ_ACCELERATED=1``` in order to force hardware acceleration for MOZ_WEBRENDER to work in case it is disabled by default
 
 ### Extras
 1. Add ```userChrome.css``` in ```~/.mozilla/firefox/(the_deafult_active_profile)/chrome/```
@@ -169,7 +171,7 @@ MOZ_ACCELERATED=1
 #### Networking
     networkmanager nm-connection-editor modemmanager mobile-broadband-provider-info usb_modeswitch networkmanager-openconnect networkmanager-openvpn openvpn openresolv dnsmasq rp-pppoe(maybe?)
 #### Drivers
-    mesa mesa-vdpau libva-mesa-driver opencl-mesa vulkan-intel vulkan-mesa-layers vulkan-radeon libinput
+    mesa mesa-vdpau libva-mesa-driver libva-intel-driver intel-media-driver opencl-mesa vulkan-intel vulkan-mesa-layers vulkan-radeon libinput
 ##### Sway & Wayland
     xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard gammastep xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
