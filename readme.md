@@ -165,7 +165,7 @@ MOZ_ACCELERATED=1
 ##### Base
     base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub nano
 ##### System
-    ntp rsync reflector playerctl brightnessctl libnotify pulseaudio pavucontrol(maybe?)
+    ntp rsync reflector playerctl brightnessctl libnotify pass pulseaudio pavucontrol(maybe?)
 #### Shell
     zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 #### Networking
