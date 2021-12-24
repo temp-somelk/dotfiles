@@ -54,8 +54,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #battery.caution:not(.charging) {color: #ebcb8b;}
 #battery.good.charging {background-color: #e5e9f0; color: #00010a;}
 #battery.critical:not(.charging) {
-    background-color: #ff4151;
-    color: #e5e9f0;
+    background-color: #e5e9f0;
+    color: #00010a;
     animation-name: red;
     animation-duration: 0.5s;
     animation-timing-function: ease-in-out;
@@ -82,8 +82,8 @@ label:focus {background-color: #000000;}
 
 @keyframes red {
     to {
-        background-color: #e5e9f0;
-        color: #00010a;
+        background-color: #ff4151;
+        color: #e5e9f0;
     }
 }
 
