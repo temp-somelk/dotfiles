@@ -1,4 +1,5 @@
 timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+timeout 90 'makoctl set-mode away' resume 'makoctl set-mode default'
 timeout 240 'swaylock'
 timeout 360 'systemctl suspend -i'
 before-sleep 'swaylock'
