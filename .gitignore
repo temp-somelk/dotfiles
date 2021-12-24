@@ -11,6 +11,7 @@
 !.config/sway
 !.config/swaylock
 !.config/swaynag
+!.config/swayidle
 !.config/waybar
 !.config/mako
 !.config/wofi

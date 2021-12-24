@@ -1,0 +1,8 @@
+timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+timeout 240 'swaylock'
+timeout 360 'systemctl suspend -i'
+before-sleep 'swaylock'
+after-resume 'swaymsg "output * dpms on"'
+lock 'swaylock'
+# timeout 60 'brightnessctl -s && brightnessctl set 0' resume 'brightnessctl -r'
+# timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
