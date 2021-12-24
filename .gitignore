@@ -3,9 +3,9 @@
 !readme.md
 !old_readme.md
 !.zshrc
+!.zshenv
 !.zprofile
 !.p10k.zsh
-!.themes/
 !.config/
 .config/*
 !.config/sway
@@ -14,8 +14,7 @@
 !.config/waybar
 !.config/mako
 !.config/wofi
-!.config/termite
-!.config/gammastep
+!.config/foot
 !.config/nvim
 .config/nvim/plugged
 !.config/scripts
