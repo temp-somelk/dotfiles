@@ -66,11 +66,11 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 ### Sway & Wayland
 1. Copy all the configs to  ```~/```, ```~/.config``` and other respective directories
 
-2. To open firefox [in wayland mode](https://wiki.archlinux.org/index.php/firefox#Wayland), set environment variable ```MOZ_ENABLE_WAYLAND=1``` in ```/etc/environment```. The wiki [says](https://wiki.archlinux.org/index.php/Environment_variables#Graphical_environment) to set the variable in ```~/.config/environment.d/envvars.conf```, but it doesn't work for some reason (have to figure out why), so setting it [globally](https://wiki.archlinux.org/index.php/Environment_variables#Globally)
+2. To open firefox [in wayland mode](https://wiki.archlinux.org/index.php/firefox#Wayland), set environment variable ```MOZ_ENABLE_WAYLAND=1``` in ```.zshenv```
 
-3. Export ```XDG_SESSION_TYPE=wayland``` and ```XDG_CURRENT_DESKTOP=sway``` to ```/etc/environment```
+3. Export ```XDG_SESSION_TYPE=wayland``` and ```XDG_CURRENT_DESKTOP=sway``` to ```.zshenv```
 
-4. ```LIBSEAT_BACKEND=logind``` in ```/etc/environment``` in case libseat fails to connect to socket
+4. ```LIBSEAT_BACKEND=logind``` in ```.zshenv``` in case libseat fails to connect to socket
 
 5. In case hardware acceleration doesn't work out of the box, [set environment variables](https://wiki.archlinux.org/title/Hardware_video_acceleration#Configuration), ```LIBVA_DRIVER_NAME=i965/iHD/radeonsi/nouveau``` and ```VDPAU_DRIVER=va_gl/radeonsi/nouveau```.
 
@@ -90,13 +90,13 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 6. Set ```EDITOR=nvim```, ```TERMINAL=termite``` and ```BROWSER=firefox``` in ```/etc/environment```
 
 ### Environment Variable
-The ```/etc/environment``` file should end up looking like
+The ```.zshenv``` file should end up looking like
 ```
 EDITOR=nvim
 XDG_SESSION_TYPE=wayland      
 XDG_CURRENT_DESKTOP=sway
 LIBSEAT_BACKEND=logind
-TERMINAL=termite
+TERMINAL=foot
 BROWSER=firefox
 MOZ_ENABLE_WAYLAND=1
 MOZ_WEBRENDER=1
@@ -163,9 +163,9 @@ MOZ_ACCELERATED=1
 
 ### Packages
 ##### Base
-    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub nano
+    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub
 ##### System
-    ntp rsync reflector playerctl brightnessctl libnotify pass pulseaudio pavucontrol(maybe?)
+    ntp(?) rsync reflector pacman-contrib playerctl brightnessctl libnotify pass pulseaudio(maybe switch to pipewire?) pavucontrol(maybe?)
 #### Shell
     zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 #### Networking
@@ -173,9 +173,9 @@ MOZ_ACCELERATED=1
 #### Drivers
     mesa mesa-vdpau libva-mesa-driver libva-intel-driver intel-media-driver opencl-mesa vulkan-intel vulkan-mesa-layers vulkan-radeon libinput
 ##### Sway & Wayland
-    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard gammastep xdg-desktop-portal-wlr kanshi
+    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
-    termite neovim vifm firefox cmus imv mpv youtube-dl rtorrent vlc
+    neovim vifm firefox cmus imv mpv youtube-dl rtorrent
 ##### Maybe
     bat exa tldr fzf bottom tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper
 ##### Fonts
@@ -195,8 +195,8 @@ MOZ_ACCELERATED=1
 - [ ] Set up a VPN
 - [x] Set up session lock (Swaylock for wayland and physlock for tty.
 - [ ] Set up a keyring (and check its security to convinience ratio)
-- [ ] Set up a password manager, preferably [KeePassXC](https://wiki.archlinux.org/index.php/KeePass)
-- [ ] Set up an IRC and an IRC client (irssi maybe)
+- [x] Set up a password manager [used ```pass```](https://www.github.com/somelazykoala/secrets)
+- [ ] Set up an IRC and weechat
 - [ ] Power management
 - [x] MPD and ncmpcpp (used cmus, since it's simpler, more lightweight and faster, may consider switching later tho)
 - [x] Transition from Xorg to Wayland (Sway is the most likely candidate)
@@ -208,9 +208,11 @@ MOZ_ACCELERATED=1
 - [x] Use output audio (speakers) for wf-recorder screencasts
 - [ ] Fix screensharing audio (probably pipewire related)
 - [ ] Consider switching:
-	- [ ] termite -> foot
-	- [ ] brightnessctl -> light
-	- [ ] gammastep -> wlsunset
+	- [x] termite -> foot (hoping for it to come to official repos)
+	- [ ] brightnessctl -> light (maybe?)
+	- [x] gammastep -> wlsunset (not in official repos yet either)
+    - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
+    - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.)
 	- [ ] pulseaudio -> pipewire
 - [ ] Binary tree layout for tiled windows automation scipt
 - [ ] Window switching using wofi
@@ -218,6 +220,8 @@ MOZ_ACCELERATED=1
 - [ ] Revise drivers and packages
 - [ ] Configure neovim
 - [ ] Configure rtorrent
+- [ ] Set up hardware acceleration for firefox
+- [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
 - [ ] Revise the entire repo and remove bloat from config files
 - [x] Timed wallpapers (changed to random, because userspace systemd timers are messy)
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
