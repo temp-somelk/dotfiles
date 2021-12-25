@@ -250,9 +250,6 @@ workspace 6 gaps inner 0
 
 # Rules
 assign [app_id="firefox"] workspace 3
-assign [class="vlc"] workspace 6
-for_window [class="zoom"] inhibit_idle visible
-for_window [class="vlc"] inhibit_idle visible
 for_window [workspace=3] layout tabbed
 for_window [workspace=5] layout tabbed
 for_window [workspace=6] layout tabbed
