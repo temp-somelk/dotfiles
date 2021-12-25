@@ -4,39 +4,31 @@ set $left h
 set $down j
 set $up k
 set $right l
-set $term termite
+set $term foot
 set $menu wofi
-
-# Idle
-exec swayidle -w \
-         timeout 60 'brightnessctl -s && brightnessctl set 0' resume 'brightnessctl -r' \
-         timeout 240 'swaylock' \
-         timeout 300 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         timeout 360 'systemctl suspend -i' \
-         before-sleep 'swaylock'
 
 # Touchpad
 input "type:touchpad" {
-      dwt enabled
-      drag enabled
-      tap enabled
-      tap_button_map lrm
-      middle_emulation enabled
-      natural_scroll disabled
-      scroll_method two_finger
-      scroll_factor 0.5
-      accel_profile adaptive
-      pointer_accel 0.2
+    dwt enabled
+    drag enabled
+    tap enabled
+    tap_button_map lrm
+    middle_emulation enabled
+    natural_scroll disabled
+    scroll_method two_finger
+    scroll_factor 0.5
+    accel_profile adaptive
+    pointer_accel 0.2
 }
 
 # Keyboard
 input "type:keyboard" {
-      xkb_layout us
-      xkb_options compose:caps
-      xkb_capslock disabled
-      xkb_numlock disabled
-      repeat_delay 500
-      repeat_rate 30
+    xkb_layout us
+    xkb_options compose:ralt
+    xkb_capslock disabled
+    xkb_numlock disabled
+    repeat_delay 500
+    repeat_rate 30
 }
 
 # Basic key bindings
@@ -46,12 +38,11 @@ bindsym $mod+Shift+c reload
 bindsym Ctrl+Mod1+Delete exit
 bindsym $mod+Shift+q kill
 bindsym --whole-window $mod+button2 kill
+bindsym --locked $mod+p output * dpms toggle
 bindsym button2 kill
 floating_modifier $mod normal
 
 # Scratchpad
-# Sway has a "scratchpad", which is a bag of holding for windows.
-# You can send windows there and get them back later.
 bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
 
@@ -163,23 +154,48 @@ mode "$mode_system" {
 }
 bindsym $mod+x mode "$mode_system"
 
+# Move Cursor
+set $mode_cursor move cursor
+mode "$mode_cursor" {
+    bindsym Left seat - cursor move -10 0
+    bindsym Down seat - cursor move 0 10
+    bindsym Up seat - cursor move 0 -10
+    bindsym Right seat - cursor move 10 0
+    bindsym comma seat - cursor press button1
+    bindsym period seat - cursor press button3
+    bindsym slash seat - cursor press button2
+    bindsym bracketleft seat - cursor release button1
+    bindsym bracketright seat - cursor release button3
+    bindsym backslash seat - cursor release button2
+    bindsym w seat - cursor press button4
+    bindsym s seat - cursor press button5
+    bindsym a seat - cursor press button6
+    bindsym d seat - cursor press button7
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+y mode "$mode_cursor"
+
 # Tools
-set $mode_tools (m)atrix (c)olor
+set $mode_tools (2)D codes (c)olor (m)usic (d)ictionary
 mode "$mode_tools" {
-    bindsym m exec grim -g "$(slurp)" - | zbarimg --quiet --raw - | wl-copy, mode "default"
+    bindsym 2 exec grim -g "$(slurp)" - | zbarimg --quiet --raw - | wl-copy, mode "default"
     bindsym c exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy, mode "default"
+    bindsym m exec echo "music recogintion", mode "default"
+    bindsym d exec echo "dictionary via wofi", mode "default"
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
 bindsym $mod+t mode "$mode_tools"
 
 # Volume, Media and Brightness
-bindsym --locked XF86AudioRaiseVolume exec amixer sset Master 5%+
-bindsym --locked XF86AudioLowerVolume exec amixer sset Master 5%-
-bindsym --locked Shift+XF86AudioRaiseVolume exec amixer sset Master 2%+
-bindsym --locked Shift+XF86AudioLowerVolume exec amixer sset Master 2%-
-bindsym --locked XF86AudioMute exec amixer set Master toggle
+bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
+bindsym --locked Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
+bindsym --locked Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -2%
+bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+bindsym --locked $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym --locked Shift+XF86MonBrightnessDown exec brightnessctl set 2%-
@@ -187,20 +203,23 @@ bindsym --locked Shift+XF86MonBrightnessUp exec brightnessctl set +2%
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
-bindsym --locked $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 
 # Screenshots
-bindsym Print exec grim $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
-bindsym Shift+Print exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
+bindsym Print exec grim $HOME/Pictures/Screenshots/$(date +'%F-%T.png')
+bindsym Shift+Print exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%F-%T.png')
 bindsym Ctrl+Print exec grim - | wl-copy
 bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
-bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - $HOME/Pictures/Screenshots/$(date +'%F_%T.png')
+bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - $HOME/Pictures/Screenshots/$(date +'%F-%T.png')
 bindsym $mod+Ctrl+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy
 
 # Screencasts
-bindsym $mod+F10 exec wf-recorder --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F_%T.mp4')
-bindsym $mod+Shift+F10 exec wf-recorder -g "$(slurp)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F_%T.mp4')
+bindsym $mod+F10 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F-%T.mp4')
+bindsym $mod+Shift+F10 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F-%T.mp4')
 bindsym $mod+Escape exec killall -s SIGINT wf-recorder
+
+# Audio Recording
+bindsym $mod+F9 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - $HOME/Music/recordings/$(date +'%F-%T.mp3')
+bindsym $mod+F1 exec killall -s SIGINT parec
 
 # Clipboard Manager
 exec clipman clear -a
@@ -243,11 +262,8 @@ for_window [workspace=10] floating enabled
 include config.ocean.conf
 include /etc/sway/config.d/*
 
-# Notifications
+# Startup
+exec swayidle -w
 exec mako
-
-# Redshit
-exec gammastep
-
-# Status Bar
 exec waybar
+exec wlsunset -t 3500 -T 6500 -g 1.0 -s 18:00 -S 06:30 -d 3600
