@@ -165,7 +165,7 @@ MOZ_ACCELERATED=1
 ##### Base
     base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub
 ##### System
-    ntp(?) rsync reflector pacman-contrib playerctl brightnessctl libnotify pass pulseaudio(maybe switch to pipewire?) pavucontrol(maybe?)
+    ntp(?) rsync reflector pacman-contrib playerctl brightnessctl libnotify pass bat bottom pulseaudio(maybe switch to pipewire?) pavucontrol(maybe?)
 #### Shell
     zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 #### Networking
@@ -177,7 +177,7 @@ MOZ_ACCELERATED=1
 ##### Additional Apps
     neovim vifm firefox cmus imv mpv youtube-dl rtorrent
 ##### Maybe
-    bat exa tldr fzf bottom tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper
+    exa tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
@@ -210,12 +210,21 @@ MOZ_ACCELERATED=1
 - [ ] Consider switching:
 	- [x] termite -> foot (hoping for it to come to official repos)
 	- [ ] brightnessctl -> light (maybe?)
+	- [ ] waybar -> yambar (maybe?)
+	- [ ] wofi -> bemenu/fuzzel (wofi is unmaintained, so will switched, but idk to what)
 	- [x] gammastep -> wlsunset (not in official repos yet either)
     - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
     - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.)
 	- [ ] pulseaudio -> pipewire
+	- [ ] ext4 -> btrfs
+	- [ ] grub -> systemd-boot (maybe?)
 - [ ] Binary tree layout for tiled windows automation scipt
 - [ ] Window switching using wofi
+- [x] Dictionary using wofi
+- [ ] Emote selector using wofi
+- [ ] Simple calc (maybe using wofi?)
+- [ ] Shazam equivalent tool
+- [ ] Restructure sway config (maybe all configs)
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings
 - [ ] Revise drivers and packages
 - [ ] Configure neovim
