@@ -1,9 +1,5 @@
 # Variables
 set $mod Mod4
-set $left h
-set $down j
-set $up k
-set $right l
 set $term foot
 set $menu wofi
 
@@ -38,7 +34,6 @@ bindsym $mod+Shift+c reload
 bindsym Ctrl+Mod1+Delete exit
 bindsym $mod+Shift+q kill
 bindsym --whole-window $mod+button2 kill
-bindsym --locked $mod+p output * dpms toggle
 bindsym button2 kill
 floating_modifier $mod normal
 
@@ -47,20 +42,12 @@ bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
 
 # Focus
-bindsym $mod+$left focus left
-bindsym $mod+$down focus down
-bindsym $mod+$up focus up
-bindsym $mod+$right focus right
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
 bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 # Move
-bindsym $mod+Shift+$left move left
-bindsym $mod+Shift+$down move down
-bindsym $mod+Shift+$up move up
-bindsym $mod+Shift+$right move right
 bindsym $mod+Shift+Left move left
 bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
@@ -128,10 +115,6 @@ bindsym $mod+f fullscreen
 
 # Resize
 mode "Resize" {
-    bindsym $left resize shrink width 10px
-    bindsym $down resize grow height 10px
-    bindsym $up resize shrink height 10px
-    bindsym $right resize grow width 10px
     bindsym equal resize grow width 10px
     bindsym minus resize shrink width 10px
     bindsym bracketright resize grow height 10px
@@ -141,9 +124,31 @@ mode "Resize" {
 }
 bindsym $mod+r mode "Resize"
 
+# Gaps
+mode "Gaps" {
+    bindsym equal gaps outer current plus 15
+    bindsym minus gaps outer current minus 15
+    bindsym Shift+equal gaps inner current plus 15
+    bindsym Shift+minus gaps inner current minus 15
+    bindsym bracketright gaps horizontal current plus 15
+    bindsym bracketleft gaps horizontal current minus 15
+    bindsym Shift+bracketright gaps vertical current plus 15
+    bindsym Shift+bracketleft gaps vertical current minus 15
+    bindsym Shift+Down gaps top current plus 15
+    bindsym Shift+Up gaps bottom current plus 15
+    bindsym Shift+Left gaps right current plus 15
+    bindsym Shift+Right gaps left current plus 15
+    bindsym Up gaps top current minus 15
+    bindsym Down gaps bottom current minus 15
+    bindsym Right gaps right current minus 15
+    bindsym Left gaps left current minus 15
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+g mode "Gaps"
+
 # Power Options
-set $mode_system (l)ock (s)uspend (e)Logout (R)eboot, (S)hutdown
-mode "$mode_system" {
+mode "Power Options" {
     bindsym l exec swaylock, mode "default"
     bindsym e exec swaymsg exit, mode "default"
     bindsym s exec systemctl suspend -i, mode "default"
@@ -152,11 +157,10 @@ mode "$mode_system" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+x mode "$mode_system"
+bindsym $mod+x mode "Power Options"
 
 # Move Cursor
-set $mode_cursor move cursor
-mode "$mode_cursor" {
+mode "Move Cursor" {
     bindsym Left seat - cursor move -10 0
     bindsym Down seat - cursor move 0 10
     bindsym Up seat - cursor move 0 -10
@@ -174,21 +178,9 @@ mode "$mode_cursor" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+y mode "$mode_cursor"
+bindsym $mod+c mode "Move Cursor"
 
-# Tools
-set $mode_tools (2)D codes (c)olor (m)usic (d)ictionary
-mode "$mode_tools" {
-    bindsym 2 exec grim -g "$(slurp)" - | zbarimg --quiet --raw - | wl-copy, mode "default"
-    bindsym c exec grim -g "$(slurp -p)" -t ppm - | convert - -format '%[pixel:p{0,0}]' txt:- | tail -n 1 | cut -d ' ' -f 4 | wl-copy, mode "default"
-    bindsym m exec echo "music recogintion", mode "default"
-    bindsym d exec echo "dictionary via wofi", mode "default"
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
-}
-bindsym $mod+t mode "$mode_tools"
-
-# Volume, Media and Brightness
+# Volume
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym --locked XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym --locked Shift+XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +2%
@@ -196,29 +188,33 @@ bindsym --locked Shift+XF86AudioLowerVolume exec pactl set-sink-volume @DEFAULT_
 bindsym --locked XF86AudioMute exec pactl set-sink-mute @DEFAULT_SINK@ toggle
 bindsym --locked XF86AudioMicMute exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
 bindsym --locked $mod+m exec pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# Brightness
 bindsym --locked XF86MonBrightnessDown exec brightnessctl set 5%-
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set +5%
 bindsym --locked Shift+XF86MonBrightnessDown exec brightnessctl set 2%-
 bindsym --locked Shift+XF86MonBrightnessUp exec brightnessctl set +2%
+
+# Media
 bindsym --locked XF86AudioPlay exec playerctl play-pause
 bindsym --locked XF86AudioNext exec playerctl next
 bindsym --locked XF86AudioPrev exec playerctl previous
 
 # Screenshots
-bindsym Print exec grim $HOME/Pictures/Screenshots/$(date +'%F-%T.png')
-bindsym Shift+Print exec grim -g "$(slurp)" $HOME/Pictures/Screenshots/$(date +'%F-%T.png')
+bindsym Print exec grim "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
+bindsym Shift+Print exec slurp | grim -g - "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
 bindsym Ctrl+Print exec grim - | wl-copy
-bindsym Ctrl+Shift+Print exec grim -g "$(slurp)" - | wl-copy
-bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - $HOME/Pictures/Screenshots/$(date +'%F-%T.png')
+bindsym Ctrl+Shift+Print exec slurp | grim -g - - | wl-copy
+bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
 bindsym $mod+Ctrl+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy
 
 # Screencasts
-bindsym $mod+F10 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F-%T.mp4')
-bindsym $mod+Shift+F10 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f $HOME/Videos/Screencasts/$(date +'%F-%T.mp4')
+bindsym $mod+F10 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/Screencasts/$(date +'%F-%T.mp4')"
+bindsym $mod+Shift+F10 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/Screencasts/$(date +'%F-%T.mp4')"
 bindsym $mod+Escape exec killall -s SIGINT wf-recorder
 
 # Audio Recording
-bindsym $mod+F9 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - $HOME/Music/recordings/$(date +'%F-%T.mp3')
+bindsym $mod+F9 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
 bindsym $mod+F1 exec killall -s SIGINT parec
 
 # Clipboard Manager
@@ -229,16 +225,11 @@ bindsym $mod+z exec clipman pick -t wofi
 bindsym $mod+Shift+z exec clipman clear -t wofi
 bindsym $mod+Shift+Ctrl+z exec clipman clear -a
 
-# Windows Switcher
-bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
+# Scripts
+# bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
+bindsym $mod+t exec "$HOME/.config/scripts/tools.sh"
 
-font pango:SourceSansPro 10
-
-# Gaps
-bindsym $mod+equal gaps outer current plus 15
-bindsym $mod+minus gaps outer current minus 15
-bindsym $mod+Shift+equal gaps inner current plus 15
-bindsym $mod+Shift+minus gaps inner current minus 15
+# Rules
 gaps inner 15
 gaps outer 15
 workspace 3 gaps outer 0
@@ -247,15 +238,14 @@ workspace 5 gaps outer 0
 workspace 5 gaps inner 0
 workspace 6 gaps outer 0
 workspace 6 gaps inner 0
-
-# Rules
-assign [app_id="firefox"] workspace 3
 for_window [workspace=3] layout tabbed
 for_window [workspace=5] layout tabbed
 for_window [workspace=6] layout tabbed
 for_window [workspace=10] floating enabled
+assign [app_id="firefox"] workspace 3
 
 # Theme
+font pango:SourceSansPro 10
 include config.ocean.conf
 include /etc/sway/config.d/*
 
