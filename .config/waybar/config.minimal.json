@@ -98,9 +98,9 @@
     "clock": {
         // "timezone": "",
         // "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "tooltip": false,
         "format": "{:%H:%M %a}",
-        "format-alt": "{:%d %b %Y}"
+        "format-alt": "{:%d %b %Y}",
+        "tooltip": false
     },
 
     "cpu": {
