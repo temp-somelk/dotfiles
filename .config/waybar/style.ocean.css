@@ -21,8 +21,8 @@ window#waybar.solo {background-color: #FFFFFF;}
 #workspaces button {color: #3a575c; font-size: 20px; padding: 0 8px;}
 #workspaces button.persistent {color: #e5e9f0;}
 #workspaces button:hover {background: #00010a; box-shadow: inherit; text-shadow: inherit;}
-#workspaces button.focused {box-shadow:inset 0 -3px 0 #3a575c;}
-#workspaces button.urgent {background-color: #ff4151; color: #e5e9f0;}
+#workspaces button.focused {box-shadow: inset 0 -3px 0 #3a575c;}
+#workspaces button.urgent {background-color: #ff4151; color: #e5e9f0; box-shadow: none;}
 /* for  #workspaces button:hover use background not background-color */
 
 #clock,
