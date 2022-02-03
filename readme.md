@@ -175,13 +175,13 @@ MOZ_ACCELERATED=1
 ##### Sway & Wayland
     xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
-    neovim vifm firefox cmus imv mpv youtube-dl rtorrent
+    neovim vifm foot firefox cmus imv mpv youtube-dl rtorrent
 ##### Maybe
     exa tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
-    wlr-randr wlsunset clipman foot spotify-tui rtv
+    wlr-randr wlsunset clipman spotify-tui rtv
 
 ### Todos
 - [x] Transition from i3 to sway ~~(currently in progress)~~ Done
@@ -208,7 +208,7 @@ MOZ_ACCELERATED=1
 - [x] Use output audio (speakers) for wf-recorder screencasts
 - [ ] Fix screensharing audio (probably pipewire related)
 - [ ] Consider switching:
-	- [x] termite -> foot (hoping for it to come to official repos)
+	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
 	- [ ] brightnessctl -> light (maybe?)
 	- [ ] waybar -> yambar (maybe?)
 	- [ ] wofi -> bemenu/fuzzel (wofi is unmaintained, so will switched, but idk to what)
