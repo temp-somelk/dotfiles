@@ -163,7 +163,7 @@ MOZ_ACCELERATED=1
 
 ### Packages
 ##### Base
-    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools ntfs-3g lvm2 efibootmgr grub
+    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools lvm2 efibootmgr grub
 ##### System
     git ntp(?) rsync reflector pacman-contrib playerctl brightnessctl libnotify pass bat bottom pulseaudio(maybe switch to pipewire?) pavucontrol(maybe?)
 #### Shell
