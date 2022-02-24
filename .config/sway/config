@@ -37,9 +37,11 @@ bindsym --whole-window $mod+button2 kill
 bindsym button2 kill
 floating_modifier $mod normal
 
-# Scratchpad
+# Scratchpad & Others
 bindsym $mod+Shift+grave move scratchpad
 bindsym $mod+grave scratchpad show
+bindsym $mod+y sticky toggle
+bindsym $mod+n border toggle
 
 # Focus
 bindsym $mod+Left focus left
@@ -111,6 +113,7 @@ bindsym $mod+Shift+space floating toggle
 bindsym button3 floating toggle
 bindsym $mod+space focus mode_toggle
 bindsym $mod+a focus parent
+bindsym $mod+Shift+a focus child
 bindsym $mod+f fullscreen
 
 # Resize
@@ -242,9 +245,11 @@ for_window [workspace=3] layout tabbed
 for_window [workspace=5] layout tabbed
 for_window [workspace=6] layout tabbed
 for_window [workspace=10] floating enabled
+# for_window [app_id=mpv] floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
 assign [app_id="firefox"] workspace 3
 
 # Theme
+border normal 2
 font pango:SourceSansPro 10
 include config.ocean.conf
 include /etc/sway/config.d/*
