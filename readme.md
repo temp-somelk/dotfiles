@@ -206,7 +206,7 @@ MOZ_ACCELERATED=1
 - [x] Make a good color scheme which can be used both at day/night (and stick to it dammit)
 - [x] Window screenshot binding on sway (grim)
 - [x] Use output audio (speakers) for wf-recorder screencasts
-- [ ] Fix screensharing audio (probably pipewire related)
+- [x] Fix screensharing audio (probably pipewire related) (Not a bug, not supported officialy yet)
 - [ ] Consider switching:
 	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
 	- [ ] brightnessctl -> light (maybe?)
@@ -218,6 +218,7 @@ MOZ_ACCELERATED=1
 	- [ ] pulseaudio -> pipewire
 	- [ ] ext4 -> btrfs
 	- [ ] grub -> systemd-boot (maybe?)
+- [ ] Revise sway config and add ```--release``` and ```--no-repeat``` where necessary
 - [ ] Binary tree layout for tiled windows automation scipt
 - [ ] Window switching using wofi
 - [x] Dictionary using wofi
