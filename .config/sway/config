@@ -1,5 +1,6 @@
 # Variables
 set $mod Mod4
+# set $mod Super_L
 set $menu wofi
 
 # Touchpad
@@ -255,6 +256,7 @@ include config.ocean.conf
 include /etc/sway/config.d/*
 
 # Startup
+# xwayland disable
 exec swayidle -w
 exec mako
 exec waybar
