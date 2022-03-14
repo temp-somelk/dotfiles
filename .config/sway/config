@@ -152,7 +152,7 @@ mode "Gaps" {
 bindsym $mod+g mode "Gaps"
 
 # Power Options
-mode "Power Options" {
+mode "Power" {
     bindsym l exec swaylock, mode "default"
     bindsym e exec swaymsg exit, mode "default"
     bindsym s exec systemctl suspend -i, mode "default"
@@ -161,10 +161,10 @@ mode "Power Options" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+x mode "Power Options"
+bindsym $mod+x mode "Power"
 
 # Move Cursor
-mode "Move Cursor" {
+mode "Cursor" {
     bindsym Left seat - cursor move -10 0
     bindsym Down seat - cursor move 0 10
     bindsym Up seat - cursor move 0 -10
@@ -182,7 +182,7 @@ mode "Move Cursor" {
     bindsym Return mode "default"
     bindsym Escape mode "default"
 }
-bindsym $mod+c mode "Move Cursor"
+bindsym $mod+c mode "Cursor"
 
 # Volume
 bindsym --locked XF86AudioRaiseVolume exec pactl set-sink-volume @DEFAULT_SINK@ +5%
