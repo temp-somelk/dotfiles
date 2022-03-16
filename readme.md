@@ -204,7 +204,11 @@ MOZ_ACCELERATED=1
 - [x] Waybar-Workspace-Index to Bullet icons using JSON hack-workarounds (used CSS for #workspaces button.persistent)
 - [x] Sway stacked layout for firefox (workspace 3)
 - [x] Make a good color scheme which can be used both at day/night (and stick to it dammit)
-- [x] Window screenshot binding on sway (grim)
+- [ ] Window screenshot binding on sway (grim) (Done, but not satisfactory; would like to take full window screenshots even if window is partially hidden by another window)
+- [ ] Screenshot current monitor/output
+- [ ] Move container to certain output
+- [ ] Other multiple output related configs (sway, waybar, etc)
+- [ ] Consider switching keyboard layout to Dvorak, Colemak or Wokman
 - [x] Use output audio (speakers) for wf-recorder screencasts
 - [x] Fix screensharing audio (probably pipewire related) (Not a bug, not supported officialy yet)
 - [ ] Consider switching:
