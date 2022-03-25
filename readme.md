@@ -219,7 +219,8 @@ MOZ_ACCELERATED=1
 	- [x] gammastep -> wlsunset (not in official repos yet either)
 	- [ ] spotify-tui -> ncspot
         - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
-        - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.)
+        - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.) Or flac(?), for lossless files.
+        - [ ] Try to switch to lossless but compressed formats for audio recording/screenshots/anything saved to disk
 	- [ ] pulseaudio -> pipewire
 	- [ ] ext4 -> btrfs
 	- [ ] grub -> systemd-boot (maybe?)
