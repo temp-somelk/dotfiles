@@ -249,9 +249,14 @@ for_window [workspace=6] layout tabbed
 for_window [workspace=10] floating enabled
 # for_window [app_id=mpv] floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
 assign [app_id="firefox"] workspace 3
+assign [app_id="mpv"] workspace 6
 
 # Theme
-border normal 2
+default_border normal 2
+default_floating_border normal 2
+title_align left
+titlebar_padding 10 5
+titlebar_border_thickness 0
 font pango:SourceSansPro 10
 include config.ocean.conf
 include /etc/sway/config.d/*
