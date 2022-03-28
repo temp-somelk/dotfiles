@@ -32,7 +32,7 @@ bindsym $mod+Return exec footclient
 bindsym $mod+Shift+Return exec foot
 bindsym $mod+d exec $menu
 bindsym $mod+Shift+c reload
-bindsym Ctrl+Mod1+Delete exit
+bindsym Ctrl+Alt+Delete exit
 bindsym --locked $mod+k input "type:keyboard" xkb_switch_layout next
 bindsym $mod+Shift+q kill
 bindsym --whole-window $mod+button2 kill
