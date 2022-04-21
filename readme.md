@@ -243,7 +243,7 @@ MOZ_ACCELERATED=1
 - [x] Timed wallpapers (changed to random, because userspace systemd timers are messy)
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
 - [ ] Spotifyd+Spotify-tui (buy premium you cheap fuck)
-- [x] Wayland clipboard manager (will do after clipman is added to official repos)
+- [ ] Fix clipman configs in .config/sway/config (might do properly after clipman is added to official repos)
 - [ ] Transition to more CLI apps
 - [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
 
