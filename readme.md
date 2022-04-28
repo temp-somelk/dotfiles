@@ -197,6 +197,7 @@ MOZ_ACCELERATED=1
 - [ ] Set up a keyring (and check its security to convinience ratio)
 - [x] Set up a password manager [used ```pass```](https://www.github.com/somelazykoala/secrets)
 - [ ] Set up an IRC and weechat
+- [ ] Remove ohmyzsh
 - [ ] Power management
 - [x] MPD and ncmpcpp (used cmus, since it's simpler, more lightweight and faster, may consider switching later tho)
 - [x] Transition from Xorg to Wayland (Sway is the most likely candidate)
@@ -205,8 +206,8 @@ MOZ_ACCELERATED=1
 - [x] Sway stacked layout for firefox (workspace 3)
 - [x] Make a good color scheme which can be used both at day/night (and stick to it dammit)
 - [ ] Window screenshot binding on sway (grim) (Done, but not satisfactory; would like to take full window screenshots even if window is partially hidden by another window)
-- [ ] Screenshot current monitor/output
-- [ ] Move container to certain output
+- [x] Screenshot current monitor/output
+- [x] Move container to certain output
 - [ ] Other multiple output related configs (sway, waybar, etc)
 - [ ] Consider switching keyboard layout to Dvorak, Colemak or Wokman
 - [x] Use output audio (speakers) for wf-recorder screencasts
