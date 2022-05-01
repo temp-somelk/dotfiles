@@ -306,7 +306,7 @@ floating_modifier $mod normal
 floating_maximum_size -1 x -1
 floating_minimum_size 75 x 50
 focus_follows_mouse yes
-focus_wrapping workspace
+focus_wrapping yes
 hide_edge_borders none
 tiling_drag enable
 tiling_drag_threshold 9
