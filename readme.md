@@ -204,7 +204,7 @@ MOZ_ACCELERATED=1
 - [x] Figure out a way to remove Waybar-Workpace-Hover in style.css [(Workaround)](https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect)
 - [x] Waybar-Workspace-Index to Bullet icons using JSON hack-workarounds (used CSS for #workspaces button.persistent)
 - [x] Sway stacked layout for firefox (workspace 3)
-- [x] Make a good color scheme which can be used both at day/night (and stick to it dammit)
+- [ ] Make a good color scheme which can be used both at day/night (and stick to it dammit) (catpuccin and nord are candidates)
 - [ ] Window screenshot binding on sway (grim) (Done, but not satisfactory; would like to take full window screenshots even if window is partially hidden by another window)
 - [x] Screenshot current monitor/output
 - [x] Move container to certain output
@@ -241,7 +241,7 @@ MOZ_ACCELERATED=1
 - [ ] Set up hardware acceleration for firefox
 - [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
 - [ ] Revise the entire repo and remove bloat from config files
-- [x] Timed wallpapers (changed to random, because userspace systemd timers are messy)
+- [ ] Create some gl-paper shaders
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
 - [ ] Spotifyd+Spotify-tui (buy premium you cheap fuck)
 - [ ] Fix clipman configs in .config/sway/config (might do properly after clipman is added to official repos)
