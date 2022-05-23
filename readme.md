@@ -228,6 +228,7 @@ MOZ_ACCELERATED=1
 - [ ] Revise sway config and add ```--release``` and ```--no-repeat``` where necessary
 - [ ] Revise sway keybindings
 - [ ] Binary tree layout for tiled windows automation scipt
+- [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
 - [ ] Window switching using wofi
 - [x] Dictionary using wofi
 - [ ] Emote selector using wofi
