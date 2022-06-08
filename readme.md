@@ -229,6 +229,8 @@ MOZ_ACCELERATED=1
 - [ ] Revise sway keybindings
 - [ ] Binary tree layout for tiled windows automation scipt
 - [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
+- [ ] Clean up waybar configs + Add proper multi-monitor indicators for workspace module
+- [ ] Primary monitor only configs (workspace-module-only waybar, mako, swaylock ring on primary monitor only) (will do when a wayland protocol for primary output is decided)
 - [ ] Window switching using wofi
 - [x] Dictionary using wofi
 - [ ] Emote selector using wofi
