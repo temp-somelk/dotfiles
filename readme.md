@@ -258,3 +258,17 @@ MOZ_ACCELERATED=1
 * Install GRUB for either just BIOS or UEFI, (or just use systemd-boot in case it's UEFI)
 * Use [default](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_2) encrypt mkinitcpio hooks (Don't move ```blocks``` hook)
 * Add a non-admin account ```# useradd -m guest``` and ```passwd guest```
+
+cod mw2
+nfs shift2
+nfs mw 2012
+far cry 2
+gta 4
+gta sa
+gta 3
+portal
+portal 2
+stanley parable
+half life
+half life 2
+half life alyx
