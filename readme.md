@@ -217,6 +217,7 @@ MOZ_ACCELERATED=1
 	- [ ] brightnessctl -> light (maybe?)
 	- [ ] waybar -> yambar (maybe?)
 	- [ ] wofi -> bemenu/fuzzel (wofi is unmaintained, so will switched, but idk to what)
+	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too
 	- [x] gammastep -> wlsunset (not in official repos yet either)
 	- [ ] spotify-tui -> ncspot
         - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
