@@ -1,7 +1,7 @@
 Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/index.php/Install_Arch_Linux_on_a_removable_medium#Tips) (bootable on both BIOS and UEFI preferably). Quick checklist to set it up fast, in case I forget the password again and have to reinstall arch. Still [to-do](#todos). PS. If someone else is reading this, **please refer to the official ArchWiki.** As you might have noticed most of these are outlinks to the wiki anyways. It's for a reason.
 
 ## Base Installation
-1. [Setting up gpt table and partitioning disk](https://wiki.archlinux.org/index.php/GPT_fdisk#Create_a_partition_table_and_partitions) with [this layout](#disk-layout)
+1. [Setting up gpt table and partitioning disk](https://wiki.archlinux.org/index.php/GPT_fdisk#Create_a_partition_table_and_partitions) with [this layout](#disk-layout) *In case of SSDs, [perform a complete format, preferably](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing#NVMe_drive)*
 
 2. [Setting up LUKS Container, Logical Volumes](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS)
 
