@@ -260,6 +260,9 @@ MOZ_ACCELERATED=1
 * Use [default](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_2) encrypt mkinitcpio hooks (Don't move ```blocks``` hook)
 * Add a non-admin account ```# useradd -m guest``` and ```passwd guest```
 
+periodic fstrim
+snapper arch
+
 cod mw2
 nfs shift2
 nfs mw 2012
