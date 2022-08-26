@@ -260,10 +260,14 @@ MOZ_ACCELERATED=1
 * Use [default](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_2) encrypt mkinitcpio hooks (Don't move ```blocks``` hook)
 * Add a non-admin account ```# useradd -m guest``` and ```passwd guest```
 
+ssd specific
 periodic fstrim
-snapper arch
-btrfs mount options noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd
+btrfs specific:
+install snapper
+1. mkfs.btrfs -L "label" --csum xxhash /dev/device
+2. btrfs mount options noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd
 zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu calculations compression can be a bottleneck; noatime -> relatime in case apps mishave; sdd in case of ssd
+3. sudo btrfs subvolume create /mnt/test/{@,@home,@snapshots,@var}
 
 cod mw2
 nfs shift2
