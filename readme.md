@@ -262,6 +262,8 @@ MOZ_ACCELERATED=1
 
 periodic fstrim
 snapper arch
+btrfs mount options noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd
+zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu calculations compression can be a bottleneck; noatime -> relatime in case apps mishave; sdd in case of ssd
 
 cod mw2
 nfs shift2
