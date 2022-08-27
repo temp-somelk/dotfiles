@@ -273,6 +273,7 @@ zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu 
 6. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@home /dev/mapper/cryptroot /mnt/test/home
 7. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@var /dev/mapper/cryptroot /mnt/test/var
 8. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@snapshots /dev/mapper/cryptroot /mnt/test/snapshots
+9. https://wiki.archlinux.org/title/Systemd-boot#systemd_service
 
 cod mw2
 nfs shift2
