@@ -261,9 +261,10 @@ MOZ_ACCELERATED=1
 * Add a non-admin account ```# useradd -m guest``` and ```passwd guest```
 
 ssd specific
+install nvme-cli
 periodic fstrim
 btrfs specific:
-install snapper
+install btrfs-rpogs,snapper
 1. mkfs.btrfs -L "label" --csum xxhash /dev/device
 2. btrfs mount options noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd
 zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu calculations compression can be a bottleneck; noatime -> relatime in case apps mishave; sdd in case of ssd
