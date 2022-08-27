@@ -268,6 +268,11 @@ install snapper
 2. btrfs mount options noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd
 zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu calculations compression can be a bottleneck; noatime -> relatime in case apps mishave; sdd in case of ssd
 3. sudo btrfs subvolume create /mnt/test/{@,@home,@snapshots,@var}
+4. umount /mnt/test
+5. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@ /dev/mapper/cryptroot /mnt/test
+6. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@home /dev/mapper/cryptroot /mnt/test/home
+7. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@var /dev/mapper/cryptroot /mnt/test/var
+8. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@snapshots /dev/mapper/cryptroot /mnt/test/snapshots
 
 cod mw2
 nfs shift2
