@@ -276,6 +276,21 @@ zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu 
 8. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@snapshots /dev/mapper/cryptroot /mnt/test/snapshots
 9. https://wiki.archlinux.org/title/Systemd-boot#systemd_service
 
+/boot/loader/entries/arch.conf:
+```
+title Arch Linux
+linux /vmlinuz-linux
+initrd /amd-ucode.img
+initrd /initramfs-linux.img
+otions rd.luks.name=*UUID*=cryptroot root=/dev/mapper/cryptroot
+```
+/boot/loader/loader.conf:
+```
+default arch
+timeout 2
+editor 0
+```
+
 cod mw2
 nfs shift2
 nfs mw 2012
