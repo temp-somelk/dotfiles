@@ -55,7 +55,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 ```
 
 ## Zsh
-1. [Autologin](https://wiki.archlinux.org/index.php/getty#Automatic_login_to_virtual_console) and use ```Type=simple``` in drop-in snippet
+1. [Autologin](https://wiki.archlinux.org/index.php/getty#Automatic_login_to_virtual_console) and use ```Type=simple``` in ```/etc/systemd/system/getty.target.wants/getty\@tty1.service```
 
 2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and remove all plugins, themes and comment everything except ```export $HOME/.oh-my-zsh```  ```source $ZSH/oh-my-zsh.sh``` ```plugins=()```
 
