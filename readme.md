@@ -276,6 +276,8 @@ zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu 
 8. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@snapshots /dev/mapper/cryptroot /mnt/test/snapshots
 9. https://wiki.archlinux.org/title/Systemd-boot#systemd_service
 
+Enable trim on the dm-crypt with :allow-discards after cryptdevice boot paramater see ahead efibootmgr command.
+
 /boot/loader/entries/arch.conf:
 ```
 title Arch Linux
