@@ -5,6 +5,16 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 2. [Setting up LUKS Container, Logical Volumes](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#LVM_on_LUKS)
 
+2b.1 [Setting LUKS Container on BTRFS filesystem](https://wiki.archlinux.org/title/Dm-crypt/Encrypting_an_entire_system#Btrfs_subvolumes_with_swap)
+
+2b.2 Make a ```btrfs``` filesystem on cryptdevice using ``` mkfs.btrfs -L "label" --csum xxhash /dev/device```. [Possible checksum algorithms](https://man.archlinux.org/man/btrfs.5#CHECKSUM_ALGORITHMS)
+
+2b.3 btrfs mount options include ```noatime,compress-force=zstd:1,datacow,datasum,nodiscard, space_cache=v2,ssd```. Use ```zstd:1``` in case it is an NVME drive, ```zstd:2``` for a SATA SSD, and ```zstd:*(default)*``` for HDDs, since CPU calculation for compression can be a bottleneck. ```noatime``` cane be reverted back to ```relatime``` in case apps mishave and need to know access times. ```sdd``` in case you are using an SSD.
+
+2b.4 Create btrfs subvolumes by first mounting the cryptdevice and then running ``` btrfs subvolume create /mountpoint/{@,@home,@snapshots,@var}```.
+
+2b.5 Unmount the *cryptdevice* and then remount the *subvolumes* using mount options  ```mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@ /dev/mapper/cryptdevice /mountpoint/``` and the same for ```subvol={@home,snapshots,var}``` to be mounted at ```{/mountpoint/home,/mountpoint/snapshots,/mountpoint/var}```. Make sure the mount options persist in the generated fstab of new installation media.
+
 3. [Backing up and restoring LUKS Header](https://wiki.archlinux.org/index.php/Dm-crypt/Device_encryption#Backup_and_restore)
 
 4. [Installing base Arch](https://wiki.archlinux.org/index.php/Installation_guide#Installation) with [these packages](#packages)
@@ -89,6 +99,8 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 6. Set ```EDITOR=nvim```, ```TERMINAL=termite``` and ```BROWSER=firefox``` in ```/etc/environment```
 
+7. In case of SSD that supports [trim](https://wiki.archlinux.org/title/Solid_state_drive#TRIM), enable ```fstrim.service``` and ```fstrim.timer```. In case the drive is NVME, install ```nvme-cli```, for userspace support.
+
 ### Environment Variable
 The ```.zshenv``` file should end up looking like
 ```
@@ -161,11 +173,15 @@ MOZ_ACCELERATED=1
   </tr>
 </table>
 
+* In case of a BTRFS filesystem on ```/```, there is no need for an LVM, and the entire cryptdevice can be formatted as a BTRFS filesystem. The separation between ```/``` and ```/home``` can be done using subvolumes, and a swapfile can be used instead of a swap partition.
+
+* In case of a UEFI system (with or without GRUB), there is no need for a BIOS GRUB partition.
+
 ### Packages
 ##### Base
-    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools lvm2 efibootmgr grub
+    base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools (efibootmgr grub nano vilvm2 btrfs-progs snapper nvme-cli)
 ##### System
-    git ntp(?) rsync reflector pacman-contrib openssh playerctl brightnessctl libnotify pass bat bottom pulseaudio(maybe switch to pipewire?) pavucontrol(maybe?)
+    git ntp(?) rsync reflector pacman-contrib openssh playerctl brightnessctl libnotify pass bat bottom wireplumber pavucontrol(maybe?)
 #### Shell
     zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 #### Networking
@@ -190,14 +206,45 @@ MOZ_ACCELERATED=1
 - [x] Check if mlocate is reuqired in the first place (yeah, not required)
 - [x] Make LUKS Header backup
 - [x] Filesyetem and journal modifications and optimizations for flash drives
-- [ ] Set up Network Manager
+- [ ] Remove ohmyzsh
+- [ ] Remove all koala references
+    - [ ] GPG keys
+    - [ ] SSH keys
+    - [ ] Github repos and commit history
+    - [ ] All accounts (check from passwords repository)
+    - [ ] Change passwords to stop leaking emails
+- [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
+- [ ] Revise drivers and packages
+- [ ] Set up hardware acceleration for firefox
+- [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
+- [ ] Fix clipman configs in .config/sway/config (might do properly after clipman is added to official repos)
+- [ ] Other multiple output related configs (sway, waybar, etc)
+- [ ] Revise sway config and add ```--release``` and ```--no-repeat``` where necessary
+- [ ] Clean up waybar configs + Add proper multi-monitor indicators for workspace module
+- [ ] Revise the entire repo and remove bloat from config files
+- [ ] Set up snapper+(timeshit?)
+- [ ] Consider switching:
+	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
+	- [ ] waybar -> yambar (maybe?)
+	- [ ] wofi -> bemenu/fuzzel (wofi is unmaintained, so will switched, but idk to what) (in progress)
+    - [ ] clipman -> cliphist (https://github.com/sentriz/cliphist)
+	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too. maybe pw (https://github.com/pzl/pw)
+	- [x] gammastep -> wlsunset (not in official repos yet either)
+	- [ ] spotify-tui -> ncspot (later ig)
+        - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
+        - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.) Or flac(?), for lossless files.
+        - [ ] Try to switch to lossless but compressed formats for audio recording/screenshots/screencasts/anything saved to disk
+	- [ ] pulseaudio -> pipewire (in progress)
+	- [x] ext4 -> btrfs
+	- [ ] grub -> systemd-boot (in progress)
+    - [ ] us -> colemak_dh or workman (yeah not happening anytime soon)
+- [ ] Set up a leaner network manager
 - [ ] Set up a firewall
 - [ ] Set up a VPN
-- [x] Set up session lock (Swaylock for wayland and physlock for tty.
 - [ ] Set up a keyring (and check its security to convinience ratio)
+- [x] Set up session lock (Swaylock for wayland and physlock for tty.
 - [x] Set up a password manager [used ```pass```](https://www.github.com/somelazykoala/secrets)
 - [ ] Set up an IRC and weechat
-- [ ] Remove ohmyzsh
 - [ ] Power management
 - [x] MPD and ncmpcpp (used cmus, since it's simpler, more lightweight and faster, may consider switching later tho)
 - [x] Transition from Xorg to Wayland (Sway is the most likely candidate)
@@ -208,49 +255,18 @@ MOZ_ACCELERATED=1
 - [ ] Window screenshot binding on sway (grim) (Done, but not satisfactory; would like to take full window screenshots even if window is partially hidden by another window)
 - [x] Screenshot current monitor/output
 - [x] Move container to certain output
-- [ ] Other multiple output related configs (sway, waybar, etc)
-- [ ] Consider switching keyboard layout to Dvorak, Colemak or Wokman
 - [x] Use output audio (speakers) for wf-recorder screencasts
 - [x] Fix screensharing audio (probably pipewire related) (Not a bug, not supported officialy yet)
-- [ ] Consider switching:
-	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
-	- [ ] brightnessctl -> light (maybe?)
-	- [ ] waybar -> yambar (maybe?)
-	- [ ] wofi -> bemenu/fuzzel (wofi is unmaintained, so will switched, but idk to what)
-	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too
-	- [x] gammastep -> wlsunset (not in official repos yet either)
-	- [ ] spotify-tui -> ncspot
-        - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
-        - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.) Or flac(?), for lossless files.
-        - [ ] Try to switch to lossless but compressed formats for audio recording/screenshots/screencasts/anything saved to disk
-	- [ ] pulseaudio -> pipewire
-	- [ ] ext4 -> btrfs
-	- [ ] grub -> systemd-boot (maybe?)
-- [ ] Revise sway config and add ```--release``` and ```--no-repeat``` where necessary
-- [ ] Revise sway keybindings
-- [ ] Binary tree layout for tiled windows automation scipt
-- [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
-- [ ] Clean up waybar configs + Add proper multi-monitor indicators for workspace module
 - [ ] Primary monitor only configs (workspace-module-only waybar, mako, swaylock ring on primary monitor only) (will do when a wayland protocol for primary output is decided)
-- [ ] Window switching using wofi
 - [x] Dictionary using wofi
 - [ ] Emote selector using wofi
+- [ ] Window switching using wofi
 - [ ] Simple calc (maybe using wofi?)
 - [ ] Shazam equivalent tool
-- [ ] Restructure sway config (maybe all configs)
-- [ ] ```--release``` for kill/floating_toggle mouse keybindings
-- [ ] Revise drivers and packages
-- [ ] Configure neovim
-- [ ] Configure rtorrent
-- [ ] Set up hardware acceleration for firefox
-- [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
-- [ ] Revise the entire repo and remove bloat from config files
+- [ ] ```--release``` for kill/floating_toggle mouse keybindings (upstream issue)
 - [ ] Create some gl-paper shaders
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
-- [ ] Spotifyd+Spotify-tui (buy premium you cheap fuck)
-- [ ] Fix clipman configs in .config/sway/config (might do properly after clipman is added to official repos)
 - [ ] Transition to more CLI apps
-- [ ] Transition from GRUB to sytemd-boot once BIOS is obsolete (Not now obviously, but later)
 
 ### For Permanent Install (on PC)
 * Windows readable partition/Windows partition need not be the first partition
@@ -260,24 +276,13 @@ MOZ_ACCELERATED=1
 * Use [default](https://wiki.archlinux.org/index.php/Dm-crypt/Encrypting_an_entire_system#Configuring_mkinitcpio_2) encrypt mkinitcpio hooks (Don't move ```blocks``` hook)
 * Add a non-admin account ```# useradd -m guest``` and ```passwd guest```
 
-ssd specific
-install nvme-cli
-periodic fstrim
-btrfs specific:
-install btrfs-rpogs,snapper
-1. mkfs.btrfs -L "label" --csum xxhash /dev/device
-2. btrfs mount options noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd
-zstd:1 in case of nvme, zstd:2 for sata ssd, zstd:(default) for hdds, since cpu calculations compression can be a bottleneck; noatime -> relatime in case apps mishave; sdd in case of ssd
-3. sudo btrfs subvolume create /mnt/test/{@,@home,@snapshots,@var}
-4. umount /mnt/test
-5. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@ /dev/mapper/cryptroot /mnt/test
-6. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@home /dev/mapper/cryptroot /mnt/test/home
-7. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@var /dev/mapper/cryptroot /mnt/test/var
-8. sudo mount -o noatime,compress-force=zstd:1,datacow,datasum,nodiscard,space_cache=v2,ssd,subvol=@snapshots /dev/mapper/cryptroot /mnt/test/snapshots
-9. https://wiki.archlinux.org/title/Systemd-boot#systemd_service
 
+<<<<<<< HEAD
 Enable trim on the dm-crypt with :allow-discards after cryptdevice boot paramater see ahead efibootmgr command.
 
+=======
+https://wiki.archlinux.org/title/Systemd-boot#systemd_service
+>>>>>>> 82129ff (updated readme)
 /boot/loader/entries/arch.conf:
 ```
 title Arch Linux
