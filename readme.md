@@ -242,6 +242,8 @@ MOZ_ACCELERATED=1
 - [ ] Set up a firewall
 - [ ] Set up a VPN
 - [ ] Set up a keyring (and check its security to convinience ratio)
+    - [ ] For GPG
+    - [ ] For SSH
 - [x] Set up session lock (Swaylock for wayland and physlock for tty.
 - [x] Set up a password manager [used ```pass```](https://www.github.com/somelazykoala/secrets)
 - [ ] Set up an IRC and weechat
