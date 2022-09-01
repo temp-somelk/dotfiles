@@ -67,11 +67,10 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 ## Zsh
 1. [Autologin](https://wiki.archlinux.org/index.php/getty#Automatic_login_to_virtual_console) and use ```Type=simple``` in ```/etc/systemd/system/getty.target.wants/getty\@tty1.service```
 
-2. Install [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) and remove all plugins, themes and comment everything except ```export $HOME/.oh-my-zsh```  ```source $ZSH/oh-my-zsh.sh``` ```plugins=()```
+2. In ```~/.zshrc``` source files for ```zsh-syntax-highlighting``` ```zsh-autosuggestions``` ```zsh-history-substring-search``` ```zsh-theme-powerlevel10k``` in this exact order. \
+```zsh-history-substring-search``` arch package is outdated and does not support "HISTORY_SUBSTRING_SEARCH_PREFIXED=1". Manually download download the [.zsh file](https://raw.githubusercontent.com/zsh-users/zsh-history-substring-search/master/zsh-history-substring-search.plugin.zsh) and optionally move it ```/usr/share/zsh/plugins/zsh-history-substring-search```to and source it.
 
-3. In ```~/.zshrc``` source files for ```zsh-syntax-highlighting``` ```zsh-autosuggestions``` ```zsh-history-substring-search``` ```zsh-theme-powerlevel10k``` in this exact order
-
-4. Make ```~/.zprofile``` and add [this](https://wiki.archlinux.org/index.php/Sway#Autostart_on_login) to autostart sway, remove ```exec``` to keep logged in after exiting sway
+3. Make ```~/.zprofile``` and add [this](https://wiki.archlinux.org/index.php/Sway#Autostart_on_login) to autostart sway, remove ```exec``` to keep logged in after exiting sway
 
 ### Sway & Wayland
 1. Copy all the configs to  ```~/```, ```~/.config``` and other respective directories
@@ -99,7 +98,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 6. Set ```EDITOR=nvim```, ```TERMINAL=termite``` and ```BROWSER=firefox``` in ```/etc/environment```
 
-7. In case of SSD that supports [trim](https://wiki.archlinux.org/title/Solid_state_drive#TRIM), enable ```fstrim.service``` and ```fstrim.timer```. In case the drive is NVME, install ```nvme-cli```, for userspace support.
+7. In case of SSD that supports [trim](https://wiki.archlinux.org/title/Solid_state_drive#TRIM), enable ```fstrim.service```(?) and ```fstrim.timer```. In case the drive is NVME, install ```nvme-cli```, for userspace support.
 
 ### Environment Variable
 The ```.zshenv``` file should end up looking like
@@ -206,7 +205,7 @@ MOZ_ACCELERATED=1
 - [x] Check if mlocate is reuqired in the first place (yeah, not required)
 - [x] Make LUKS Header backup
 - [x] Filesyetem and journal modifications and optimizations for flash drives
-- [ ] Remove ohmyzsh
+- [x] Remove ohmyzsh
 - [ ] Remove all koala references
     - [ ] GPG keys
     - [ ] SSH keys
@@ -279,12 +278,9 @@ MOZ_ACCELERATED=1
 * Add a non-admin account ```# useradd -m guest``` and ```passwd guest```
 
 
-<<<<<<< HEAD
 Enable trim on the dm-crypt with :allow-discards after cryptdevice boot paramater see ahead efibootmgr command.
 
-=======
 https://wiki.archlinux.org/title/Systemd-boot#systemd_service
->>>>>>> 82129ff (updated readme)
 /boot/loader/entries/arch.conf:
 ```
 title Arch Linux
