@@ -17,6 +17,9 @@ bindkey "^[[1;5D"  backward-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[Z" reverse-menu-complete
 
+unsetopt correct_all
+setopt correct
+
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
 
 autoload -Uz compinit
