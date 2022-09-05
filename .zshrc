@@ -21,9 +21,9 @@ unsetopt correct_all
 setopt correct
 
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*'
 
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
