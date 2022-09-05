@@ -196,7 +196,7 @@ MOZ_ACCELERATED=1
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
-    wlr-randr wlsunset clipman spotify-tui rtv
+    wlsunset clipman spotify-tui rtv
 
 ### Todos
 - [x] Transition from i3 to sway ~~(currently in progress)~~ Done
@@ -206,20 +206,14 @@ MOZ_ACCELERATED=1
 - [x] Make LUKS Header backup
 - [x] Filesyetem and journal modifications and optimizations for flash drives
 - [x] Remove ohmyzsh
-- [ ] Remove all koala references
-    - [ ] GPG keys
-    - [ ] SSH keys
-    - [ ] Github repos and commit history
-    - [ ] All accounts (check from passwords repository)
-    - [ ] Change passwords to stop leaking emails
+- [x] Playerctl rewind 10 seconds keybinding
 - [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
-- [ ] Revise drivers and packages
-- [ ] Set up hardware acceleration for firefox
-- [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
-- [ ] Fix clipman configs in .config/sway/config (might do properly after clipman is added to official repos)
 - [ ] Other multiple output related configs (sway, waybar, etc)
 - [ ] Revise sway config and add ```--release``` and ```--no-repeat``` where necessary
 - [ ] Clean up waybar configs + Add proper multi-monitor indicators for workspace module
+- [ ] Revise drivers and packages
+- [ ] Set up hardware acceleration for firefox
+- [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
 - [ ] Revise the entire repo and remove bloat from config files
 - [ ] Set up snapper+(timeshit?)
 - [ ] Consider switching:
@@ -243,6 +237,12 @@ MOZ_ACCELERATED=1
 - [ ] Set up a keyring (and check its security to convinience ratio)
     - [ ] For GPG
     - [ ] For SSH
+- [ ] Remove all koala references
+    - [ ] GPG keys
+    - [ ] SSH keys
+    - [ ] Github repos and commit history
+    - [ ] All accounts (check from passwords repository)
+    - [ ] Change passwords to stop leaking emails
 - [x] Set up session lock (Swaylock for wayland and physlock for tty.
 - [x] Set up a password manager [used ```pass```](https://www.github.com/somelazykoala/secrets)
 - [ ] Set up an IRC and weechat
