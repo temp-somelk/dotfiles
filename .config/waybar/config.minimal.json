@@ -197,10 +197,10 @@
 
     "pulseaudio": {
         "scroll-step": 1,
-        "format": "{format_source} {icon}",
-        "format-bluetooth": "{format_source} {icon}",
-        "format-bluetooth-muted": "{format_source} {icon}",
-        "format-muted": "{format_source} {icon}",
+        "format": "{format_source}  {icon}",
+        "format-bluetooth": "{format_source}  {icon}",
+        "format-bluetooth-muted": "{format_source}  {icon}",
+        "format-muted": "{format_source}  {icon}",
         // "format-source": [" ○○○○○", " ●○○○○", " ●●○○○", " ●●●○○", " ●●●●○", " ●●●●●"],
         "format-source": "{volume}% ",
         "format-source-muted": "",
@@ -226,8 +226,8 @@
     },
 
     "custom/applauncher": {
-        "format": "",
-        "on-click": "wofi",
+        "format": "", //
+        "on-click": "nwggrid",
         "tooltip": false
     },
 
@@ -324,6 +324,42 @@
 //         "interval": 3600,
 //         "tooltip": false
 //     },
+//
+//    "custom/youtube": {
+//        "format": "",
+//        "on-click": "firefox https://www.youtube.com/",
+//        "tooltip": false
+//    },
+//
+//    "custom/twitch": {
+//        "format": "",
+//       "on-click": "firefox https://www.twitch.tv/",
+//        "tooltip": false
+//    },
+//
+//    "custom/reddit": {
+//        "format": "",
+//        "on-click": "firefox https://www.reddit.com/",
+//        "tooltip": false
+//    },
+//
+//   "custom/discord": {
+//        "format": "",
+//        "on-click": "firefox https://discord.com/app",
+//        "tooltip": false
+//    },
+//
+//   "custom/github": {
+//        "format": "",
+//        "on-click": "firefox https://github.com/",
+//        "tooltip": false
+//    },
+//
+//    "custom/spotify": {
+//        "format": "",
+//        "on-click": "firefox https://open.spotify.com/",
+//        "tooltip": false
+//    },
 //
 // This cmus module does't work for now, since waybar doesn't accept custom json formatting
 //      "custom/cmus": {
