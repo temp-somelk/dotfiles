@@ -16,6 +16,8 @@ bindkey "^H" backward-kill-word
 bindkey "^[[1;5D"  backward-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[Z" reverse-menu-complete
+bindkey "^[[1;2A" up-line
+bindkey "^[[1;2B" down-line
 
 unsetopt correct_all
 setopt correct
@@ -24,6 +26,7 @@ zstyle :compinstall filename '/home/artfrowl/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*'
 
 autoload -Uz compinit && compinit
+autoload -Uz select-word-style && select-word-style bash
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
