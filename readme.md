@@ -209,6 +209,7 @@ MOZ_ACCELERATED=1
 - [x] Playerctl rewind 10 seconds keybinding
 - [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
 - [ ] Other multiple output related configs (sway, waybar, etc)
+- [ ] Improve output management mode in sway by adding mirroring and screen res, refreshrate options
 - [ ] Revise sway config and add ```--release``` and ```--no-repeat``` where necessary
 - [ ] Clean up waybar configs + Add proper multi-monitor indicators for workspace module
 - [ ] Revise drivers and packages
@@ -245,6 +246,10 @@ MOZ_ACCELERATED=1
     - [ ] Change passwords to stop leaking emails
 - [x] Set up session lock (Swaylock for wayland and physlock for tty.
 - [x] Set up a password manager [used ```pass```](https://www.github.com/somelazykoala/secrets)
+- [ ] Set up neovim properly
+    - [ ] Autocompletion
+    - [ ] Tree view on the left
+    - [ ] Indent lines
 - [ ] Set up an IRC and weechat
 - [ ] Power management
 - [x] MPD and ncmpcpp (used cmus, since it's simpler, more lightweight and faster, may consider switching later tho)
