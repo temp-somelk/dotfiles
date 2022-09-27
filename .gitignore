@@ -14,7 +14,7 @@
 !.config/swayidle
 !.config/waybar
 !.config/mako
-!.config/wofi
+!.config/fuzzel
 !.config/foot
 !.config/mpv
 !.config/nvim
