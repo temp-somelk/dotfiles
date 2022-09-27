@@ -16,6 +16,7 @@
 !.config/mako
 !.config/wofi
 !.config/foot
+!.config/mpv
 !.config/nvim
 .config/nvim/plugged
 !.config/scripts
