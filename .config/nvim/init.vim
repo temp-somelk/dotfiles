@@ -80,6 +80,11 @@ imap <buffer> <F9> <Esc>:w<CR>:!%:p:S<CR>
 map <buffer> <F10> :w<CR>:term %:p:S<CR>
 imap <buffer> <F10> <Esc>:w<CR>:term %:p:S<CR>
 
+" set <xUp>=\e[1;*A
+" set <xDown>=\e[1;*B
+" set <xRight>=\e[1;*C
+" set <xLeft>=\e[1;*D
+
 " plugins
 " call plug#begin()
 " Plug 'yggdroot/indentline'
