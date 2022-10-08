@@ -192,11 +192,11 @@ MOZ_ACCELERATED=1
 ##### Additional Apps
     neovim vifm foot firefox cmus imv mpv youtube-dl rtorrent
 ##### Maybe
-    exa tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper
+    exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
-    wlsunset clipman spotify-tui rtv
+    wlsunset ncspot
 
 ### Todos
 - [x] Transition from i3 to sway ~~(currently in progress)~~ Done
@@ -216,11 +216,12 @@ MOZ_ACCELERATED=1
 - [ ] Set up hardware acceleration for firefox
 - [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
 - [ ] Revise the entire repo and remove bloat from config files
+- [ ] Set up btrfs
 - [ ] Set up snapper+(timeshit?)
 - [ ] Consider switching:
 	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
 	- [ ] waybar -> yambar (maybe?)
-	- [ ] wofi -> bemenu/fuzzel (wofi is unmaintained, so will switched, but idk to what) (in progress)
+	- [ ] wofi -> bemenu/fuzzel/tofi (wofi is unmaintained, so will switch, but idk to what) (in progress)
     - [ ] clipman -> cliphist (https://github.com/sentriz/cliphist)
 	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too. maybe pw (https://github.com/pzl/pw)
 	- [x] gammastep -> wlsunset (not in official repos yet either)

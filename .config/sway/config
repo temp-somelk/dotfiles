@@ -1,6 +1,6 @@
 # Variables
 set $mod Mod4
-set $menu fuzzel
+set $menu tofi
 
 # Keyboard
 input "type:keyboard" {
@@ -40,7 +40,7 @@ input "type:touchpad" {
 # Basic key bindings
 bindsym $mod+Return exec footclient
 bindsym $mod+Shift+Return exec foot
-bindsym $mod+d exec $menu
+bindsym $mod+d exec $menu-drun
 bindsym $mod+Shift+q kill
 bindsym button2 kill
 bindsym --whole-window $mod+button2 kill
@@ -205,7 +205,9 @@ mode "Output Management" {
     bindsym Escape mode "default"
 }
 bindsym $mod+o mode "Output Management"
-bindsym --locked $mod+Escape output - dpms toggle
+# bindsym --locked $mod+Escape output - dpms toggle
+bindsym --locked $mod+Escape output - dpms off
+bindsym --locked $mod+Shift+Escape output - dpms on
 
 # Inputs
 mode "Input Management" {
@@ -291,9 +293,9 @@ bindsym $mod+Alt+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g 
 bindsym $mod+F5 exec killall -s SIGINT wf-recorder
 
 # Audio Recording
-# bindsym $mod+F2 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
-bindsym $mod+F2 exec pw-record --target=auto "$HOME/Music/Recordings/$(date +'%F-%T.mp3')"
-bindsym $mod+F6 exec killall -s SIGINT pw-record
+bindsym $mod+F2 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
+# bindsym $mod+F2 exec pw-record --target=auto "$HOME/Music/Recordings/$(date +'%F-%T.mp3')"
+bindsym $mod+F6 exec killall -s SIGINT parec
 
 # Clipboard Manager
 exec clipman clear -a
