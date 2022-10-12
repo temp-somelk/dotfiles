@@ -18,6 +18,8 @@
 !.config/fuzzel
 !.config/foot
 !.config/mpv
+!.config/weechat
+!.config/rtorrent
 !.config/nvim
 .config/nvim/plugged
 !.config/scripts
