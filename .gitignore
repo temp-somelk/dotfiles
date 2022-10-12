@@ -31,5 +31,5 @@
 !.config/spotify-tui/config.yml
 !Pictures
 Pictures/*
-!Pictures/Wallpapers
+!Pictures/wallpapers
 !Pictures/glsl

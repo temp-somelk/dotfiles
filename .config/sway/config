@@ -277,24 +277,24 @@ bindsym --locked Shift+XF86AudioNext exec playerctl position 5+
 bindsym --locked Shift+XF86AudioPrev exec playerctl position 5-
 
 # Screenshots
-bindsym Print exec grim "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
-bindsym Shift+Print exec slurp | grim -g - "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
-bindsym Alt+Print exec slurp -o | grim -g - "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
+bindsym Print exec grim "$HOME/Pictures/screenshots/$(date +'%F-%T.png')"
+bindsym Shift+Print exec slurp | grim -g - "$HOME/Pictures/screenshots/$(date +'%F-%T.png')"
+bindsym Alt+Print exec slurp -o | grim -g - "$HOME/Pictures/screenshots/$(date +'%F-%T.png')"
 bindsym Ctrl+Print exec grim - | wl-copy
 bindsym Ctrl+Shift+Print exec slurp | grim -g - - | wl-copy
 bindsym Ctrl+Alt+Print exec slurp -o | grim -g - - | wl-copy
-bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - "$HOME/Pictures/Screenshots/$(date +'%F-%T.png')"
+bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - "$HOME/Pictures/screenshots/$(date +'%F-%T.png')"
 bindsym $mod+Ctrl+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy
 
 # Screencasts
-bindsym $mod+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/Screencasts/$(date +'%F-%T.mp4')"
-bindsym $mod+Shift+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/Screencasts/$(date +'%F-%T.mp4')"
-bindsym $mod+Alt+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp -o)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/Screencasts/$(date +'%F-%T.mp4')"
+bindsym $mod+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/screencasts/$(date +'%F-%T.mp4')"
+bindsym $mod+Shift+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/screencasts/$(date +'%F-%T.mp4')"
+bindsym $mod+Alt+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -t -g "$(slurp -o)" --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/screencasts/$(date +'%F-%T.mp4')"
 bindsym $mod+F5 exec killall -s SIGINT wf-recorder
 
 # Audio Recording
 bindsym $mod+F2 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
-# bindsym $mod+F2 exec pw-record --target=auto "$HOME/Music/Recordings/$(date +'%F-%T.mp3')"
+# bindsym $mod+F2 exec pw-record --target=auto "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
 bindsym $mod+F6 exec killall -s SIGINT parec
 
 # Clipboard Manager
