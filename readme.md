@@ -192,7 +192,7 @@ MOZ_ACCELERATED=1
 ##### Additional Apps
     neovim vifm foot firefox cmus imv mpv youtube-dl rtorrent
 ##### Maybe
-    exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur)
+    exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode mdcat clipman(aur)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
@@ -271,8 +271,9 @@ MOZ_ACCELERATED=1
 - [ ] Simple calc (maybe using wofi?)
 - [ ] Shazam equivalent tool
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings (upstream issue)
-- [ ] Create some gl-paper shaders
+- [x] Create some gl-paper shaders
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
+- [ ] Revise the entire repo and remove bloat from config files
 - [ ] Transition to more CLI apps
 
 ### For Permanent Install (on PC)
