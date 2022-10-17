@@ -74,6 +74,7 @@ set tpm=10
 " ino ( ()<left>
 " ino [ []<left>
 " ino { {}<left>
+imap <buffer> <C-BS> <C-W>
 map <buffer> <F8> :w<CR>:!gcc %:S -o %:S< && ./%:S<<CR>
 map <buffer> <F9> :w<CR>:!%:p:S<CR>
 imap <buffer> <F9> <Esc>:w<CR>:!%:p:S<CR>
