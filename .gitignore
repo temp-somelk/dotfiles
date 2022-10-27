@@ -17,6 +17,7 @@
 !.config/tofi
 !.config/fuzzel
 !.config/foot
+!.config/bat
 !.config/mpv
 !.config/weechat
 !.config/rtorrent
