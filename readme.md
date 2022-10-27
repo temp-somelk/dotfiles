@@ -190,9 +190,9 @@ MOZ_ACCELERATED=1
 ##### Sway & Wayland
     xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
-    neovim vifm foot firefox cmus imv mpv youtube-dl rtorrent
+    neovim lf foot firefox cmus imv mpv youtube-dl/yt-dlp rtorrent
 ##### Maybe
-    exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode mdcat clipman(aur)
+    sc lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur) glpaper-hg(aur)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
@@ -302,6 +302,14 @@ default arch
 timeout 2
 editor 0
 ```
+
+firefox
+> about:config
+> gfx.webrender.compositor,gfx.webrender.compositor.force-enabled -> true
+
+tlp
+sudo systemctl disable/stop tlp.service
+sudo systemctl unmask systemd-rfkill.service systemd-rfkill.socket
 
 cod mw2
 nfs shift2
