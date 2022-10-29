@@ -4,9 +4,9 @@ fi
 
 HISTFILE=~/.histfile
 HISTSIZE=1000
-SAVEHIST=5000
+SAVEHIST=50000
 
-setopt nomatch notify correct
+setopt nomatch notify correct extendedhistory inc_append_history_time
 unsetopt autocd extendedglob correct_all
 
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
@@ -55,9 +55,9 @@ help() {
 }
 
 gitdiff() {
-    git diff --name-only --relative | xargs bat --diff
+    git diff --name-only --relative "$@" | xargs bat --diff
 }
 
 hist() {
-    cat "$HISTFILE" | grep -i -n -E --color=always "$1"
+    history -Di 0 | \grep -i -E "$*" | bat -l log --pager="less -Ri~ +G"
 }
