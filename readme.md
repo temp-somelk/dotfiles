@@ -270,6 +270,7 @@ MOZ_ACCELERATED=1
 - [ ] Window switching using wofi
 - [ ] Simple calc (maybe using wofi?)
 - [ ] Shazam equivalent tool
+- [ ] [Picker stuff](https://mark.stosberg.com/fuzzel-a-great-dmenu-and-rofi-altenrative-for-wayland/)
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings (upstream issue)
 - [x] Create some gl-paper shaders
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
@@ -306,6 +307,11 @@ editor 0
 firefox
 > about:config
 > gfx.webrender.compositor,gfx.webrender.compositor.force-enabled -> true
+> full-screen-api.warning.timeout -> 0
+> browser.cache.disk.enable -> false
+> browser.cache.memory.enable -> true
+> browser.cache.memory.capacity -> 102400
+> browser.sessionstore.interval -> 60000
 
 tlp
 sudo systemctl disable/stop tlp.service
