@@ -6,7 +6,7 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=50000
 
-setopt nomatch notify correct extendedhistory inc_append_history_time
+setopt nomatch notify correct extendedhistory inc_append_history_time histignorespace
 unsetopt autocd extendedglob correct_all
 
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
