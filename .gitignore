@@ -19,7 +19,7 @@
 !.config/foot
 !.config/bat
 !.config/mpv
-!.config/weechat
+.config/weechat
 !.config/rtorrent
 !.config/nvim
 .config/nvim/plugged
