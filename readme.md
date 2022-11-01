@@ -206,6 +206,9 @@ MOZ_ACCELERATED=1
 - [x] Make LUKS Header backup
 - [x] Filesyetem and journal modifications and optimizations for flash drives
 - [x] Remove ohmyzsh
+    - [ ] Remove duplicates while scrolling up/down
+    - [ ] Improve hist() function: Include/Source history from .histfile rather than memory
+    - [ ] Print .histfile with proper formatting timestamps and log syntax highlighting
 - [x] Playerctl rewind 10 seconds keybinding
 - [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
 - [ ] Other multiple output related configs (sway, waybar, etc)
