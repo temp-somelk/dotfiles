@@ -38,13 +38,13 @@ input "type:touchpad" {
 }
 
 # Basic key bindings
-bindsym $mod+Return exec footclient
-bindsym $mod+Shift+Return exec foot
-bindsym $mod+d exec $menu-drun
-bindsym $mod+Shift+q kill
+bindsym --no-repeat $mod+Return exec footclient
+bindsym --no-repeat $mod+Shift+Return exec foot
+bindsym --no-repeat $mod+d exec $menu-drun
+bindsym --no-repeat $mod+Shift+q kill
 bindsym button2 kill
 bindsym --whole-window $mod+button2 kill
-bindsym $mod+Shift+c reload
+bindsym --no-repeat $mod+Shift+c reload
 
 # Layout
 bindsym $mod+h split horizontal
@@ -187,7 +187,7 @@ bindsym $mod+c mode "Cursor"
 # Outputs
 mode "Output Management" {
     bindsym Shift+Delete output - disable
-    bindsym space output - dpms toggle
+    bindsym space output - power toggle
     # bindsym equal output - scale plus 0.25
     # bindsym minus output - scale minus 0.25
     # bindsym something output - scale 1
@@ -205,9 +205,9 @@ mode "Output Management" {
     bindsym Escape mode "default"
 }
 bindsym $mod+o mode "Output Management"
-# bindsym --locked $mod+Escape output - dpms toggle
-bindsym --locked $mod+Escape output - dpms off
-bindsym --locked $mod+Shift+Escape output - dpms on
+# bindsym --locked $mod+Escape output - power toggle
+bindsym --locked $mod+Escape output - power off
+bindsym --locked $mod+Shift+Escape output - power on
 
 # Inputs
 mode "Input Management" {
@@ -237,18 +237,20 @@ mode "Power" {
 bindsym --locked $mod+x mode "Power"
 
 # Bindswitches
+# bindswitch --locked lid:on
+# bindswitch --locked lid:off
 
 # Bindgestures
-# bindsym $mod+scrollup opacity plus 0.05
-# bindsym $mod+scrolldown opacity minus 0.05
-# bindsym scroll:up:3 resize grow
-# bindsym scroll:down:3 resize shrink
-# bindsym scroll:left:3 resize shrink
-# bindsym scroll:right:3 resize grow
-# bindsym scroll:left:4 workspace prev
-# bindsym scroll:right:4 workspace next
-# bindsym $mod+comma
-# bindsym $mod+period
+bindgesture swipe:3:up move up 50 px
+bindgesture swipe:3:down move down 50 px
+bindgesture swipe:3:left move left 50 px
+bindgesture swipe:3:right move right 50 px
+bindgesture swipe:4:up scratchpad show
+bindgesture swipe:4:down move container scratchpad
+bindgesture swipe:4:left workspace prev
+bindgesture swipe:4:right workspace next
+# bindgesture pinch:4:inward zoom in
+# bindgesture pinch:4:outward zoom out
 
 # Volume
 bindsym --locked XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+
@@ -298,17 +300,17 @@ bindsym $mod+F2 exec parec -d $(pactl list sources | grep "Name" | grep "output"
 bindsym $mod+F6 exec killall -s SIGINT parec
 
 # Clipboard Manager
-exec clipman clear -a
-exec wl-paste -t text --watch clipman store --max-items=20 -P --histpath="~/.local/share/clipman-primary.json"
-bindsym $mod+z exec clipman pick -t $menu
-bindsym $mod+Shift+z exec clipman clear -t $menu
-bindsym $mod+Shift+Ctrl+z exec clipman clear -a
+bindsym $mod+z exec cliphist list | $menu | cliphist decode | xargs -r wl-copy
+bindsym $mod+Shift+z exec cliphist list | $menu | cliphist delete && wl-copy -c
+bindsym $mod+Shift+Ctrl+z exec wl-copy -c && rm "$HOME/.cache/cliphist/db"
 
 # Scripts & Extras
 # bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
 bindsym $mod+F3 exec "$HOME/.config/scripts/tools.sh"
 bindsym $mod+F4 floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
 bindsym --locked $mod+k input "type:keyboard" xkb_switch_layout next
+bindsym $mod+comma opacity minus 0.05
+bindsym $mod+period opacity plus 0.05
 
 # Rules
 gaps inner 15
@@ -336,8 +338,8 @@ font pango:SourceSansPro 14px
 include config.ocean.conf
 
 # Options
-# xwayland disable
-# seat - hide_cursor 5000
+xwayland disable
+# seat * hide_cursor 5000
 workspace_layout default
 smart_gaps off
 smart_borders off
@@ -359,5 +361,8 @@ exec swayidle -w
 exec mako
 exec waybar
 exec wlsunset -t 3000 -T 6500 -g 1.0 -s 18:00 -S 06:30 -d 3600
+exec wl-paste --watch cliphist store
 exec foot --server
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# Include
+include /etc/sway/config.d/*
