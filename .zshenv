@@ -1,6 +1,7 @@
 export "EDITOR=nvim"
 export "TERMINAL=foot"
 export "PAGER=less"
+export "GPG_TTY=$(tty)"
 export "VDPAU_DRIVER=radeonsi"
 export "LIBVA_DRIVER_NAME=radeonsi"
 export "XDG_SESSION_TYPE=wayland"
