@@ -1,0 +1,84 @@
+initial_screen="library"
+use_nerdfont=false
+flip_status_indicators=true
+# backend="pipewire"
+# backend_device=
+audio_cache=false
+# audio_cache_size=100
+volnorm=false
+# volnorm_pregain=
+default_keybindings=false
+notify=false
+bitrate=320
+gapless=true
+shuffle=false
+repeat="off"
+playback_state="Paused"
+library_tabs=["tracks","playlists","artists","albums"]
+cover_max_scale=1.0
+hide_display_names=false
+statusbar_format="%artists - %title"
+
+[track_format]
+left=" %saved  %title"
+center="%artists - %album"
+right="%duration "
+
+[theme]
+background="default"
+primary="white"
+secondary="black"
+title="blue"
+playing="green"
+playing_selected="white"
+playing_bg="black"
+highlight="black"
+highlight_bg ="green"
+error="white"
+error_bg="red"
+statusbar="green"
+statusbar_bg="black"
+statusbar_progress="green"
+cmdline="white"
+cmdline_bg="black"
+search_match="red"
+
+[keybindings]
+"h"="help"
+"Space"="playpause"
+","="previous"
+"."="next"
+"S"="stop"
+"r"="repeat"
+"s"="shuffle"
+"]"="seek +5000"
+"["="seek -5000"
+"F1"="focus library"
+"F2"="focus queue"
+"F3"="focus search"
+"t"="sort title"
+"T"="sort added"
+"c"="clear"
+"Ctrl+n"="newplaylist"
+"Ctrl+r"="reload"
+"Ctrl+s"="share selected"
+"Ctrl+q"="quit"
+"R"="redraw"
+"u"="updatelibrary"
+"="="volup 5"
+"-"="voldown 5"
+"+"="volup 1"
+"_"="voldown 1"
+"p"="play"
+"Enter"="open selected"
+"Backspace"="back"
+"Esc"="back"
+"q"="back"
+"Left"="move left 1"
+"Right"="move right 1"
+"Up"="move up 1"
+"Down"="move down 1"
+"Shift+Up"="shift up 1"
+"Shift+Down"="shift down 1"
+"PageUp"="move up 15"
+"PageDown"="move down 15"
