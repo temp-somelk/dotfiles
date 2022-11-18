@@ -250,8 +250,8 @@
     "custom/playerctl": {
         "format": "{icon}  {}",
         "format-icons": {
-            "Playing": "",
-            "Paused": "",
+            "Playing": "",
+            "Paused": "",
             "Stopped": ""
         },
         "exec": "$HOME/.config/scripts/playerctl.sh",
