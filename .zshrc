@@ -42,13 +42,17 @@ bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
 alias cp="cp -v"
-alias ls="ls -l -h --color=always"
+alias ls="ls -l -h --group-directories-first --color=always"
 alias mkdir="mkdir -p -v"
 alias grep="grep -i -n -E --color=always"
 alias diff="diff -y -N --suppress-common-lines --no-ignore-file-name-case --color=always"
 alias mount="mount | column -t"
 alias du="du -h"
 alias df="df -H"
+
+search() {
+    ls -a | \grep -i -E --color="always" "$*"
+}
 
 help() {
     "$@" --help 2>&1 | bat -p -l help
