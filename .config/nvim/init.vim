@@ -1,6 +1,6 @@
 colo ocean
 set nu rnu
-set so=10
+set so=5
 set ch=5
 set ts=4
 set sw=4
