@@ -187,7 +187,7 @@ bindsym $mod+c mode "Cursor"
 # Outputs
 mode "Output Management" {
     bindsym Shift+Delete output - disable
-    bindsym space output - power toggle
+    bindsym --release space output - power toggle
     # bindsym equal output - scale plus 0.25
     # bindsym minus output - scale minus 0.25
     # bindsym something output - scale 1
@@ -205,9 +205,7 @@ mode "Output Management" {
     bindsym Escape mode "default"
 }
 bindsym $mod+o mode "Output Management"
-# bindsym --locked $mod+Escape output - power toggle
-bindsym --locked $mod+Escape output - power off
-bindsym --locked $mod+Shift+Escape output - power on
+bindsym --release --locked $mod+Escape output - power toggle
 
 # Inputs
 mode "Input Management" {
@@ -264,6 +262,7 @@ bindsym --locked Alt+XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_S
 bindsym --locked Alt+XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 5%-
 bindsym --locked Alt+Shift+XF86AudioRaiseVolume exec wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%+
 bindsym --locked Alt+Shift+XF86AudioLowerVolume exec wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 2%-
+bindsym --locked $mod+m exec wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle
 
 # Brightness
 bindsym --locked XF86MonBrightnessUp exec brightnessctl set 5%+
@@ -325,8 +324,8 @@ for_window [workspace=3] layout tabbed
 for_window [workspace=5] layout tabbed
 for_window [workspace=6] layout tabbed
 for_window [workspace=10] floating enabled
-assign [app_id="firefox"] workspace 3
-assign [app_id="mpv"] workspace 6
+# assign [app_id="firefox"] workspace 3
+# assign [app_id="mpv"] workspace 6
 
 # Theme
 default_border normal 2
@@ -338,7 +337,7 @@ font pango:SourceSansPro 14px
 include config.ocean.conf
 
 # Options
-xwayland disable
+# xwayland disable
 # seat * hide_cursor 5000
 workspace_layout default
 smart_gaps off
