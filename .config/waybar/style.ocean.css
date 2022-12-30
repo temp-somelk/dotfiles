@@ -6,9 +6,6 @@
     min-height: 0;
 }
 
-label {all: unset;}
-button {all: unset;}
-
 window#waybar {background-color: #00010a; color: #e5e9f0;}
 
 /*
@@ -63,6 +60,8 @@ for #workspaces button:hover use background not background-color
 #idle_inhibitor,
 #window,
 #taskbar,
+#scratchpad,
+#keyboard-state,
 #mpd {padding: 0 6px}
 
 #battery.warning:not(.charging) {background-color: #ebcb8b; color: #00010a;}
