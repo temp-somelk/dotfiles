@@ -24,6 +24,7 @@
 .config/rtorrent/*
 !.config/rtorrent/rtorrent.rc
 !.config/nvim
+!.config/kak
 .config/nvim/plugged
 !.config/scripts
 !.config/cmus
