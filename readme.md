@@ -223,12 +223,13 @@ MOZ_ACCELERATED=1
 - [ ] Set up snapper+(timeshit?)
 - [ ] Consider switching:
 	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
+    - [ ] neovim -> kakoune
 	- [ ] waybar -> yambar (maybe?)
 	- [ ] wofi -> bemenu/fuzzel/tofi (wofi is unmaintained, so will switch, but idk to what) (in progress)
     - [ ] clipman -> cliphist (https://github.com/sentriz/cliphist)
 	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too. maybe pw (https://github.com/pzl/pw)
 	- [x] gammastep -> wlsunset (not in official repos yet either)
-	- [ ] spotify-tui -> ncspot (later ig)
+	- [x] spotify-tui -> ncspot (later ig)
         - [ ] h264 -> hevc for ```wf-recorder``` (hevc results in worse quality)
         - [ ] lame -> vorbis-tools (```oggenc - -q8 -b196 -r -o $HOME/Music/recordings/$(date +'%F-%T.mp3'```) (need to weigh pros and cons, so far, oggenc is better but, dependencies might be huge; also need to sort out optimal quality/size ratio.) Or flac(?), for lossless files.
         - [ ] Try to switch to lossless but compressed formats for audio recording/screenshots/screencasts/anything saved to disk
