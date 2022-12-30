@@ -41,7 +41,8 @@ bindkey "^[[1;2B" down-line
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
-alias cp="cp -v"
+alias cp="cp -v -r"
+alias mv="mv -v -i"
 alias ls="ls -l -h --group-directories-first --color=always"
 alias mkdir="mkdir -p -v"
 alias grep="grep -i -n -E --color=always"
