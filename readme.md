@@ -199,6 +199,8 @@ MOZ_ACCELERATED=1
     wlsunset ncspot
 
 ### Todos
+- [ ] Remove mentions of somelazykoala & artfrowl
+- [ ] Transition to hft51 for personal stuff; koala stays for "online" stuff
 - [x] Transition from i3 to sway ~~(currently in progress)~~ Done
 - [x] Setup up fscrypt for home directories (Changed to dm-crypt for system-wide encryption)
 - [x] ~~Configure [mlocate](https://wiki.archlinux.org/index.php/mlocate) to change frequency of updatedb in systemd timer unit~~
