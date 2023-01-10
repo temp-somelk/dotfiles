@@ -320,9 +320,7 @@ workspace 5 gaps outer 0
 workspace 5 gaps inner 0
 workspace 6 gaps outer 0
 workspace 6 gaps inner 0
-for_window [workspace=3] layout tabbed
-for_window [workspace=5] layout tabbed
-for_window [workspace=6] layout tabbed
+for_window [workspace=2] layout splith
 for_window [workspace=10] floating enabled
 # assign [app_id="firefox"] workspace 3
 # assign [app_id="mpv"] workspace 6
@@ -339,7 +337,8 @@ include config.ocean.conf
 # Options
 # xwayland disable
 # seat * hide_cursor 5000
-workspace_layout default
+default_orientation auto
+workspace_layout tabbed
 smart_gaps off
 smart_borders off
 floating_modifier $mod normal
