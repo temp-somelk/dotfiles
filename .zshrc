@@ -11,6 +11,7 @@ unsetopt autocd extendedglob correct_all
 
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*'
+zstyle ':completion:*' menu select
 
 autoload -Uz compinit && compinit
 autoload -Uz select-word-style && select-word-style bash
