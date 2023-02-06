@@ -196,7 +196,7 @@ MOZ_ACCELERATED=1
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
-    wlsunset ncspot
+    wlsunset chayang wmenu ncspot
 
 ### Todos
 - [ ] Remove mentions of somelazykoala & artfrowl
