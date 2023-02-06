@@ -10,7 +10,7 @@ setopt nomatch notify correct extendedhistory incappendhistorytime histreducebla
 unsetopt autocd extendedglob correct_all
 
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*'
 zstyle ':completion:*' menu select
 
 autoload -Uz compinit && compinit
@@ -37,8 +37,8 @@ bindkey "^H" backward-kill-word
 bindkey "^[[1;5D"  backward-word
 bindkey "^[[1;5C" forward-word
 bindkey "^[[Z" reverse-menu-complete
-bindkey "^[[1;2A" up-line
-bindkey "^[[1;2B" down-line
+bindkey "^[[1;5A" up-line
+bindkey "^[[1;5B" down-line
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
