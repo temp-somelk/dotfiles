@@ -45,6 +45,7 @@ bindkey "^[[B" history-substring-search-down
 alias cp="cp -v -r"
 alias mv="mv -v -i"
 alias ls="ls -l -h --group-directories-first --color=always"
+alias tree="tree -C --dirsfirst"
 alias mkdir="mkdir -p -v"
 alias grep="grep -i -n -E --color=always"
 alias diff="diff -y -N --suppress-common-lines --no-ignore-file-name-case --color=always"
