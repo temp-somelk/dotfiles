@@ -42,7 +42,7 @@ bindkey "^[[1;5B" down-line
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
 
-alias cp="cp -v -r"
+alias cp="cp -v -r -i"
 alias mv="mv -v -i"
 alias ls="ls -l -h --group-directories-first --color=always"
 alias tree="tree -C --dirsfirst"
