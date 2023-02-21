@@ -320,7 +320,6 @@ workspace 5 gaps outer 0
 workspace 5 gaps inner 0
 workspace 6 gaps outer 0
 workspace 6 gaps inner 0
-for_window [workspace=2] layout splith
 for_window [workspace=10] floating enabled
 # assign [app_id="firefox"] workspace 3
 # assign [app_id="mpv"] workspace 6
