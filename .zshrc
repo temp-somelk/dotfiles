@@ -10,7 +10,7 @@ setopt nomatch notify correct extendedhistory incappendhistorytime histreducebla
 unsetopt autocd extendedglob correct_all
 
 zstyle :compinstall filename '/home/artfrowl/.zshrc'
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*'
+zstyle ':completion:*' matcher-list '' 'r:|?=** m:{a-z\-}={A-Z\_}'
 zstyle ':completion:*' menu select
 
 autoload -Uz compinit && compinit
