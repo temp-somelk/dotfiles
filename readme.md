@@ -60,7 +60,7 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
     --completion-percent 100.0
     --country de,fr,ch,nl,no,fi,be,at
     --age 2
-    --score 10
+    --score 20
     --sort rate
 ```
 
@@ -221,7 +221,8 @@ MOZ_ACCELERATED=1
 - [ ] Set up hardware acceleration for firefox
 - [ ] Set up hardware acceleration for wf-recorder (using hevc, preferably)
 - [ ] Revise the entire repo and remove bloat from config files
-- [ ] Set up btrfs
+- [ ] Set up btrfs (snapshots and stuff)
+- [ ] Maybe auto ```pacman -Syu``` every week
 - [ ] Set up snapper+(timeshit?)
 - [ ] Consider switching:
 	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
@@ -257,6 +258,7 @@ MOZ_ACCELERATED=1
     - [ ] Autocompletion
     - [ ] Tree view on the left
     - [ ] Indent lines
+- [ ] Set up Newsboat
 - [ ] Set up an IRC and weechat
 - [ ] Power management
 - [x] MPD and ncmpcpp (used cmus, since it's simpler, more lightweight and faster, may consider switching later tho)
