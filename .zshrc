@@ -3,28 +3,33 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 HISTFILE=~/.histfile
-HISTSIZE=1000
+HISTSIZE=5000
 SAVEHIST=50000
 
-setopt nomatch notify correct extendedhistory incappendhistorytime histreduceblanks histignorespace
+setopt nomatch notify correct extendedhistory incappendhistorytime histreduceblanks histignorespace histfindnodups menucomplete
 unsetopt autocd extendedglob correct_all
 
-zstyle :compinstall filename '/home/artfrowl/.zshrc'
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' '+l:|=* r:|=*' 'r:|?=** m:{a-z\-}={A-Z\_}v'
+zstyle ':compinstall' filename '/home/ekunazanu/.zshrc'
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'
 zstyle ':completion:*' menu select
+zstyle ':completion:*:commands' list-colors '=*=1;32'
+zstyle ':completion:*:arguments' list-colors '=*=1;33'
+zstyle ':completion:*:parameters' list-colors '=*=1;33'
+zstyle ':completion:*:options' list-colors '=*=1;34'
+zstyle ':completion:*:zsh-options' list-colors "=*=1;34"
+
+eval "$(dircolors)"
+zstyle ':completion:*:default' list-colors ${(s.:.)LS_COLORS}
 
 autoload -Uz compinit && compinit
 autoload -Uz select-word-style && select-word-style bash
-
-export "HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_FOUND=default"
-export "HISTORY_SUBSTRING_SEARCH_HIGHLIGHT_NOT_FOUND=default"
-export "HISTORY_SUBSTRING_SEARCH_PREFIXED=1"
-export "HISTORY_SUBSTRING_SEARCH_FUZZY=0"
-export "HISTORY_SUBSTRING_SEARCH_ENSURE_UNIQUE=1"
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 source ~/.p10k.zsh
 
@@ -39,8 +44,10 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[Z" reverse-menu-complete
 bindkey "^[[1;5A" up-line
 bindkey "^[[1;5B" down-line
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
+bindkey "^[[5~" up-line
+bindkey "^[[6~" down-line
+bindkey "^[[A" up-line-or-beginning-search
+bindkey "^[[B" down-line-or-beginning-search
 
 alias cp="cp -v -r -i"
 alias mv="mv -v -i"
@@ -54,18 +61,22 @@ alias mount="mount | column -t"
 alias du="du -h"
 alias df="df -H"
 
-search() {
+function search {
     ls -a | \grep -i -E --color="always" "$*"
 }
 
-help() {
+function help {
     "$@" --help 2>&1 | bat -p -l help
 }
 
-gitdiff() {
+function gitdiff {
     git diff --name-only --relative "$@" | xargs bat --diff
 }
 
-hist() {
+function hist {
     history -Di 0 | \grep -i -E "$*" | bat -l log --pager="less -Ri~ +G"
+}
+
+function preexec() {
+    print -Pn "\e]0;${(q)1}\e\\"
 }
