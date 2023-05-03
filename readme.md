@@ -190,13 +190,13 @@ MOZ_ACCELERATED=1
 ##### Sway & Wayland
     xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
-    neovim lf foot firefox cmus imv mpv youtube-dl/yt-dlp rtorrent
+    neovim lf foot firefox cmus imv mpv yt-dlp rtorrent ncspot
 ##### Maybe
     sc lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur) glpaper-hg(aur)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
-    wlsunset chayang wmenu ncspot
+    wlsunset chayang wmenu
 
 ### Todos
 - [ ] Remove mentions of somelazykoala & artfrowl
