@@ -211,6 +211,7 @@ MOZ_ACCELERATED=1
     - [ ] Remove duplicates while scrolling up/down
     - [ ] Improve hist() function: Include/Source history from .histfile rather than memory
     - [ ] Print .histfile with proper formatting timestamps and log syntax highlighting
+    - [ ] [Use mouse to move cursor](https://github.com/matschaffer/oh-my-zsh-custom/blob/master/mouse.zsh)
 - [x] Playerctl rewind 10 seconds keybinding
 - [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
 - [ ] Other multiple output related configs (sway, waybar, etc)
