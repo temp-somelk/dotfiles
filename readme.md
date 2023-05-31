@@ -190,7 +190,7 @@ MOZ_ACCELERATED=1
 ##### Sway & Wayland
     xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi
 ##### Additional Apps
-    neovim lf foot firefox cmus imv mpv yt-dlp rtorrent ncspot
+    neovim lf foot firefox cmus imv mpv yt-dlp aria2 ncspot
 ##### Maybe
     sc lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie ncdu archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur) glpaper-hg(aur)
 ##### Fonts
