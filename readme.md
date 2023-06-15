@@ -229,7 +229,7 @@ MOZ_ACCELERATED=1
 	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
     - [ ] neovim -> kakoune
 	- [ ] waybar -> yambar (maybe?)
-	- [ ] wofi -> bemenu/fuzzel/tofi (wofi is unmaintained, so will switch, but idk to what) (in progress)
+	- [ ] wofi -> bemenu/fuzzel/wmenu/dmenu-wayland/yofi/tofi (wofi is unmaintained, so will switch, but idk to what) (in progress)
     - [ ] clipman -> cliphist (https://github.com/sentriz/cliphist)
 	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too. maybe pw (https://github.com/pzl/pw)
 	- [x] gammastep -> wlsunset (not in official repos yet either)
