@@ -261,6 +261,7 @@ MOZ_ACCELERATED=1
     - [ ] Indent lines
 - [ ] Set up Newsboat
 - [ ] Set up an IRC and weechat
+- [ ] Set up mailnag
 - [ ] Power management
 - [x] MPD and ncmpcpp (used cmus, since it's simpler, more lightweight and faster, may consider switching later tho)
 - [x] Transition from Xorg to Wayland (Sway is the most likely candidate)
