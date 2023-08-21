@@ -75,14 +75,12 @@ set tpm=10
 " ino [ []<left>
 " ino { {}<left>
 imap <buffer> <C-BS> <C-W>
+map <buffer> <F7> :w<CR>:term javac %:p:S && java -cp %:p:h %:t:r<CR>i
+imap <buffer> <F7> <Esc>:w<CR>:term javac %:p:S && java -cp %:p:h %:t:r<CR>i
 map <buffer> <F8> :w<CR>:term gcc %:p:S -o %:p:r:S && %:p:r:S<CR>i
 imap <buffer> <F8> <Esc>:w<CR>:term gcc %:p:S -o %:p:r:S && %:p:r:S<CR>i
 map <buffer> <F9> :w<CR>:term %:p:S<CR>i
 imap <buffer> <F9> <Esc>:w<CR>:term %:p:S<CR>i
-map <buffer> <F20> :w<CR>:!gcc %:p:S -o %:p:r:S && %:p:r:S<CR>
-imap <buffer> <F20> <Esc>:w<CR>:!gcc %:p:S -o %:p:r:S && %:p:r:S<CR>
-map <buffer> <F21> :w<CR>:!%:p:S<CR>
-imap <buffer> <F21> <Esc>:w<CR>:!%:p:S<CR>
 
 " set <xUp>=\e[1;*A
 " set <xDown>=\e[1;*B
