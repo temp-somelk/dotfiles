@@ -60,6 +60,7 @@ alias diff="diff -y -N --suppress-common-lines --no-ignore-file-name-case --colo
 alias mount="mount | column -t"
 alias du="du -h"
 alias df="df -H"
+alias tt="taskwarrior-tui"
 
 function search {
     ls -a | \grep -i -E --color="always" "$*"
