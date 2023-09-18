@@ -306,7 +306,7 @@ bindsym $mod+Shift+Ctrl+z exec wl-copy -c && rm "$HOME/.cache/cliphist/db"
 # Scripts & Extras
 # bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
 bindsym $mod+F3 exec "$HOME/.config/scripts/tools.sh"
-bindsym $mod+F4 floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
+# bindsym $mod+F4 floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
 bindsym --locked $mod+k input "type:keyboard" xkb_switch_layout next
 bindsym $mod+comma opacity minus 0.05
 bindsym $mod+period opacity plus 0.05
