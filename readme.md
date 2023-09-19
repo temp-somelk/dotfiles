@@ -314,6 +314,10 @@ timeout 2
 editor 0
 ```
 
+https://www.latacora.com/blog/2019/07/16/the-pgp-problem/ encrypted backups -> tarsnap
+https://xoc3.io/blog/2022-12-11 -> signing -> minisign
+file encryption -> age
+
 firefox
 > about:config
 > gfx.webrender.compositor,gfx.webrender.compositor.force-enabled -> true
