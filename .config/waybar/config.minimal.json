@@ -262,7 +262,7 @@
     "custom/audiorecording": {
         "format": "{}",
         "exec": "echo ●",
-        "exec-if": "pgrep parec",
+        "exec-if": "pgrep pw-record",
         "interval": 10,
         "tooltip": false
     },

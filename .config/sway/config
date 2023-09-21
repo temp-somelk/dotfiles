@@ -294,9 +294,8 @@ bindsym $mod+Alt+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi -g "$(
 bindsym $mod+F5 exec killall -s SIGINT wf-recorder
 
 # Audio Recording
-bindsym $mod+F2 exec parec -d $(pactl list sources | grep "Name" | grep "output" | cut -c 8-) | lame -r -V0 - "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
-# bindsym $mod+F2 exec pw-record --target=auto "$HOME/Music/recordings/$(date +'%F-%T.mp3')"
-bindsym $mod+F6 exec killall -s SIGINT parec
+bindsym $mod+F2 exec pw-record -P "{stream.capture.sink=true}" "$HOME/Music/recordings/$(date +'%F-%T.flac')"
+bindsym $mod+F6 exec killall -s SIGINT pw-record
 
 # Clipboard Manager
 bindsym $mod+z exec cliphist list | $menu | cliphist decode | xargs -r wl-copy
