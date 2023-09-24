@@ -192,11 +192,12 @@ MOZ_ACCELERATED=1
 ##### Additional Apps
     neovim lf foot firefox imv mpv yt-dlp aria2 ncspot gitui ncdu taskwarrior-tui
 ##### Maybe
-    lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur) glpaper-hg(aur)
+    lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode clipman(aur) glpaper-hg(aur) hackernews_tui wiki-tui ripgrep
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
 ##### AUR
     wlsunset chayang wmenu
+
 
 ### Todos
 - [ ] Remove mentions of somelazykoala & artfrowl
@@ -317,6 +318,8 @@ editor 0
 https://www.latacora.com/blog/2019/07/16/the-pgp-problem/ encrypted backups -> tarsnap
 https://xoc3.io/blog/2022-12-11 -> signing -> minisign
 file encryption -> age
+
+https://www.reddit.com/r/archlinux/comments/16p9nh7/comment/k1qsqge/
 
 firefox
 > about:config
