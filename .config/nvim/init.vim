@@ -75,8 +75,8 @@ set tpm=10
 " ino [ []<left>
 " ino { {}<left>
 imap <buffer> <C-BS> <C-W>
-map <buffer> <F6> :w<CR>:term gcc %:p:S -o %:p:r:S && %:p:r:S<CR>i
-imap <buffer> <F6> <Esc>:w<CR>:term gcc %:p:S -o %:p:r:S && %:p:r:S<CR>i
+map <buffer> <F6> :w<CR>:term gcc -Werror %:p:S -o %:p:r:S && %:p:r:S<CR>i
+imap <buffer> <F6> <Esc>:w<CR>:term gcc -Werror %:p:S -o %:p:r:S && %:p:r:S<CR>i
 map <buffer> <F7> :w<CR>:term chicken-csc %:p:S -o %:p:r:S && %:p:r:S<CR>i
 imap <buffer> <F7> <Esc>:w<CR>:term chicken-csc %:p:S -o %:p:r:S && %:p:r:S<CR>i
 map <buffer> <F8> :w<CR>:term javac %:p:S && java -cp %:p:h %:t:r<CR>i
