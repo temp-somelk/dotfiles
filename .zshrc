@@ -61,6 +61,7 @@ alias mount="mount | column -t"
 alias du="du -h"
 alias df="df -H"
 alias tt="taskwarrior-tui"
+alias cat="bat"
 
 function search {
     ls -a | \grep -i -E --color="always" "$*"
