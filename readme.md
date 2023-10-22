@@ -188,7 +188,7 @@ MOZ_ACCELERATED=1
 #### Drivers
     mesa mesa-vdpau libva-mesa-driver libva-intel-driver intel-media-driver opencl-mesa vulkan-intel vulkan-mesa-layers vulkan-radeon libinput
 ##### Sway & Wayland
-    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi cliphist
+    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi cliphist xdg-utils
 ##### Additional Apps
     neovim lf foot firefox imv mpv yt-dlp aria2 ncspot gitui ncdu taskwarrior-tui
 ##### Maybe
@@ -333,17 +333,3 @@ firefox
 tlp
 sudo systemctl disable/stop tlp.service
 sudo systemctl unmask systemd-rfkill.service systemd-rfkill.socket
-
-cod mw2
-nfs shift2
-nfs mw 2012
-far cry 2
-gta 4
-gta sa
-gta 3
-portal
-portal 2
-stanley parable
-half life
-half life 2
-half life alyx
