@@ -1,5 +1,6 @@
 export "PATH=$PATH:$HOME/.local/bin"
 export "EDITOR=nvim"
+export "TERM=foot"
 export "TERMINAL=foot"
 export "PAGER=less"
 export "GPG_TTY=$(tty)"

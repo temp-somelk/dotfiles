@@ -1,6 +1,5 @@
 # Variables
 set $mod Mod4
-set $menu tofi
 
 # Keyboard
 input "type:keyboard" {
@@ -40,7 +39,7 @@ input "type:touchpad" {
 # Basic key bindings
 bindsym --no-repeat $mod+Return exec footclient
 bindsym --no-repeat $mod+Shift+Return exec foot
-bindsym --no-repeat $mod+d exec $menu-drun
+bindsym --no-repeat $mod+d exec tofi-drun --terminal footclient | xargs swaymsg exec --
 bindsym --no-repeat $mod+Shift+q kill
 bindsym button2 kill
 bindsym --whole-window $mod+button2 kill
@@ -298,8 +297,8 @@ bindsym $mod+F2 exec pw-record -P "{stream.capture.sink=true}" "$HOME/Music/reco
 bindsym $mod+F6 exec killall -s SIGINT pw-record
 
 # Clipboard Manager
-bindsym $mod+z exec cliphist list | $menu | cliphist decode | wl-copy
-bindsym $mod+Shift+z exec cliphist list | $menu | cliphist delete && wl-copy -c
+bindsym $mod+z exec cliphist list | tofi | cliphist decode | wl-copy
+bindsym $mod+Shift+z exec cliphist list | tofi | cliphist delete && wl-copy -c
 
 # Scripts & Extras
 # bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
