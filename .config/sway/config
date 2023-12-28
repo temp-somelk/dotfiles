@@ -44,6 +44,7 @@ bindsym --no-repeat $mod+Shift+q kill
 bindsym button2 kill
 bindsym --whole-window $mod+button2 kill
 bindsym --no-repeat $mod+Shift+c reload
+bindsym --locked $mod+k input "type:keyboard" xkb_switch_layout next
 
 # Layout
 bindsym $mod+h split horizontal
@@ -52,7 +53,7 @@ bindsym $mod+n split none
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
-bindsym $mod+t sticky toggle
+bindsym $mod+p sticky toggle
 bindsym $mod+b border toggle
 bindsym $mod+f fullscreen toggle
 bindsym $mod+Shift+f fullscreen toggle global
@@ -300,9 +301,9 @@ bindsym $mod+Shift+z exec cliphist list | tofi | cliphist delete && wl-copy -c
 
 # Scripts & Extras
 # bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
-bindsym $mod+F3 exec "$HOME/.config/scripts/tools.sh"
-# bindsym $mod+F4 floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
-bindsym --locked $mod+k input "type:keyboard" xkb_switch_layout next
+bindsym $mod+t exec "$HOME/.config/scripts/tools.sh"
+bindsym $mod+r floating enable, border pixel 2, resize set 320 180, move position cursor, sticky enable
+bindsym $mod+Shift+r floating disable, border normal
 bindsym $mod+comma opacity minus 0.05
 bindsym $mod+period opacity plus 0.05
 
