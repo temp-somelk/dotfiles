@@ -283,8 +283,6 @@ bindsym Alt+Print exec slurp -o | grim -g - "$HOME/Pictures/screenshots/$(date +
 bindsym Ctrl+Print exec grim - | wl-copy
 bindsym Ctrl+Shift+Print exec slurp | grim -g - - | wl-copy
 bindsym Ctrl+Alt+Print exec slurp -o | grim -g - - | wl-copy
-bindsym $mod+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - "$HOME/Pictures/screenshots/$(date +'%F-%T.png')"
-bindsym $mod+Ctrl+Print exec swaymsg -t get_tree | jq -r '.. | select(.focused?) | .rect | "\(.x),\(.y) \(.width)x\(.height)"' | grim -g - - | wl-copy
 
 # Screencasts
 bindsym $mod+F1 exec wf-recorder -d /dev/dri/renderD128 -c h264_vaapi --audio="$(pactl list sources | grep "Name" | grep "output" | cut -c 8-)" -f "$HOME/Videos/screencasts/$(date +'%F-%T.mp4')"
@@ -318,8 +316,6 @@ workspace 5 gaps inner 0
 workspace 6 gaps outer 0
 workspace 6 gaps inner 0
 for_window [workspace=10] floating enabled
-# assign [app_id="firefox"] workspace 3
-# assign [app_id="mpv"] workspace 6
 
 # Theme
 default_border normal 2
