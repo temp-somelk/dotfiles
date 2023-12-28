@@ -33,7 +33,7 @@ for #workspaces button:hover use background not background-color
 #workspaces button.current_output {color: #cad8b1;}
 #workspaces button.current_output.visible {box-shadow: inset 0 -3px 0 #cad8b1;}
 #workspaces button.current_output.focused {box-shadow: inset 0 -3px 0 #cad8b1; color: #cad8b1;}
-#workspaces button.urgent {background-color: #f18e91; color: #030400; box-shadow: none;}
+#workspaces button.urgent {background-color: #a3332c; color: #cad8b1; box-shadow: none;}
 
 #clock,
 #battery,
