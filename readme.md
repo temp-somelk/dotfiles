@@ -214,6 +214,7 @@ MOZ_ACCELERATED=1
     - [ ] Print .histfile with proper formatting timestamps and log syntax highlighting
     - [ ] [Use mouse to move cursor](https://github.com/matschaffer/oh-my-zsh-custom/blob/master/mouse.zsh)
 - [x] Playerctl rewind 10 seconds keybinding
+- [ ] Set up pass-otp
 - [ ] Update mako config (invoking makoctl DND mode, away mode, low priority styles+timing, progress styling, etc)
 - [ ] Other multiple output related configs (sway, waybar, etc)
 - [ ] Improve output management mode in sway by adding mirroring and screen res, refreshrate options
