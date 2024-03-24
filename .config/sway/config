@@ -325,7 +325,13 @@ title_align left
 titlebar_padding 10 5
 titlebar_border_thickness 0
 font pango:SourceSansPro 14px
-include config.ocean.conf
+                         #border #backgr #text   #indica #child_border
+client.focused           #3f4536 #3f4536 #cad8b1 #4c566a #2a2d25
+client.focused_inactive  #2a2d25 #2a2d25 #3f4536 #3b4252 #2a2d25
+client.focused_tab_title #2a2d25 #2a2d25 #cad8b1
+client.unfocused         #181a16 #181a16 #586048 #3b4252 #2a2d25
+client.urgent            #a3332c #a3332c #cad8b1 #fdfffa #2a2d25
+output * bg $HOME/Pictures/wallpapers/gruvbox/platform.jpg fill
 
 # Options
 # xwayland disable
@@ -354,6 +360,27 @@ exec waybar
 exec wlsunset -t 3000 -T 6500 -g 1.0 -s 18:00 -S 06:30 -d 3600
 exec wl-paste --watch cliphist store
 exec foot --server
+
+# Bar
+#bar {
+#    id 1
+#    output *
+#    mode dock
+#    position top
+#    height 30
+#    workspace_min_width 30
+#    font pango:Inter 13px
+#    colors {
+#        background #181a16
+#        statusline #cad8b1
+#        binding_mode #181a16 #181a16 #cad8b1
+#        focused_workspace #181a16 #3f4536 #cad8b1
+#        active_workspace #181a16 #181a16 #cad8b1
+#        inactive_workspace #181a16 #181a16 #3f4536
+#        urgent_workspace #a3332c #a3332c #cad8b1
+#    }
+#    status_command while date +'%F %R'; do sleep 1; done
+#}
 
 # Include
 include /etc/sway/config.d/*
