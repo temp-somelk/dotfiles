@@ -43,9 +43,9 @@ Backup to set up an encrypted Arch on a [USB drive](https://wiki.archlinux.org/i
 
 4. For networking, use [NetworkManager](https://wiki.archlinux.org/index.php/NetworkManager), by enabling NetworkManager.service and [disabling dhcpcd/netctl/other services](https://wiki.archlinux.org/index.php/NetworkManager#Additional_interfaces)
 
-5. openvPN or WireGuard
+5. openvPN or WireGuard - https://sylvaindurand.org/setting-up-a-vpn-with-wireguard/
 
-6. nftables
+6. nftables - https://wiki.archlinux.org/index.php/nftables
 
 7. power management
 
@@ -180,7 +180,7 @@ MOZ_ACCELERATED=1
 ##### Base
     base base-devel arch-install-scripts intel-ucode amd-ucode linux linux-lts linux-firmware man-db man-pages dosfstools (efibootmgr grub nano vilvm2 btrfs-progs snapper nvme-cli)
 ##### System
-    git ntp(?) rsync reflector pacman-contrib openssh playerctl brightnessctl libnotify pass bat bottom wireplumber pavucontrol(maybe?)
+    git ntp(?) rsync reflector pacman-contrib openssh playerctl brightnessctl libnotify pass bat ripgrep eza btop wireplumber pavucontrol(maybe?)
 #### Shell
     zsh zsh-history-substring-search zsh-autosuggestions zsh-completions zsh-syntax-highlighting zsh-theme-powerlevel10k
 #### Networking
@@ -190,11 +190,11 @@ MOZ_ACCELERATED=1
 ##### Sway & Wayland
     xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi cliphist xdg-utils
 ##### Additional Apps
-    neovim lf foot firefox imv mpv yt-dlp aria2 ncspot gitui ncdu taskwarrior-tui
+    neovim lf foot firefox imv mpv yt-dlp aria2 ncspot gitui ncdu
 ##### Maybe
     lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode glpaper-hg(aur) hackernews_tui wiki-tui ripgrep yazi fd fzf pijul(aur)
 ##### Fonts
-    adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome
+    adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome inter-font
 ##### AUR
     wlsunset chayang wmenu
 
@@ -230,7 +230,7 @@ MOZ_ACCELERATED=1
 - [ ] Consider switching:
 	- [x] termite -> foot ~~(hoping for it to come to official repos)~~ in official repos now
     - [ ] neovim -> kakoune
-	- [ ] waybar -> yambar (maybe?)
+	- [ ] waybar -> yambar swaybar+https://github.com/greshake/i3status-rust (maybe?)
 	- [ ] wofi -> bemenu/fuzzel/wmenu/dmenu-wayland/yofi/tofi (wofi is unmaintained, so will switch, but idk to what) (in progress)
     - [ ] clipman -> cliphist (https://github.com/sentriz/cliphist)
 	- [ ] pass -> something that uses symmetric encryption, preferably encrypts file structure and names too. maybe pw (https://github.com/pzl/pw)
@@ -288,6 +288,12 @@ MOZ_ACCELERATED=1
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
 - [ ] Revise the entire repo and remove bloat from config files
 - [ ] Transition to more CLI apps
+- [ ] General
+    - [ ] https://wiki.archlinux.org/index.php/Improving_performance#Reduce_disk_reads.2Fwrites
+    - [ ] https://wiki.archlinux.org/index.php/Pacman/Tips_and_tricks
+    - [ ] https://wiki.archlinux.org/index.php/General_recommendations
+    - [ ] https://wiki.archlinux.org/index.php/System_maintenance
+    - [ ] https://wiki.archlinux.org/title/Firefox/Tweaks#Turn_off_the_disk_cache
 
 ### For Permanent Install (on PC)
 * Windows readable partition/Windows partition need not be the first partition
@@ -334,3 +340,7 @@ firefox
 tlp
 sudo systemctl disable/stop tlp.service
 sudo systemctl unmask systemd-rfkill.service systemd-rfkill.socket
+
+https://gitlab.freedesktop.org/wlroots/wlroots/-/merge_requests/3421 mirroring
+https://github.com/swaywm/sway/issues/5758 primary output concept
+https://git.sr.ht/~emersion/wlspeech + https://github.com/ggerganov/whisper.cpp stt
