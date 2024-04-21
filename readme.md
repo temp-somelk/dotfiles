@@ -188,15 +188,15 @@ MOZ_ACCELERATED=1
 #### Drivers
     mesa mesa-vdpau libva-mesa-driver libva-intel-driver intel-media-driver opencl-mesa vulkan-intel vulkan-mesa-layers vulkan-radeon libinput
 ##### Sway & Wayland
-    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wofi jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi cliphist xdg-utils
+    xorg-server-xwayland sway swaybg swayidle swaylock waybar mako wlsunset jq grim slurp wf-recorder wl-clipboard xdg-desktop-portal-wlr kanshi cliphist xdg-utils
 ##### Additional Apps
     neovim lf foot firefox imv mpv yt-dlp aria2 ncspot gitui ncdu csvlens
 ##### Maybe
-    lesspipe exa tofi tldr fzf tickrs mutt/neomutt/notmuch httpie archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode glpaper-hg(aur) hackernews_tui wiki-tui ripgrep yazi fd fzf pijul(aur)
+    lesspipe exa wmenu tofi(aur) tldr fzf tickrs mutt/neomutt/notmuch httpie archlinux-wallpaper tesseract tesseract-data-eng zbarimg qrencode glpaper-hg(aur) hackernews_tui wiki-tui ripgrep yazi fd fzf pijul(aur)
 ##### Fonts
     adobe-source-code-pro-fonts adobe-source-sans-pro-fonts adobe-source-serif-pro-fonts noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-fira-code ttf-jetbrains-mono ttf-nerd-fonts-symbols ttf-font-awesome inter-font
 ##### AUR
-    wlsunset chayang wmenu
+    chayang
 
 
 ### Todos
