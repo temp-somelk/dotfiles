@@ -298,6 +298,7 @@ bindsym $mod+F6 exec killall -s SIGINT pw-record
 # Clipboard Manager
 bindsym $mod+z exec cliphist list | tofi | cliphist decode | wl-copy
 bindsym $mod+Shift+z exec cliphist list | tofi | cliphist delete && wl-copy -c
+bindsym $mod+Ctrl+Shift+z exec cliphist wipe
 
 # Scripts & Extras
 # bindsym $mod+c exec $HOME/.config/scripts/winswitch.sh
