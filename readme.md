@@ -277,12 +277,13 @@ MOZ_ACCELERATED=1
 - [x] Use output audio (speakers) for wf-recorder screencasts
 - [x] Fix screensharing audio (probably pipewire related) (Not a bug, not supported officialy yet)
 - [ ] Primary monitor only configs (workspace-module-only waybar, mako, swaylock ring on primary monitor only) (will do when a wayland protocol for primary output is decided)
-- [x] Dictionary using wofi
-- [ ] Emote selector using wofi
-- [ ] Window switching using wofi
-- [ ] Simple calc (maybe using wofi?)
-- [ ] Shazam equivalent tool
-- [ ] [Picker stuff](https://mark.stosberg.com/fuzzel-a-great-dmenu-and-rofi-altenrative-for-wayland/)
+- [ ] Tofi apps: https://www.youtube.com/watch?v=v8w1i3wAKiw
+    - [x] Dictionary using wofi
+    - [ ] Emote selector using wofi
+    - [ ] Window switching using wofi
+    - [ ] Simple calc (maybe using wofi?)
+    - [ ] Shazam equivalent tool
+    - [ ] [Picker stuff](https://mark.stosberg.com/fuzzel-a-great-dmenu-and-rofi-altenrative-for-wayland/)
 - [ ] ```--release``` for kill/floating_toggle mouse keybindings (upstream issue)
 - [x] Create some gl-paper shaders
 - [x] userChrome.css for firefox (Slowed down startup time and syntax keeps changing, so used themes instead)
