@@ -1,4 +1,5 @@
 colo ocean
+set notgc
 set nu rnu
 set so=5
 set ch=5
