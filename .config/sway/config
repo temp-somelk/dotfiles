@@ -332,7 +332,7 @@ client.focused_inactive  #2a2d25 #2a2d25 #3f4536 #3b4252 #2a2d25
 client.focused_tab_title #2a2d25 #2a2d25 #cad8b1
 client.unfocused         #181a16 #181a16 #586048 #3b4252 #2a2d25
 client.urgent            #a3332c #a3332c #cad8b1 #fdfffa #2a2d25
-output * bg $HOME/Pictures/wallpapers/gruvbox/platform.jpg fill
+output * bg $HOME/Pictures/wallpapers/muted/darkleaves.png fill
 
 # Options
 # xwayland disable
