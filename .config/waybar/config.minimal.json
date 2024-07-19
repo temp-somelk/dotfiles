@@ -177,12 +177,12 @@
     },
 
     "battery": {
-    	"interval": 60,
+        "interval": 60,
         "states": {
             "good": 100,
             "normal": 80,
-            "caution": 30,
-            "warning": 25,
+            "caution": 35,
+            "warning": 30,
             "critical": 20
         },
         "format": "{icon}",
