@@ -188,15 +188,14 @@ bindsym $mod+c mode "Cursor"
 mode "Output Management" {
     bindsym Shift+Delete output - disable
     bindsym --release space output - power toggle
-    # bindsym equal output - scale plus 0.25
-    # bindsym minus output - scale minus 0.25
-    # bindsym something output - scale 1
-    bindsym 1 output - mode 1280x720
-    bindsym 2 output - mode 1366x768
-    bindsym 3 output - mode 1600x900
-    bindsym 4 output - mode 1920x1080
-    bindsym 5 output - mode 2560x1440
-    bindsym 6 output - mode 3840x2160
+    bindsym 1 output - mode 640x480
+    bindsym 2 output - mode 800x600
+    bindsym 3 output - mode 1280x720
+    bindsym 4 output - mode 1366x768
+    bindsym 5 output - mode 1600x900
+    bindsym 6 output - mode 1920x1080
+    bindsym 7 output - mode 2560x1440
+    bindsym 8 output - mode 3840x2160
     bindsym comma output - transform 90 anticlockwise
     bindsym period output - transform 90 clockwise
     bindsym slash output - transform flipped
