@@ -56,8 +56,8 @@
     },
 
     "sway/scratchpad": {
-        "format": "{icon}",
-        "format-icons": "",
+        "format": "F",
+        // "format-icons": "",
         "show-empty": false,
         "on-click": "swaymsg scratchpad show",
         "tooltip": false
