@@ -116,6 +116,7 @@ bindsym $mod+Ctrl+Alt+Shift+Down move workspace output down
 bindsym $mod+Ctrl+Alt+Shift+Left move workspace output left
 bindsym $mod+Ctrl+Alt+Shift+Right move workspace output right
 bindsym $mod+Shift+grave move container scratchpad
+bindsym button5 move container scratchpad
 
 # Move to workspace
 bindsym $mod+Shift+1 move container workspace 1
