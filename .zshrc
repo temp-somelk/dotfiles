@@ -52,33 +52,19 @@ bindkey "^[[B" down-line-or-beginning-search
 alias cp="cp -v -r -i"
 alias mv="mv -v -i"
 alias rm="rm -r -i"
-alias ls="eza -l -h --group-directories-first"
-alias tree="tree -C --dirsfirst"
 alias mkdir="mkdir -p -v"
-alias grep="rg -i"
+alias chown="chown -v"
+alias chmod="chmod -v"
+alias tree="tree -C --dirsfirst"
 alias diff="diff -y -N --suppress-common-lines --no-ignore-file-name-case --color=always"
+alias ls="eza -l -h --group-directories-first"
+alias grep="rg -i"
 alias mount="mount | column -t"
 alias du="du -h"
 alias df="df -H"
-alias tt="taskwarrior-tui"
 alias cat="bat"
 
-function search {
-    ls -a | \grep -i -E --color="always" "$*"
-}
-
-function help {
-    "$@" --help 2>&1 | bat -p -l help
-}
-
-function gitdiff {
-    git diff --name-only --relative "$@" | xargs bat --diff
-}
-
-function hist {
-    history -Di 0 | \grep -i -E "$*" | bat -l log --pager="less -Ri~ +G"
-}
-
-function preexec() {
-    print -Pn "\e]0;${(q)1}\e\\"
-}
+function help { "$@" --help 2>&1 | bat -p -l help }
+function gitdiff { git diff --name-only --relative "$@" | xargs bat --diff }
+function hist { history -Di 0 | \grep -i -E "$*" | bat -l log --pager="less -Ri~ +G" }
+function preexec() { print -Pn "\e]0;${(q)1}\e\\" }
