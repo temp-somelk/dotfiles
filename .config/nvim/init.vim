@@ -10,6 +10,7 @@ set nosmd
 set cul
 set et
 set nofixeol
+set cb=unnamedplus
 " set sts=0
 " set noet
 " set lcs=tab:\┊\ 
